@@ -1,0 +1,152 @@
+*{
+  background-image: none;
+}
+.video-content{
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center; // Centra verticalmente
+  height: 100vh;
+  .video_mp4{
+    width: 1000px;
+    height: 530px;
+  }
+}
+
+.know-content{
+  color: #444444;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.history-content {
+  background-color: #F1F1F1; /* Color de fondo */
+  padding: 30px; /* Espaciado interno */
+  margin-top: 10px;
+  display: flex; /* Usamos grid layout */
+  grid-template-columns: 2fr 1fr; /* División en columnas */
+  align-items: center; /* Centrado vertical */
+  column-gap: 20px; /* Espacio entre columnas */
+
+  .text-content {
+    font-size: 1rem;
+    color: #585656; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    font-weight: normal; /* Fuente regular */
+    text-align: left; /* Alineación izquierda */
+    text-align: justify;
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Tamaño del título */
+    margin-bottom: 15px; /* Espaciado inferior */
+    color: #585656; /* Color del título */
+  }
+
+  .Logo_imagen {
+    width: 100%; /* La imagen ocupa su contenedor */
+    max-width: 300px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantener la proporción */
+    margin-left: auto; /* Empujar la imagen a la derecha */
+  }
+}
+.vision-mision {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between; /* Espacio uniforme entre las secciones */
+  align-items: flex-start; /* Alinea todo al inicio */
+  text-align: center; /* Centra el texto */
+  padding: 20px;
+  gap: 20px; /* Espacio entre los elementos */
+
+  div {
+    flex: 1; /* Ocupa la mitad del contenedor */
+    padding: 0 10px; /* Espacio alrededor del contenido */
+
+    .vision {
+      width: 100px; /* Ajusta el tamaño del ícono */
+      height: 100px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .mision {
+      width: 100px; /* Ajusta el tamaño del ícono */
+      height: 100px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      color: #585656; /* Color del título */
+    }
+
+    p {
+      width: 65%;
+      font-size: 1rem;
+      color: #585656; /* Color del texto */
+      line-height: 1.5; /* Espaciado entre líneas */
+      text-align: justify;
+      margin-left: 100px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.Esencia-content {
+  padding: 20px;
+  background-color: #F1F1F1;
+  display: flex; // Flexbox para alinear imagen y texto
+  align-items: center; // Alinear verticalmente
+  gap: 30px; // Espacio entre imagen y texto
+
+  .Esencia-img {
+    flex: 0 0 40%; // Imagen ocupa el 40% del contenedor
+    max-width: 450px;
+    height: auto;
+    object-fit: cover; // Asegura que la imagen mantenga sus proporciones
+  }
+
+  .esencia-text-content {
+    flex: 1; // El texto ocupa el resto del espacio
+    display: flex;
+    flex-direction: column;
+    gap: 15px; // Espacio entre cada título y texto
+
+    h4 {
+      font-size: 2rem;
+      color: #585656;
+      margin-bottom: 15px;
+    }
+
+    .Esencia-title {
+      display: flex; // Flexbox para h5 y p
+      align-items: flex-start; // Alinear h5 y p al inicio
+      gap: 10px; // Espacio entre h5 y p
+
+      h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin: 10px 30px; // Asegurar que no haya margen
+        width: 25%;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #585656;
+        margin: 0; // Eliminar margen superior
+        line-height: 1.5;
+        width: 55%;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+
+
+

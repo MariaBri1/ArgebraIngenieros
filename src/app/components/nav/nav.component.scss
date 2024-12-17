@@ -1,0 +1,54 @@
+
+.nav-content {
+  background-image: url('/assets/Fondo_Home.jpeg'); /* Asegúrate de usar la ruta correcta a tu imagen */
+  background-size: cover; background-position: center;
+  height: 100vh; /* Ajusta el tamaño según necesites */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Cambia la alineación horizontal */
+  align-items: flex-start; /* Alinear elementos al inicio (parte superior) */
+  padding-top: 40px; /* Margen superior de 30 píxeles */
+  padding-right: 40px; /* Agrega espacio a la derecha */
+  box-sizing: border-box; /* Incluye el padding en el ancho y alto del elemento */
+  color: #072D75; /* Color del texto para que sea visible sobre la imagen */
+  overflow: hidden;
+  .dlogo{
+    .logo {
+      width: 140px;
+      height: 53px;
+      margin-right: 300px;
+      margin-top: -20px;
+     }
+  }
+  .menu{
+    .nav-list {
+      list-style-type: none; /* Quitar puntos de la lista */
+      display: flex; /* Cambia la disposición a flex para hacer la lista horizontal */
+
+    }
+    .nav-list li {
+      margin: 0 15px; /* Espacio de 15 píxeles entre los ítems de la lista */
+      font-size: 1.125rem; /* Ajusta el tamaño de la fuente */
+    }
+
+    .nav-item {
+      text-decoration: none; // Quita la línea debajo del texto
+      color: #072D75; // Color del texto
+      padding:0 ; // Añade padding a los enlaces
+      }
+
+    .nav-item:hover {
+        text-decoration: underline; // Añade subrayado al pasar el ratón sobre el enlace
+    }
+}
+.slogan {
+  position: absolute;
+  top: 50%; /* Posición vertical centrada */
+  left: 77%; /* Posición horizontal centrada */
+  text-align: center;
+  color: #072D75; /* Color blanco para que destaque */
+  font-size: 0.938rem; /* Tamaño de fuente adecuado */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+}
+
