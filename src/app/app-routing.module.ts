@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { RouterModule, type Routes } from '@angular/router'
 
 const routes: Routes = [
-  { path: 'conocenos', loadChildren: () => import('./pages/conocenos/conocenos.module').then(m => m.ConocenosModule) },
-  { path: 'paquetes', loadChildren: () => import('./pages/packages/packages.module').then(m => m.PackagesModule) }];
+  {
+    path: '',
+    loadChildren: async () => (await import('./pages/pages.module')).PagesModule
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

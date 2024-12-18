@@ -1,0 +1,12 @@
+<div class="banner-container">
+  <div
+    *ngIf="urlImage"
+    class="banner-background"
+    [ngStyle]="{ 'background-image': backgroundImage }"
+  ></div>
+  <div *ngIf="title" class="banner-slogan">
+    <div class="main-container">
+      <h2>{{ title }}</h2>
+    </div>
+  </div>
+</div>
