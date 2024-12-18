@@ -1,14 +1,49 @@
+:root {
+  --color-primary: #072D75;
+  --color-accent: #07afe9;
+  --color-white: #fff;
+  --color-text: #676767;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.nav-content,.know-content, .history-content, .vision-mision, .Esencia-content{
+html {
   font-family: 'Montserrat';
+  font-size: 16px;
+  color: var(--color-text);
 }
+
+.main-container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    width: 1170px;
+  }
+}
+

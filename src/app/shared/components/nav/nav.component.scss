@@ -1,0 +1,41 @@
+.nav-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px; /* Margen superior de 30 píxeles */
+    overflow: hidden;
+  }
+}
+
+.dlogo {
+  .logo {
+    width: 140px;
+    height: 53px;
+  }
+}
+
+.menu {
+  .nav-list {
+    list-style-type: none; /* Quitar puntos de la lista */
+    display: flex; /* Cambia la disposición a flex para hacer la lista horizontal */
+    li {
+      margin: 0 15px; /* Espacio de 15 píxeles entre los ítems de la lista */
+      font-size: 1rem; /* Ajusta el tamaño de la fuente */
+      font-weight: bolder;
+      .nav-item {
+        text-decoration: none; // Quita la línea debajo del texto
+        color: var(--color-primary); // Color del texto
+        opacity: 0.5; // Opacidad al pasar el ratón sobre el enlace
+        text-decoration: none; // Añade subrayado al pasar el ratón sobre el enlace
+        &:hover, &.active {
+          opacity: 1; // Opacidad al pasar el ratón sobre el enlace
+        }
+      }
+    }
+  }
+}
