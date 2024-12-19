@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, type OnDestroy, type OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-carousel',
@@ -6,10 +6,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, OnDestroy {
-
   slides = [
     {
-      image: "/assets/agil_peru_logo.jpg",
+      image: '/assets/agil_peru_logo.jpg',
       title: 'Agil (Destinos Mundiales SAC)',
       description: 'proveedor con 10 años de experiencia especializado en el sector turistico'
     },
@@ -23,20 +22,20 @@ export class CarouselComponent implements OnInit, OnDestroy {
       title: 'Mundo Representaciones',
       description: 'proveedor con 10 años de experiencia especializado en el sector turistico'
     }
-  ];
+  ]
 
-  currentIndex = 0;
-  intervalId: any;
+  currentIndex = 0
+  intervalId: any
 
-  ngOnInit() {
+  ngOnInit (): void {
     this.intervalId = setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-    }, 2000); // Mover cada 2 segundos
+      this.currentIndex = (this.currentIndex + 1) % this.slides.length
+    }, 2000) // Mover cada 2 segundos
   }
 
-  ngOnDestroy() {
+  ngOnDestroy (): void {
     if (this.intervalId) {
-      clearInterval(this.intervalId);
+      clearInterval(this.intervalId)
     }
   }
 }
