@@ -62,15 +62,52 @@ export class AboutUsComponent implements OnInit, OnDestroy {
   currentIndex = 0
   intervalId: any
 
+  // Lógica para el nuevo carrusel respaldo
+  slidesRespaldo = [
+    {
+      image: 'assets/logos/respald-icons/protecte-icon.webp',
+      alt: 'Protegeme Turismo Responsable'
+    },
+    {
+      image: 'assets/logos/respald-icons/prom_p-icon.png',
+      alt: 'PromPerú'
+    },
+    {
+      image: 'assets/logos/respald-icons/min_c-icon.png',
+      alt: 'Mincetur'
+    },
+    {
+      image: 'assets/logos/respald-icons/agency_r-icon.png',
+      alt: 'Agencia de Viajes y Turismo Registrada'
+    },
+    {
+      image: 'assets/logos/respald-icons/camera-comercy-icon.png',
+      alt: 'CCL Cámara de Comercio de Lima'
+    },
+    {
+      image: 'assets/logos/respald-icons/ytu-icon.webp',
+      alt: 'Y tú qué planes'
+    }]
+
+  currentIndexRespaldo = 0
+  intervalIdRespaldo: any
+
   ngOnInit (): void {
     this.intervalId = setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.slides.length
+    }, 3000) // Mover cada 3 segundos
+
+    this.intervalIdRespaldo = setInterval(() => {
+      this.currentIndexRespaldo = (this.currentIndexRespaldo + 1) % this.slidesRespaldo.length
     }, 3000) // Mover cada 3 segundos
   }
 
   ngOnDestroy (): void {
     if (this.intervalId) {
       clearInterval(this.intervalId)
+    }
+    if (this.intervalIdRespaldo) {
+      clearInterval(this.intervalIdRespaldo)
     }
   }
 }

@@ -77,6 +77,9 @@
   </div>
 </div>
 <div class="carousel-container">
+  <div >
+    <h5 class="respald-text" >Opiniones de nuestros socios:</h5>
+  </div>
   <div class="carousel" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
     <div class="carousel-item" *ngFor="let slide of slides">
       <img [src]="slide.image" alt="Slide image" class="carousel-image" />
@@ -85,4 +88,15 @@
     </div>
   </div>
 </div>
+<div class="carousel-respald-container">
+<div >
+  <h5 class="respald-text" >Respaldado Por:</h5>
+</div>
+  <div class="carousel-respald" [style.transform]="'translateX(' + (-currentIndexRespaldo * 100) + '%)'">
+    <div class="carousel-respald-item" *ngFor="let slide of slidesRespaldo">
+      <img [src]="slide.image" alt="{{ slide.alt }}" />
+    </div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>

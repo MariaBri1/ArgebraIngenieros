@@ -157,7 +157,7 @@ body{
 }
 
 .carousel-container {
-  margin-top: 40px;
+  margin-top: 25px;
   width: 100%;
   height: 80%;
   overflow: hidden;
@@ -174,4 +174,36 @@ body{
      object-fit: cover; // Asegura que la imagen mantenga sus proporciones dentro del contenedor
     }
 
+  }
+  .carousel-respald-container {
+    margin-top: 10px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .respald-text{
+    font-size: 1.150rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 30px;
+    margin-top: 3%;
+    width: 20%;
+    margin-left: 5%;
+    font-family: 'Montserrat';
+  }
+
+  .carousel-respald {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-respald-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+
+    img {
+      width: auto;
+      height: 170px;
+      margin: 0 auto;
+    }
   }
