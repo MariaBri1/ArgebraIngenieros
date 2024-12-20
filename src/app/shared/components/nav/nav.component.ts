@@ -1,4 +1,3 @@
-import { NgStyle } from '@angular/common'
 import { Component, Input } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
@@ -8,7 +7,6 @@ import { RouterModule } from '@angular/router'
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   imports: [
-    NgStyle,
     RouterModule
   ]
 })

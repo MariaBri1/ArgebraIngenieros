@@ -1,14 +1,19 @@
+import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
-import { CarouselComponent } from 'src/app/components/carousel/carousel.component'
+import { FooterComponent } from '../../components/footer/footer.component'
 import { AboutUsRoutingModule } from './about-us-routing.module'
 import { AboutUsComponent } from './about-us.component'
 @NgModule({
   declarations: [
-    AboutUsComponent,
-    CarouselComponent
+    AboutUsComponent
   ],
   imports: [
-    AboutUsRoutingModule
+    AboutUsRoutingModule,
+    CommonModule,
+    FooterComponent
+  ],
+  exports: [
+    AboutUsComponent
   ]
 })
 export class AboutUsModule { }

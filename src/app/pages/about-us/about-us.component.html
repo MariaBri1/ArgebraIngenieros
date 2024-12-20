@@ -1,14 +1,12 @@
-
-
-<div class="video-content" >
+<div class="video-content">
   <iframe class="video_mp4"
-  src="https://www.youtube.com/embed/nWk6Y5h4Ovo?si=UXbyGhnuHgqclqua?&autoplay=1"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen>
-</iframe>
+          src="https://www.youtube.com/embed/nWk6Y5h4Ovo?si=UXbyGhnuHgqclqua?&autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+  </iframe>
 </div>
 <div class="know-content">
   <p> Conocenos</p>
@@ -28,7 +26,7 @@
   <img src="/assets/images/logo-mqv-background.png" class="Logo_imagen" alt="logo_mqv"/>
 </div>
 <div class="vision-mision">
-  <div >
+  <div>
     <img src="/assets/images/vision.png" alt="logo-vision" class="vision" />
     <h3>Visión</h3>
     <p>
@@ -47,7 +45,7 @@
   </div>
 </div>
 <div class="Esencia-content">
-  <img src="/assets/images/our-essence.png" class="Esencia-img" />
+  <img src="/assets/images/our-essence.webp" class="Esencia-img" />
 
   <div class="esencia-text-content">
     <h4>Nuestra Esencia</h4>
@@ -78,6 +76,15 @@
     </div>
   </div>
 </div>
+<div class="carousel-container">
+  <div class="carousel" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+    <div class="carousel-item" *ngFor="let slide of slides">
+      <img [src]="slide.image" alt="Slide image" class="carousel-image" />
+      <h5>{{ slide.title }}</h5>
+      <p>{{ slide.description }}</p>
+    </div>
+  </div>
+</div>
 
+<app-footer></app-footer>
 <router-outlet></router-outlet>
-<app-carousel></app-carousel>

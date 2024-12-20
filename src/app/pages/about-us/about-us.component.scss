@@ -2,6 +2,7 @@ body{
   background-image: none;
 }
 .video-content{
+  margin-top: 90px;
   display: flex;
   justify-content: center; // Hola soy patrick
   align-items: center; // Centra verticalmente
@@ -14,7 +15,7 @@ body{
 
 .know-content{
   color: #444444;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   padding: 10px;
 }
@@ -38,7 +39,7 @@ body{
   }
 
   h2 {
-    font-size: 1.5rem; /* Tamaño del título */
+    font-size: 1.3rem; /* Tamaño del título */
     margin-bottom: 15px; /* Espaciado inferior */
     color: #585656; /* Color del título */
   }
@@ -80,7 +81,7 @@ body{
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: bold;
       margin: 0 0 10px 0;
       color: #585656; /* Color del título */
@@ -98,7 +99,7 @@ body{
   }
 }
 .Esencia-content {
-  margin-top: 40px;
+  margin-top: 90px;
   padding: 20px;
   background-color: #F1F1F1;
   display: flex; // Flexbox para alinear imagen y texto
@@ -119,7 +120,7 @@ body{
     gap: 15px; // Espacio entre cada título y texto
 
     h4 {
-      font-size: 2rem;
+      font-size: 1.3rem;
       color: #585656;
       margin-bottom: 15px;
     }
@@ -130,7 +131,7 @@ body{
       gap: 10px; // Espacio entre h5 y p
 
       h5 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: bold;
         color: #333;
         margin: 10px 30px; // Asegurar que no haya margen
@@ -149,6 +150,22 @@ body{
   }
 }
 
+.carousel-container {
+  margin-top: 40px;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+} .carousel {
+   display: flex;
+   transition: 2s;
+} .carousel-item {
+   min-width: 100%;
+   box-sizing: border-box;
+   text-align: center;
+   .carousel-image {
+     width: 120px; // Ajusta el ancho según sea necesari
+     height: 120px; // Ajusta la altura según sea necesario
+     object-fit: cover; // Asegura que la imagen mantenga sus proporciones dentro del contenedor
+    }
 
-
-
+  }

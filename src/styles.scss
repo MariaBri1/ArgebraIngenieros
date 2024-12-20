@@ -3,6 +3,7 @@
   --color-accent: #07afe9;
   --color-white: #fff;
   --color-text: #676767;
+  --color-nav: #1D63A0;
 }
 
 * {
@@ -15,7 +16,8 @@
   width: 0;
   height: 0;
 }
-.nav-content,.know-content, .history-content, .vision-mision, .Esencia-content, .carousel-container{
+.nav-content,.know-content, .history-content, .vision-mision,
+.Esencia-content, .carousel-container, .banner-slogan, .footer-container {
   font-family: 'Montserrat';
   font-size: 16px;
   color: var(--color-text);
