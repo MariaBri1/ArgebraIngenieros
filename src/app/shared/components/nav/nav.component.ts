@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, HostListener } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 @Component({
@@ -6,14 +6,14 @@ import { RouterModule } from '@angular/router'
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  imports: [
-    RouterModule
-  ]
+  imports: [RouterModule]
 })
 export class NavComponent {
-  @Input() urlImage?: string
+  isScrolled = false
 
-  get backgroundImage (): string {
-    return `url('/assets/images/${this.urlImage}')`
+  // Detectar el scroll de la ventana
+  @HostListener('window:scroll', [])
+  onWindowScroll (): void {
+    this.isScrolled = window.scrollY > 20 // Cambia 50 según la cantidad de scroll que quieras detectar
   }
 }

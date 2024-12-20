@@ -1,5 +1,4 @@
 footer {
-
   margin-top: 40px;
   background-color: #f8f8f8;
 }
@@ -15,6 +14,7 @@ footer {
 
 .first-column {
   display: grid;
+  margin-bottom: 50px;
   flex-direction: 1 1 1 1 1; // Apila los elementos en columna
   gap: 20px; // Espaciado entre los elementos
 }
@@ -70,6 +70,6 @@ footer {
 }
 
 .footer-logo {
-  max-width: 200px;
+  max-width: 170px;
   margin-bottom: 10px;
 }

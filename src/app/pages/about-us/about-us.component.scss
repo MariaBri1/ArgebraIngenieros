@@ -18,6 +18,7 @@ body{
   font-size: 1.6rem;
   font-weight: bold;
   padding: 10px;
+  margin-left: 3%;
 }
 
 .history-content {
@@ -25,9 +26,8 @@ body{
   padding: 30px; /* Espaciado interno */
   margin-top: 10px;
   display: flex; /* Usamos grid layout */
-  grid-template-columns: 2fr 1fr; /* División en columnas */
   align-items: center; /* Centrado vertical */
-  column-gap: 20px; /* Espacio entre columnas */
+  column-gap: 50px; /* Espacio entre columnas */
 
   .text-content {
     font-size: 1rem;
@@ -36,12 +36,16 @@ body{
     font-weight: normal; /* Fuente regular */
     text-align: left; /* Alineación izquierda */
     text-align: justify;
+    width: 50%;
+
   }
 
   h2 {
     font-size: 1.3rem; /* Tamaño del título */
     margin-bottom: 15px; /* Espaciado inferior */
     color: #585656; /* Color del título */
+    margin-left: 3%;
+    display: flex;
   }
 
   .Logo_imagen {
@@ -49,6 +53,8 @@ body{
     max-width: 300px; /* Ancho máximo de la imagen */
     height: auto; /* Mantener la proporción */
     margin-left: auto; /* Empujar la imagen a la derecha */
+    display: flex;
+     margin-right: 5%;
   }
 }
 .vision-mision {
@@ -99,7 +105,7 @@ body{
   }
 }
 .Esencia-content {
-  margin-top: 90px;
+  margin-top: 40px;
   padding: 20px;
   background-color: #F1F1F1;
   display: flex; // Flexbox para alinear imagen y texto
@@ -108,7 +114,7 @@ body{
 
   .Esencia-img {
     flex: 0 0 40%; // Imagen ocupa el 40% del contenedor
-    max-width: 450px;
+    max-width: 410px;
     height: auto;
     object-fit: cover; // Asegura que la imagen mantenga sus proporciones
   }
