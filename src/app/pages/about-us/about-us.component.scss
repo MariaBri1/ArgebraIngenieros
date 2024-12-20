@@ -18,7 +18,7 @@ body{
   font-size: 1.6rem;
   font-weight: bold;
   padding: 10px;
-  margin-left: 3%;
+  margin-left: 7%;
 }
 
 .history-content {
@@ -34,9 +34,9 @@ body{
     color: #585656; /* Color del texto */
     line-height: 1.6; /* Espaciado entre líneas */
     font-weight: normal; /* Fuente regular */
-    text-align: left; /* Alineación izquierda */
+
     text-align: justify;
-    width: 50%;
+
 
   }
 
@@ -44,7 +44,7 @@ body{
     font-size: 1.3rem; /* Tamaño del título */
     margin-bottom: 15px; /* Espaciado inferior */
     color: #585656; /* Color del título */
-    margin-left: 3%;
+    margin-left: 10%;
     display: flex;
   }
 
@@ -54,7 +54,7 @@ body{
     height: auto; /* Mantener la proporción */
     margin-left: auto; /* Empujar la imagen a la derecha */
     display: flex;
-     margin-right: 5%;
+     margin-right: 9%;
   }
 }
 .vision-mision {
@@ -66,6 +66,7 @@ body{
   text-align: center; /* Centra el texto */
   padding: 20px;
   gap: 20px; /* Espacio entre los elementos */
+  margin-left: 3%;
 
   div {
     margin-top: 40px;
@@ -117,6 +118,7 @@ body{
     max-width: 410px;
     height: auto;
     object-fit: cover; // Asegura que la imagen mantenga sus proporciones
+    margin-left: 10%;
   }
 
   .esencia-text-content {
@@ -124,6 +126,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px; // Espacio entre cada título y texto
+    margin-right: 3%;
 
     h4 {
       font-size: 1.3rem;
