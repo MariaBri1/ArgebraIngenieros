@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'
 
-import { PackagesRoutingModule } from './packages-routing.module';
-import { PackagesComponent } from './packages.component';
-
+import { PackagesRoutingModule } from './packages-routing.module'
+import { PackagesComponent } from './packages.component'
 
 @NgModule({
   declarations: [
