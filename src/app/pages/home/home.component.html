@@ -2,3 +2,22 @@
   title="Cada destino, una historia por vivir."
   urlImage="home-banner.webp"
 ></app-banner>
+<div class="search">
+  <div class="search-engine">
+    <div class="tabs">
+      <button class="tab active" data-target="hotels">🏨 Hoteles</button>
+      <button class="tab" data-target="transfers">🚍 Traslados</button>
+      <button class="tab" data-target="flights">✈️ Vuelos</button>
+      <button class="tab" data-target="cruises">🛳️ Cruceros</button>
+    </div>
+    <div class="form-container">
+      <!-- Formulario para Hoteles -->
+      <form id="hotels" class="form active">
+        <input type="text" placeholder="Ingrese Destino o Nombre de Hotel/Resort" />
+        <input type="date" />
+        <input type="text" placeholder="1 Habitación - 1 Huésped" />
+        <button>Buscar</button>
+      </form>
+    </div>
+  </div>
+</div>

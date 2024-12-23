@@ -19,6 +19,7 @@ const routes: Routes = [
         path: 'packages',
         loadChildren: async () => (await import('./packages/packages.module')).PackagesModule
       },
+
       {
         path: '',
         redirectTo: 'home',

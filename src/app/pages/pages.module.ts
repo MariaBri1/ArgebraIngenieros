@@ -12,6 +12,10 @@ import { PagesComponent } from './pages.component'
     PagesRoutingModule,
     NavComponent,
     FooterComponent
+  ],
+  exports: [
+    NavComponent,
+    FooterComponent
   ]
 })
 export class PagesModule { }

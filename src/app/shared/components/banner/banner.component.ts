@@ -2,8 +2,8 @@ import { NgIf, NgStyle } from '@angular/common'
 import { Component, Input } from '@angular/core'
 
 @Component({
-  selector: 'app-banner',
   standalone: true,
+  selector: 'app-banner',
   imports: [
     NgIf,
     NgStyle
