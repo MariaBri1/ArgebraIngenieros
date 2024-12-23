@@ -31,7 +31,7 @@
       <p><a href="/servicios">Servicios que ofrecemos</a></p>
 
       <h4>Enlaces</h4>
-      <p><a href="/libro-de-reclamos">Libro de reclamos</a></p>
+      <p><a [routerLink]="['/',routebook.path]">{{ routebook.name}}</a></p>
       <p><a href="/terminos-y-condiciones">Términos y condiciones</a></p>
       <p><a [routerLink]="['/', routeFaq.path]">{{ routeFaq.name }}</a></p>
       <p><a href="/politicas-de-privacidad">Políticas de privacidad</a></p>

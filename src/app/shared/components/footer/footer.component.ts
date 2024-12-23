@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import { ROUTE_FAQ } from 'src/app/pages/constants/routes.constant'
+import { ROUTE_BOOK, ROUTE_FAQ } from 'src/app/pages/constants/routes.constant'
 
 @Component({
   standalone: true,
@@ -14,4 +14,5 @@ import { ROUTE_FAQ } from 'src/app/pages/constants/routes.constant'
 })
 export class FooterComponent {
   readonly routeFaq = ROUTE_FAQ
+  readonly routebook = ROUTE_BOOK
 }
