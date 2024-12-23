@@ -33,7 +33,7 @@
       <h4>Enlaces</h4>
       <p><a href="/libro-de-reclamos">Libro de reclamos</a></p>
       <p><a href="/terminos-y-condiciones">Términos y condiciones</a></p>
-      <p><a routerLink="/preguntas-frecuentes">Preguntas Frecuentes</a></p>
+      <p><a [routerLink]="['/', routeFaq.path]">{{ routeFaq.name }}</a></p>
       <p><a href="/politicas-de-privacidad">Políticas de privacidad</a></p>
       <p><a href="/politica-de-cancelacion">Política de cancelación</a></p>
     </div>

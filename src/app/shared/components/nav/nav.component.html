@@ -10,11 +10,11 @@
       </div>
       <div class="menu">
         <ul class="nav-list">
-          <li><a routerLink="/home" routerLinkActive="active" class="nav-item">HOME</a></li>
-          <li><a routerLink="/contact-us" routerLinkActive="active" class="nav-item">CONTACTANOS</a></li>
-          <li><a routerLink="/about-us" routerLinkActive="active" class="nav-item ">CONOCENOS</a></li>
-          <li><a routerLink="/packages" routerLinkActive="active" class="nav-item">PAQUETES</a></li>
-          <li><a routerLink="/tu-proxima-aventura" routerLinkActive="active" class="nav-item">TU PROXIMA AVENTURA</a></li>
+          <li *ngFor="let route of routes">
+            <a [routerLink]="['/', route.path]" routerLinkActive="active" class="nav-item">
+              {{ route.name }}
+            </a>
+          </li>
         </ul>
       </div>
     </div>

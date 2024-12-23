@@ -1,15 +1,21 @@
+import { NgFor } from '@angular/common'
 import { Component, HostListener } from '@angular/core'
 import { RouterModule } from '@angular/router'
+import { SECTIONS_ROUTES } from 'src/app/pages/constants/routes.constant'
 
 @Component({
   standalone: true,
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  imports: [RouterModule]
+  imports: [
+    NgFor,
+    RouterModule
+  ]
 })
 export class NavComponent {
   isScrolled = false
+  routes = SECTIONS_ROUTES
 
   // Detectar el scroll de la ventana
   @HostListener('window:scroll', [])
