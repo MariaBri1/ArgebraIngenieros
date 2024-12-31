@@ -1,0 +1,11 @@
+<div class="faq" [ngClass]="{ 'active': open }">
+  <button class="button-accordion" (click)="handleClick()">
+    {{ title }}
+    <i class="fa-solid" [ngClass]="accordionIcon"></i>
+  </button>
+  <div class="pannel" [ngClass]="{ 'visible': open }">
+    <p>
+      {{ description }}
+    </p>
+  </div>
+ </div>

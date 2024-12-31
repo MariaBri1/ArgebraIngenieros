@@ -1,2 +1,21 @@
-<app-banner></app-banner>
+<div class="container">
+    <app-banner
+    class="my_cover" urlImage="paisaje_faq.webp">
+    </app-banner>
+</div>
 
+<link rel="stylesheet" href="faq.component.scss">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="wrapper">
+    <h1>Todo lo que necesitas saber...</h1>
+    <div class="pannel">
+        <app-accordion
+            *ngFor="let faq of faqs"
+            [title]="faq.title"
+            [description]="faq.description"
+        ></app-accordion>
+    </div>
+</div>
