@@ -1,17 +1,25 @@
 body{
   background-image: none;
 }
-.video-content{
-  margin-top: 70px;
+.video-content {
+  margin-top: 90px;
   display: flex;
-  justify-content: center; // centra horizontalmente
+  justify-content: center; // Centra horizontalmente
   align-items: center; // Centra verticalmente
   height: 100vh;
-  .video_mp4{
-    width: 1250px;
-    height: 550px;
+  overflow: hidden; // Asegura que no haya elementos fuera del contenedor
+
+  iframe {
+    width: 1982.23px;
+    height: 1116px;
+    opacity: 1;
+    overflow: hidden;
+
   }
 }
+
+
+
 
 .know-content{
   color: #444444;

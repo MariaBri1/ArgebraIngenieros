@@ -28,6 +28,18 @@
   }
 }
 
+.nav-logo {
+  width: 150px; /* Ajusta según necesites */
+  height: auto;
+  /* El fill controlará el color del SVG */
+  fill: #00a8e8; /* Color celeste por defecto */
+}
+
+/* Cuando el nav tiene fondo de imagen */
+.nav-with-image .nav-logo {
+  fill: white;
+}
+
 .menu {
   .nav-list {
     list-style-type: none;
