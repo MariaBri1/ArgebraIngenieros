@@ -42,19 +42,11 @@ body{
     color: #585656; /* Color del texto */
     line-height: 1.6; /* Espaciado entre líneas */
     font-weight: normal; /* Fuente regular */
-
     text-align: justify;
 
 
   }
 
-  h2 {
-    font-size: 1.3rem; /* Tamaño del título */
-    margin-bottom: 15px; /* Espaciado inferior */
-    color: #585656; /* Color del título */
-    margin-left: 10%;
-    display: flex;
-  }
 
   .Logo_imagen {
     width: 100%; /* La imagen ocupa su contenedor */
@@ -136,11 +128,7 @@ body{
     gap: 15px; // Espacio entre cada título y texto
     margin-right: 3%;
 
-    h4 {
-      font-size: 1.3rem;
-      color: #333;
-      margin-bottom: 15px;
-    }
+
 
     .Esencia-title {
       display: flex; // Flexbox para h5 y p
@@ -250,4 +238,19 @@ body{
 .whatsapp-button img {
     width: 40px;
     height: 40px;
+}
+
+h2 {
+  font-size: 1.3rem; /* Tamaño del título */
+  margin-bottom: 15px; /* Espaciado inferior */
+  color: #333; /* Color del título */
+  margin-left: 10%;
+  display: flex;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+  margin-left: 20px;
 }

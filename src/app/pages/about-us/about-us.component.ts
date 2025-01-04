@@ -31,7 +31,14 @@ export class AboutUsComponent implements OnInit {
       { image: 'assets/logos/logo_eua.png', title: 'Euroamerican Assistance', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/posada_tumpis.png', title: 'Posada de los Tumpis', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/cumbaza_hoteles.png', title: 'Río Cumbaza Hotel', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/domiruth_logo.png', title: 'DOMIRUTH TRAVEL SERVICE', description: 'Proveedor con 10 años de experiencia' }
+      { image: 'assets/logos/domiruth_logo.png', title: 'DOMIRUTH TRAVEL SERVICE', description: 'Proveedor con 10 años de experiencia' },
+
+      { image: 'assets/logos/costamar_logo.png', title: 'Costamar Travel Cruise & Tours S.A.C.', description: 'Proveedor con 10 años de experiencia' },
+      { image: 'assets/logos/vcr_logo.png', title: 'VCR Representaciones', description: 'Proveedor con 10 años de experiencia' },
+      { image: 'assets/logos/tambo_logo.png', title: 'Hoteles El Tambo Perú', description: 'Proveedor con 10 años de experiencia' },
+      { image: 'assets/logos/union_logo.png', title: 'Hotel Union Cusco', description: 'Proveedor con 10 años de experiencia' },
+      { image: 'assets/logos/colonial_logo.png', title: 'Colonial Tours SRL', description: 'Proveedor con 10 años de experiencia' }
+
     ]
 
     this.carouselItems2 = [

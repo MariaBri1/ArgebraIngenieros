@@ -15,8 +15,7 @@
   flex-wrap: nowrap;
   width: 100%;
   margin-bottom: 20px;
-
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .carousel-item {
@@ -34,14 +33,35 @@ img {
 
 .carousel-navigation {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Separa el h4 del grupo de botones */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  padding: 0 20px; /* Espacios en los lados izquierdo y derecho */
+
+  h4 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0; /* Sin márgenes para un mejor alineado */
+  }
+
+  .button-group {
+    display: flex; /* Mantiene los botones alineados horizontalmente */
+    gap: 10px; /* Espaciado entre los botones */
+  }
 }
 
 .nav-button {
   padding: 10px 20px;
-  margin-top: 20px;
   font-size: 16px;
   cursor: pointer;
-}
-
+  background: none;
+  border: 2px solid #072D75;
+  color: #072D75;
+  &:hover {
+    background-color: #072D75; /* Color de fondo al pasar el cursor */
+     color: #ffffff; /* Color del texto al pasar el cursor */
+    }
+  &:active {
+    background-color: #ffffff; /* Color de fondo al hacer clic */
+    color: #072D75; /* Color del texto al hacer clic */
+  }}

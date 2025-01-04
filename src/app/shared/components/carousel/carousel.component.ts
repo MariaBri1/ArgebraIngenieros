@@ -17,22 +17,27 @@ export interface SimpleCarouselItem {
   imports: [CommonModule],
   template: `
     <div class="carousel-container">
-      <div class="carousel-navigation" *ngIf="showNavigation">
-        <button
-          (click)="prevSlide()"
-          [disabled]="currentIndex === 0"
-          class="nav-button"
-        >
-          Anterior
-        </button>
-        <button
-          (click)="nextSlide()"
-          [disabled]="currentIndex >= items.length - itemsToShow"
-          class="nav-button"
-        >
-          Siguiente
-        </button>
-      </div>
+
+    <div class="carousel-navigation" *ngIf="showNavigation">
+      <h4>Socios Estratégicos</h4>
+        <div class="button-group">
+          <button
+            (click)="prevSlide()"
+            [disabled]="currentIndex === 0"
+            class="nav-button"
+          >
+            Anterior
+          </button>
+          <button
+            (click)="nextSlide()"
+            [disabled]="currentIndex >= items.length - itemsToShow"
+            class="nav-button"
+          >
+            Siguiente
+          </button>
+    </div>
+  </div>
+
 
       <div class="carousel-content">
         <div
