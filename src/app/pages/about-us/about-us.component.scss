@@ -105,56 +105,61 @@ body{
     }
   }
 }
-.Esencia-content {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #F1F1F1;
-  display: flex; // Flexbox para alinear imagen y texto
-  align-items: center; // Alinear verticalmente
-  gap: 30px; // Espacio entre imagen y texto
 
-  .Esencia-img {
-    flex: 0 0 40%; // Imagen ocupa el 40% del contenedor
-    max-width: 410px;
-    height: auto;
-    object-fit: cover; // Asegura que la imagen mantenga sus proporciones
-    margin-left: 10%;
+.Esencia-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .esencia-text-content {
-    flex: 1; // El texto ocupa el resto del espacio
+  .card-item {
     display: flex;
     flex-direction: column;
-    gap: 15px; // Espacio entre cada título y texto
-    margin-right: 3%;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; // Ancho fijo para las tarjetas
+    padding: 1rem;
+    text-align: center;
 
+    img {
+      width: 200px; // Ancho fijo para las imágenes
+      height: auto; // Mantiene la proporción de la imagen
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
 
+    h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+      color: #333;
+    }
 
-    .Esencia-title {
-      display: flex; // Flexbox para h5 y p
-      align-items: flex-start; // Alinear h5 y p al inicio
-      gap: 10px; // Espacio entre h5 y p
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
 
-      h5 {
-        font-size: 1rem;
-        font-weight: bold;
-        color: #585656;
-        margin: 10px 30px; // Asegurar que no haya margen
-        width: 25%;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #585656;
-        margin: 0; // Eliminar margen superior
-        line-height: 1.5;
-        width: 55%;
-        text-align: justify;
-      }
+    &:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     }
   }
 }
-
 .carousel-container {
   margin-top: 25px;
   width: 100%;
@@ -254,3 +259,4 @@ h4 {
   margin-bottom: 15px;
   margin-left: 20px;
 }
+

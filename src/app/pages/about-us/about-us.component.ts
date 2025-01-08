@@ -1,26 +1,35 @@
 import { Component, type OnInit } from '@angular/core'
 import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel.interface'
 import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface'
+
 @Component({
   selector: 'app-about-us',
-  template: `
-    <div class="about-us-container">
-
-      <h2>Carrusel de 15 elementos (con descripción)</h2>
-      <app-carousel [items]="carouselItems1" [itemsToShow]="5"></app-carousel>
-
-      <h2>Respaldados Por:</h2>
-      <app-carousel [items]="carouselItems2" [itemsToShow]="3"></app-carousel>
-    </div>
-  `,
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
   carouselItems1: CarouselItem[] = []
   carouselItems2: SimpleCarouselItem[] = []
+  galleryItems: Array<{ image: string, title: string, description: string }> = [] // Declara galleryItems aquí
 
   ngOnInit (): void {
+    this.galleryItems = [
+      {
+        image: '/assets/images/our-essence.webp',
+        title: 'Servicio Integral',
+        description: 'Nos enorgullece proporcionar una solución que cubre todos los aspectos de tus requerimientos'
+      },
+      {
+        image: '/assets/images/our-essence.webp',
+        title: 'Atención personalizada',
+        description: 'Adaptamos nuestros servicios para proporcionarte una experiencia única'
+      },
+      {
+        image: '/assets/images/our-essence.webp',
+        title: 'Soluciones holísticas',
+        description: 'Abordamos cada desafío de manera integral, considerando todos los aspectos y variables involucradas'
+      }
+    ]
     this.carouselItems1 = [
       { image: 'assets/logos/agil_peru_logo.png', title: 'Agil (Destinos Mundiales SAC)', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/continental_travel_logo.jpg', title: 'Continental Travel SAC', description: 'Proveedor con 10 años de experiencia' },

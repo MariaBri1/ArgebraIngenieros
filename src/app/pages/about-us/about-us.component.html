@@ -14,14 +14,9 @@
 <div class="history-content">
   <h2> Más Que Vacaciones</h2>
   <p class="text-content">
-    Más que Vacaciones es una agencia de viajes fundada en 2014
-    con el propósito de ofrecer un servicio integral y hacer
-    que cada experiencia de viaje sea inolvidable.
-    Proporcionamos pasajes aéreos, paquetes turísticos,
-    seguros de viaje y cruceros, siempre enfocados en brindar
-    momentos únicos a precios accesibles.
-    Creemos firmemente que viajar debe ser una experiencia enriquecedora
-    y asequible para todos.
+    nació en 2014 con el sueño de ofrecer un servicio de viajes integral.
+    Nos dedicamos a crear experiencias de viaje inolvidables con pasajes aéreos,
+    paquetes turísticos, seguros de viaje y cruceros, siempre a precios accesibles.
   </p>
   <img src="/assets/images/logo-mqv-background.png" class="Logo_imagen" alt="logo_mqv"/>
 </div>
@@ -45,35 +40,15 @@
   </div>
 </div>
 <div class="Esencia-content">
-  <img src="/assets/images/our-essence.webp" class="Esencia-img" />
-
-  <div class="esencia-text-content">
-    <h2>Nuestra Esencia</h2>
-
-    <div class="Esencia-title">
-      <h5>Servicio Integral</h5>
-      <p>Nos encargamos de todos los aspectos de tu viaje, desde la planificación hasta el regreso.</p>
-    </div>
-    <div class="Esencia-title">
-      <h5>Compromiso con la excelencia</h5>
-      <p>Nos esforzamos por superar tus expectativas en cada viaje, ofreciendo experiencias únicas y enriquecedoras.</p>
-    </div>
-    <div class="Esencia-title">
-      <h5>Accesibilidad y Calidad</h5>
-      <p>Creemos que viajar debe ser accesible para todos, sin comprometer la calidad de los servicios ofrecidos.</p>
-    </div>
-    <div class="Esencia-title">
-      <h5>Recomendaciones</h5>
-      <p>Te ofrecemos recomendaciones personalizadas para que aproveches al máximo tu viaje.</p>
-    </div>
-    <div class="Esencia-title">
-      <h5>Experiencias Únicas</h5>
-      <p>Diseñamos viajes que combinan confort, aventura y autenticidad para enriquecer tus vivencias.</p>
-    </div>
-    <div class="Esencia-title">
-      <h5>Atención Personalizada</h5>
-      <p>Nuestro equipo está disponible para asistirte antes, durante y después de tu viaje.</p>
-    </div>
+  <h4> Nuestra Esencia</h4>
+  <div class="image-container">
+    <app-cards
+      *ngFor="let item of galleryItems"
+      [image]="item.image"
+      [title]="item.title"
+      [description]="item.description"
+      class="card-item">
+    </app-cards>
   </div>
 </div>
 <div class="carousel-container">
