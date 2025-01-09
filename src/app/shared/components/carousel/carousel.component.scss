@@ -4,64 +4,85 @@
   position: relative;
 }
 
-.carousel-content {
+.carousel-navigation {
+  .button-group {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 0 10px;
+  }
+  h4 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #333;
+  }
+
+}
+
+.nav-button {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  font-size: 50px;
+  color: #666;
   display: flex;
-  flex-wrap: nowrap;
-  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Estilos esenciales que faltaban
+.carousel-content {
+  position: relative;
+  z-index: 1;
 }
 
 .carousel-items {
   display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  margin-bottom: 20px;
-  transition: transform 1s ease-in-out;
+  transition:
+  transform 0.5s ease-in-out;
+  margin-bottom: 40px;
 }
 
 .carousel-item {
-  flex: 0 0 calc(100% / 5); /* Cambia a 3 para el segundo carrusel */
-  text-align: center;
+  flex: 0 0 calc(100% / 5); // Para mostrar 5 items
   padding: 10px;
-}
+  text-align: center;
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  width: 100px;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+    width: 100px; // Ajusta según necesites
+    border-radius: 8px;
+  }
 
-.carousel-navigation {
-  display: flex;
-  align-items: center; /* Alinea verticalmente los elementos */
-  justify-content: space-between; /* Separa el h4 del grupo de botones */
-  width: 100%; /* Asegura que ocupe todo el ancho */
-  padding: 0 20px; /* Espacios en los lados izquierdo y derecho */
-
-  h4 {
-    font-size: 1.3rem;
+  h3 {
+    margin: 10px 0;
+    font-size: 0.9rem;
     color: #333;
-    margin: 0; /* Sin márgenes para un mejor alineado */
   }
 
-  .button-group {
-    display: flex; /* Mantiene los botones alineados horizontalmente */
-    gap: 10px; /* Espaciado entre los botones */
+  p {
+    font-size: 0.8rem;
+    color: #666;
   }
 }
-
-.nav-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background: none;
-  border: 2px solid #072D75;
-  color: #072D75;
-  &:hover {
-    background-color: #072D75; /* Color de fondo al pasar el cursor */
-     color: #ffffff; /* Color del texto al pasar el cursor */
-    }
-  &:active {
-    background-color: #ffffff; /* Color de fondo al hacer clic */
-    color: #072D75; /* Color del texto al hacer clic */
-  }}

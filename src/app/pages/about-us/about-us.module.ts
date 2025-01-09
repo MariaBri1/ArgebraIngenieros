@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
+import { BannerComponent } from 'src/app/shared/components/banner/banner.component'
 import { CardsComponent } from 'src/app/shared/components/cards/cards.component'
 import { CarouselComponent } from 'src/app/shared/components/carousel/carousel.component'
 import { FooterComponent } from '../../shared/components/footer/footer.component'
@@ -14,7 +15,8 @@ import { AboutUsComponent } from './about-us.component'
     CommonModule,
     FooterComponent,
     CarouselComponent,
-    CardsComponent
+    CardsComponent,
+    BannerComponent
   ],
   exports: [
     AboutUsComponent
