@@ -6,10 +6,45 @@
   background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
+  // Estilo inicial para el SVG y nav-items
+  .dlogo svg {
+    .cls-1, .cls-2 {
+      fill: white;
+      transition: fill 0.3s ease;
+    }
+  }
 
+  .menu {
+    .nav-list {
+      li {
+        .nav-item {
+          color: white;
+          transition: color 0.3s ease;
+        }
+      }
+    }
+  }
+
+  // Estilos cuando se hace scroll
   &.scrolled {
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra para dar efecto de elevación
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .dlogo svg {
+      .cls-1, .cls-2 {
+        fill: #00a8d9; // Color cian
+      }
+    }
+
+    .menu {
+      .nav-list {
+        li {
+          .nav-item {
+            color: #00a8d9; // Color cian
+          }
+        }
+      }
+    }
   }
 
   .nav-content {
@@ -22,22 +57,13 @@
 }
 
 .dlogo {
-  .logo {
-    width: 140px;
-    height: 53px;
-  }
-}
-
-.nav-logo {
-  width: 150px; /* Ajusta según necesites */
+  width: 200px;
   height: auto;
-  /* El fill controlará el color del SVG */
-  fill: #00a8e8; /* Color celeste por defecto */
 }
 
-/* Cuando el nav tiene fondo de imagen */
-.nav-with-image .nav-logo {
-  fill: white;
+.dlogo svg {
+  width: 100%;
+  height: 100%;
 }
 
 .menu {
@@ -50,7 +76,6 @@
       font-weight: bolder;
       .nav-item {
         text-decoration: none;
-        color: var(--color-nav);
         opacity: 0.5;
         text-transform: uppercase;
         &:hover, &.active {

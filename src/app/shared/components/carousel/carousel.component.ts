@@ -24,7 +24,7 @@ export interface SimpleCarouselItem {
         [disabled]="currentIndex === 0"
         class="nav-button"
       >
-        <
+      <img src="assets/images/before.webp" alt="Anterior" class="button-icon" />
 
       </button>
       <button
@@ -32,7 +32,7 @@ export interface SimpleCarouselItem {
         [disabled]="currentIndex >= items.length - itemsToShow"
         class="nav-button"
       >
-        >
+      <img src="assets/images/next.webp" alt="Siguiente" class="button-icon" />
       </button>
     </div>
   </div>
