@@ -11,7 +11,7 @@ import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/si
 export class AboutUsComponent implements OnInit {
   private readonly sanitizer = inject(DomSanitizer)
   videoUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-    'https://www.youtube.com/embed/nWk6Y5h4Ovo?autoplay=1&mute=1&controls=0&loop=1&playlist=nWk6Y5h4Ovo&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3'
+    'https://www.youtube.com/embed/nWk6Y5h4Ovo?autoplay=1&mute=0&controls=0&loop=1&playlist=nWk6Y5h4Ovo&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3'
   )
 
   carouselItems1: CarouselItem[] = []

@@ -19,7 +19,21 @@
       li {
         .nav-item {
           color: white;
+          font-weight: bolder;
+          text-transform: uppercase;
+          opacity: 1;
+          text-decoration: none;
           transition: color 0.3s ease;
+
+          &:hover {
+            color: #fff;
+          }
+
+          &.active {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+          }
         }
       }
     }
@@ -27,12 +41,12 @@
 
   // Estilos cuando se hace scroll
   &.scrolled {
-    background-color: #fff;
+    background-color: #072D75;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     .dlogo svg {
       .cls-1, .cls-2 {
-        fill: #00a8d9; // Color cian
+        fill: #fff;
       }
     }
 
@@ -40,7 +54,7 @@
       .nav-list {
         li {
           .nav-item {
-            color: #00a8d9; // Color cian
+            color: #fff;
           }
         }
       }
@@ -51,14 +65,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    overflow: hidden;
+    padding: 20px 50px;
+    width: 100%;
+    max-width: 100%; // Permitir que ocupe todo el ancho disponible
   }
 }
 
 .dlogo {
   width: 200px;
   height: auto;
+  margin-left: -50px; // Mover más a la izquierda
 }
 
 .dlogo svg {
@@ -67,20 +83,47 @@
 }
 
 .menu {
+  margin-right: -50px; // Mover más a la derecha
+
   .nav-list {
     list-style-type: none;
     display: flex;
+    gap: 35px; // Espacio entre elementos del menú
+
     li {
-      margin: 0 15px;
+      margin: 0; // Eliminar márgenes que puedan limitar el movimiento
       font-size: 1rem;
-      font-weight: bolder;
       .nav-item {
         text-decoration: none;
         opacity: 0.5;
         text-transform: uppercase;
+        white-space: nowrap; // Evitar que el texto se rompa
         &:hover, &.active {
           opacity: 1;
         }
+      }
+    }
+  }
+}
+
+// Media query para pantallas pequeñas
+@media (max-width: 768px) {
+  .nav-content {
+    padding: 15px 20px;
+  }
+
+  .dlogo {
+    width: 150px;
+
+  }
+
+  .menu {
+
+    .nav-list {
+      gap: 5px;
+
+      li {
+        font-size: 0.9rem;
       }
     }
   }

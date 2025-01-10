@@ -10,7 +10,7 @@ export const ROUTE_CONTACT = {
 
 export const ROUTE_ABOUT = {
   path: 'about-us',
-  name: 'Conocenos'
+  name: 'Conócenos'
 }
 
 export const ROUTE_PACKAGES = {
@@ -19,7 +19,7 @@ export const ROUTE_PACKAGES = {
 }
 export const ROUTE_NEW_ADVENTURE = {
   path: 'new-adventure',
-  name: 'Proxima Aventura'
+  name: 'Próxima Aventura'
 }
 export const ROUTE_FAQ = {
   path: 'faq',
