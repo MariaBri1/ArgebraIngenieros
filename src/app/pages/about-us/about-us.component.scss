@@ -1,112 +1,185 @@
-body{
+body {
   background-image: none;
 }
+
 .banner-container {
   .banner-video {
     overflow: hidden;
+    position: relative;
+    padding-top: 56.25%; // Aspect ratio 16:9
 
     iframe {
-      width: 1982px; // Ajusta este tamaño si es necesario
-      height: 1116px; // Ajusta este tamaño si es necesario
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      pointer-events: none; // Evita que el usuario interactúe con el video
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
-.know-content{
+
+.know-content {
   color: #444444;
   font-size: 1.6rem;
   font-weight: bold;
   padding: 10px;
   margin-top: 20px;
   margin-left: 7%;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-left: 5%;
+  }
 }
 
 .history-content {
-  background-color: #F1F1F1; /* Color de fondo */
-  padding: 30px; /* Espaciado interno */
+  background-color: #F1F1F1;
+  padding: 30px;
   margin-top: 10px;
-  display: flex; /* Usamos grid layout */
-  align-items: center; /* Centrado vertical */
-  column-gap: 50px; /* Espacio entre columnas */
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+    margin-left: 10%;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
 
   .text-content {
     font-size: 1rem;
-    color: #585656; /* Color del texto */
-    line-height: 1.6; /* Espaciado entre líneas */
-    font-weight: normal; /* Fuente regular */
+    color: #585656;
+    line-height: 1.6;
     text-align: justify;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      padding: 0 15px;
+    }
   }
 
   .Logo_imagen {
-    width: 100%; /* La imagen ocupa su contenedor */
-    max-width: 300px; /* Ancho máximo de la imagen */
-    height: auto; /* Mantener la proporción */
-    margin-left: auto; /* Empujar la imagen a la derecha */
-    display: flex;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     margin-right: 9%;
+
+    @media (max-width: 768px) {
+      margin: 20px auto;
+      max-width: 250px;
+    }
   }
 }
+
 .vision-mision {
   margin-top: 10px;
   display: flex;
-  justify-content: center;
-  justify-content: space-between; /* Espacio uniforme entre las secciones */
-  align-items: flex-start; /* Alinea todo al inicio */
-  text-align: center; /* Centra el texto */
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
-  gap: 20px; /* Espacio entre los elementos */
-  margin-left: 3%;
+  gap: 20px;
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
 
   div {
     margin-top: 40px;
-    flex: 1; /* Ocupa la mitad del contenedor */
-    padding: 0 10px; /* Espacio alrededor del contenido */
+    flex: 1;
+    padding: 0 10px;
+    display: flex; // Añadido
+    flex-direction: column; // Añadido
+    align-items: center; // Añadido
 
-    .vision {
-      width: 100px; /* Ajusta el tamaño del ícono */
-      height: 100px;
-      padding: 10px;
-      margin-bottom: 10px;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 20px;
     }
 
-    .mision {
-      width: 100px; /* Ajusta el tamaño del ícono */
+    .vision, .mision {
+      width: 100px;
       height: 100px;
       padding: 10px;
       margin-bottom: 10px;
+      display: block; // Añadido
+      margin: 0 auto 10px; // Añadido
+
+      @media (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+      }
     }
 
     h3 {
       font-size: 1.3rem;
       font-weight: bold;
-      margin: 0 0 10px 0;
-      color: #585656; /* Color del título */
+      margin: 10px 0; // Ajustado
+      color: #585656;
+      text-align: center; // Añadido
     }
 
     p {
       width: 65%;
       font-size: 1rem;
-      color: #585656; /* Color del texto */
-      line-height: 1.5; /* Espaciado entre líneas */
+      color: #585656;
+      line-height: 1.5;
       text-align: justify;
-      margin-left: 100px;
-      margin-bottom: 10px;
+      margin: 0 auto 10px; // Modificado
+
+      @media (max-width: 768px) {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
     }
   }
 }
 
 .Esencia-content {
-
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+
+  h4 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
 
   .image-container {
     display: flex;
@@ -115,98 +188,70 @@ body{
     gap: 3.75rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: 768px) {
+      gap: 2rem;
+    }
   }
 
   .card-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px; // Ancho fijo para las tarjetas
+    width: 300px;
     padding: 1rem;
-    text-align: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 300px;
+    }
 
     img {
-      width: 200px; // Ancho fijo para las imágenes
-      height: auto; // Mantiene la proporción de la imagen
-      border-radius: 6px;
-      margin-bottom: 0.5rem;
-    }
+      width: 200px;
+      height: auto;
 
-    h3 {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 0.5rem 0;
-      color: #333;
-    }
-
-    p {
-      font-size: 1rem;
-      color: #666;
-    }
-
-    &:hover {
-      transform: translateY(-5px);
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      @media (max-width: 768px) {
+        width: 150px;
+      }
     }
   }
 }
+
 .carousel-container {
   margin-top: 25px;
   width: 80%;
   height: 100%;
   place-self: center;
-}
-  .whatsapp-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
+  h4 {
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
 }
 
-.whatsapp-container:hover {
-    background-color: #128C7E;
-}
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
 
-.whatsapp-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: white;
-}
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
 
-.whatsapp-button img {
-    width: 40px;
-    height: 40px;
+  .whatsapp-button img {
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
-
-h2 {
-  font-size: 1.3rem; /* Tamaño del título */
-  margin-bottom: 15px; /* Espaciado inferior */
-  color: #333; /* Color del título */
-  margin-left: 10%;
-  display: flex;
-}
-
-h4 {
-  font-size: 1.3rem;
-  color: #333;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
