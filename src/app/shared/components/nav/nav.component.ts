@@ -17,6 +17,12 @@ export class NavComponent {
   isScrolled = false
   routes = SECTIONS_ROUTES
 
+  isMenuOpen: boolean = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   // Detectar el scroll de la ventana
   @HostListener('window:scroll', [])
   onWindowScroll (): void {

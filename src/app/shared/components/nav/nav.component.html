@@ -42,7 +42,8 @@
           </g>
         </svg>
       </div>
-      <div class="menu">
+      <button class="hamburger" (click)="toggleMenu()">☰</button>
+      <div class="menu"  [class.open]="isMenuOpen">
         <ul class="nav-list">
           <li *ngFor="let route of routes">
             <a [routerLink]="['/', route.path]" routerLinkActive="active" class="nav-item">

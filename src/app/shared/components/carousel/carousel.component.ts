@@ -1,16 +1,17 @@
-import { CommonModule } from '@angular/common'
-import { Component, Input, type OnDestroy, type OnInit } from '@angular/core'
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 export interface CarouselItem {
-  image: string
-  title: string
-  description: string
+  image: string;
+  title: string;
+  description: string;
 }
 
 export interface SimpleCarouselItem {
-  image: string
-  title: string
+  image: string;
+  title: string;
 }
+
 @Component({
   selector: 'app-carousel',
   standalone: true,
@@ -24,15 +25,14 @@ export interface SimpleCarouselItem {
         [disabled]="currentIndex === 0"
         class="nav-button"
       >
-      <img src="assets/images/before.webp" alt="Anterior" class="button-icon" />
-
+        <img src="assets/images/before.webp" alt="Anterior" class="button-icon" />
       </button>
       <button
         (click)="nextSlide()"
         [disabled]="currentIndex >= items.length - itemsToShow"
         class="nav-button"
       >
-      <img src="assets/images/next.webp" alt="Siguiente" class="button-icon" />
+        <img src="assets/images/next.webp" alt="Siguiente" class="button-icon" />
       </button>
     </div>
   </div>
@@ -51,60 +51,74 @@ export interface SimpleCarouselItem {
   </div>
 </div>
   `,
-  styleUrls: ['./carousel.component.scss']
-}) export class CarouselComponent implements OnInit, OnDestroy {
-  @Input() showNavigation: boolean = true
-  @Input() items: Array<CarouselItem | SimpleCarouselItem> = []
-  @Input() itemsToShow: number = 5
-  @Input() autoRotate: boolean = true
-  @Input() rotationInterval: number = 3000 // 3 segundos por defecto
+  styleUrls: ['./carousel.component.scss'],
+})
+export class CarouselComponent implements OnInit, OnDestroy {
+  @Input() showNavigation: boolean = true;
+  @Input() items: Array<CarouselItem | SimpleCarouselItem> = [];
+  @Input() itemsToShow: number = 5; // Por defecto, 5 items
+  @Input() autoRotate: boolean = true;
+  @Input() rotationInterval: number = 3000; // 3 segundos por defecto
 
-  currentIndex = 0
-  private autoRotateInterval: any
+  currentIndex = 0;
+  private autoRotateInterval: any;
 
-  ngOnInit (): void {
+  ngOnInit(): void {
+    this.adjustItemsToShow(); // Ajustar la cantidad de items al cargar el componente
+    window.addEventListener('resize', this.adjustItemsToShow.bind(this)); // Listener para cambios en el tamaño de pantalla
+
     if (this.autoRotate) {
-      this.startAutoRotation()
+      this.startAutoRotation();
     }
   }
 
-  ngOnDestroy (): void {
-    this.stopAutoRotation()
+  ngOnDestroy(): void {
+    this.stopAutoRotation();
+    window.removeEventListener('resize', this.adjustItemsToShow.bind(this));
   }
 
-  private startAutoRotation (): void {
+  private startAutoRotation(): void {
     this.autoRotateInterval = setInterval(() => {
       if (this.currentIndex < this.items.length - this.itemsToShow) {
-        this.nextSlide()
+        this.nextSlide();
       } else {
-        this.currentIndex = 0 // Volver al inicio cuando llegue al final
+        this.currentIndex = 0; // Volver al inicio cuando llegue al final
       }
-    }, this.rotationInterval)
+    }, this.rotationInterval);
   }
 
-  private stopAutoRotation (): void {
+  private stopAutoRotation(): void {
     if (this.autoRotateInterval) {
-      clearInterval(this.autoRotateInterval)
+      clearInterval(this.autoRotateInterval);
     }
   }
 
-  nextSlide (): void {
+  nextSlide(): void {
     if (this.currentIndex < this.items.length - this.itemsToShow) {
-      this.currentIndex++
+      this.currentIndex++;
     }
   }
 
-  prevSlide (): void {
+  prevSlide(): void {
     if (this.currentIndex > 0) {
-      this.currentIndex--
+      this.currentIndex--;
     }
   }
 
-  hasDescription (item: CarouselItem | SimpleCarouselItem): boolean {
-    return 'description' in item
+  hasDescription(item: CarouselItem | SimpleCarouselItem): boolean {
+    return 'description' in item;
   }
 
-  getDescription (item: CarouselItem | SimpleCarouselItem): string {
-    return this.hasDescription(item) ? (item as CarouselItem).description : ''
+  getDescription(item: CarouselItem | SimpleCarouselItem): string {
+    return this.hasDescription(item) ? (item as CarouselItem).description : '';
+  }
+
+  private adjustItemsToShow(): void {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+      this.itemsToShow = 2; // Mostrar 2 items en pantallas pequeñas
+    } else {
+      this.itemsToShow = 5; // Mostrar 5 items en pantallas grandes
+    }
   }
 }
