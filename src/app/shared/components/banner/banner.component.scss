@@ -59,9 +59,11 @@
   padding: 0 20px;
 
   @media (max-width: 768px) {
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+    padding: 0 20px;
   }
 
   h2 {
@@ -73,12 +75,12 @@
 
     @media (max-width: 1200px) {
       margin-right: 5%;
-      font-size: 22px;
+      font-size: 15px;
     }
 
     @media (max-width: 768px) {
       margin: 0;
-      font-size: 20px;
+      font-size: 10px;
       text-align: center;
       max-width: 280px;
     }
