@@ -4,10 +4,11 @@
   max-height: 1080px;
   background-color: rgb(255, 255, 255);
   position: relative;
-  overflow: hidden; // Previene desbordamiento en móviles
+  overflow: hidden;
 
   @media (max-width: 768px) {
-    height: 60vh; // Altura reducida para móviles
+    height: 29vh;
+    width: 100vw;
   }
 
   .banner-background,
@@ -28,66 +29,65 @@
   .banner-video {
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%; // Aspect ratio 16:9 (9 / 16 = 0.5625)
-
+    padding-top: 56.25%;
 
     iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
       width: 100%;
       height: 100%;
+      transform: translate(-50%, -50%);
       border: none;
       pointer-events: none;
 
-      @media (max-width: 1200px) {
-        width: 120vw; // Ligero zoom para cubrir mejor en pantallas medianas
-      }
-
       @media (max-width: 768px) {
-        width: 100vw; // Mayor zoom para móviles
+        width: 90vw;
+        height: 91vh;
+        // Ajusta estos valores para controlar el zoom
+        transform: translate(-50%, -50%) scale(1.2);
       }
     }
   }
-}
 
-.banner-slogan {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  z-index: 1;
-  padding: 0 20px;
-
-  @media (max-width: 768px) {
+  .banner-slogan {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     z-index: 1;
     padding: 0 20px;
-  }
-
-  h2 {
-    margin-top: 15%;
-    max-width: 330px;
-    font-size: 24px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Mejora legibilidad
-
-    @media (max-width: 1200px) {
-      margin-right: 5%;
-      font-size: 15px;
-    }
 
     @media (max-width: 768px) {
-      margin: 0;
-      font-size: 10px;
-      text-align: center;
-      max-width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      z-index: 1;
+      padding: 0 20px;
     }
 
-    @media (max-width: 480px) {
-      font-size: 18px;
-      max-width: 250px;
+    h2 {
+      margin-top: 15%;
+      max-width: 330px;
+      font-size: 24px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+      @media (max-width: 1200px) {
+        margin-right: 5%;
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px) {
+        margin: 0;
+        font-size: 10px;
+        text-align: center;
+        max-width: 280px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 18px;
+        max-width: 250px;
+      }
     }
   }
 }

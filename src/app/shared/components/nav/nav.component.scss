@@ -116,11 +116,12 @@
   display: none; /* Oculto por defecto */
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
   color: white;
   position: absolute;
   right: 20px; /* Colocar hacia la derecha */
+  top: 20px
 }
 
 @media (max-width: 768px) {
@@ -129,7 +130,7 @@
   }
 
   .dlogo {
-    width: 150px;
+    width: 100px;
   }
 
   .menu {
