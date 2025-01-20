@@ -150,7 +150,7 @@ body {
       font-size: 1rem;
       color: #585656;
       line-height: 1.5;
-      text-align: justify;
+
       margin: 0 auto 10px; // Modificado
 
       @media (max-width: 768px) {
@@ -196,7 +196,8 @@ body {
 
     @media (max-width: 768px) {
       gap: 2rem;
-      padding: 10% 20%; // Reduce el padding en móviles
+      padding: 10%;
+      align-content: center; // Reduce el padding en móviles
     }
   }
 

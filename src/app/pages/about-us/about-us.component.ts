@@ -1,6 +1,7 @@
 import { Component, inject, type OnInit } from '@angular/core'
 import { DomSanitizer, type SafeResourceUrl } from '@angular/platform-browser'
 import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel.interface'
+
 import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface'
 
 @Component({
@@ -16,6 +17,7 @@ export class AboutUsComponent implements OnInit {
 
   carouselItems1: CarouselItem[] = []
   carouselItems2: SimpleCarouselItem[] = []
+
   galleryItems: Array<{ image: string, title: string, description: string }> = [] // Declara galleryItems aquí
 
   ngOnInit (): void {
@@ -47,15 +49,12 @@ export class AboutUsComponent implements OnInit {
       { image: 'assets/logos/posada_tumpis.png', title: 'Posada de los Tumpis', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/cumbaza_hoteles.png', title: 'Río Cumbaza Hotel', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/domiruth_logo.png', title: 'DOMIRUTH TRAVEL SERVICE', description: 'Proveedor con 10 años de experiencia' },
-
       { image: 'assets/logos/costamar_logo.png', title: 'Costamar Travel Cruise & Tours S.A.C.', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/vcr_logo.png', title: 'VCR Representaciones', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/tambo_logo.png', title: 'Hoteles El Tambo Perú', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/union_logo.png', title: 'Hotel Union Cusco', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/colonial_logo.png', title: 'Colonial Tours SRL', description: 'Proveedor con 10 años de experiencia' }
-
     ]
-
     this.carouselItems2 = [
       { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Protegeme Turismo Responsable' },
       { image: 'assets/logos/respald-icons/prom_p-icon.png', title: 'PromPerú' },
@@ -64,5 +63,7 @@ export class AboutUsComponent implements OnInit {
       { image: 'assets/logos/respald-icons/camera-comercy-icon.png', title: 'CCL Cámara de Comercio de Lima' },
       { image: 'assets/logos/respald-icons/ytu-icon.webp', title: 'Y tú qué planes' }
     ]
+
   }
+
 }
