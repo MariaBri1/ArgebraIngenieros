@@ -10,13 +10,16 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 20px; /* Espacio entre elementos */
+
+    @media (max-width: 768px) { // Pantallas más pequeñas
+    gap: 0;
+    }
   }
 
   .review-item {
     flex: 0 0 calc(100% / 3 - 20px); /* Mostrar 3 elementos a la vez */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #F2F6FF;
     text-align: left;
     position: relative; /* Agregado para posicionar el icono de Google */
@@ -29,7 +32,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+
 
 
       .review-info {
