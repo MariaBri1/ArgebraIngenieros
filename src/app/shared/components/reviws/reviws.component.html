@@ -1,0 +1,27 @@
+<div class="review-carousel">
+  <div class="review-items" [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
+    <div class="review-item" *ngFor="let review of reviews">
+      <div class="review-header">
+        <div class="review-info">
+          <div class="review-name">{{ review.name }}</div>
+          <div class="review-time">{{ review.time }}</div>
+        </div>
+        <div class="review-avatar">
+          <img [src]="review.image" [alt]="review.name">
+        </div>
+      </div>
+
+      <div class="review-stars">
+        <span *ngFor="let star of getStarsArray(review.stars)">★</span>
+      </div>
+
+      <div class="review-text">
+        {{ review.text }}
+      </div>
+
+      <div class="review-google-icon">
+        <img src="assets/logos/google-icon.png" alt="Google Review">
+      </div>
+    </div>
+  </div>
+</div>

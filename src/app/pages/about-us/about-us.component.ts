@@ -1,8 +1,8 @@
-import { Component, inject, type OnInit } from '@angular/core'
-import { DomSanitizer, type SafeResourceUrl } from '@angular/platform-browser'
-import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel.interface'
-
-import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface'
+import { Component, inject, type OnInit } from '@angular/core';
+import { DomSanitizer, type SafeResourceUrl } from '@angular/platform-browser';
+import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel.interface';
+import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface';
+import { ReviwsComponent, type Review } from 'src/app/shared/components/reviws/reviws.component';
 
 @Component({
   selector: 'app-about-us',
@@ -17,8 +17,44 @@ export class AboutUsComponent implements OnInit {
 
   carouselItems1: CarouselItem[] = []
   carouselItems2: SimpleCarouselItem[] = []
+  carouselItems3: ReviwsComponent[]=[]
 
-  galleryItems: Array<{ image: string, title: string, description: string }> = [] // Declara galleryItems aquí
+
+
+reviewList: Review[] = [
+  {
+    image: '/assets/clientes/cliente.webp',
+    time: '2 días atrás',
+    stars: 5,
+    text: 'La agencia nos diseñó un itinerario a medida que se ajustaba perfectamente a nuestros gustos.La elección de los  hoteles fue excelente, muy cómodos y bien ubicados',
+    name: 'Carlos Pérez'
+  },
+  {
+    image: '/assets/clientes/juana.jpg',
+    time: '3 días atrás',
+    stars: 5,
+    text: 'Todo estaba perfectamente organizado, desde los traslados hasta las actividades. La agencia nos proporcionó toda la  información necesaria para disfrutar  al máximo nuestro viaje.',
+    name: 'Juana Flores'
+  },
+  {
+    image: '/assets/clientes/predeterminada.webp',
+    time: '1 semana atrás',
+    stars: 5,
+    text: 'El precio del paquete turístico fue muy competitivo y el servicio fue de primera calidad.',
+    name: 'Jose fernandez'
+  },
+  {
+    image: '/assets/clientes/mario.jpg',
+    time: '3 semanas atrás',
+    stars: 5,
+    text: 'Excelente servicio, muy recomendado.',
+    name: 'Mario Rojas'
+  }
+
+  // Puedes agregar más reseñas aquí
+];
+
+galleryItems: Array<{ image: string, title: string, description: string }> = [] // Declara galleryItems aquí
 
   ngOnInit (): void {
     this.galleryItems = [

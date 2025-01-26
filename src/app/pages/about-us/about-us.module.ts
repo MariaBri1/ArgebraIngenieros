@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core'
 import { BannerComponent } from 'src/app/shared/components/banner/banner.component'
 import { CardsComponent } from 'src/app/shared/components/cards/cards.component'
 import { CarouselComponent } from 'src/app/shared/components/carousel/carousel.component'
+import { ReviwsComponent } from 'src/app/shared/components/reviws/reviws.component'
 import { FooterComponent } from '../../shared/components/footer/footer.component'
 import { AboutUsRoutingModule } from './about-us-routing.module'
 import { AboutUsComponent } from './about-us.component'
@@ -16,8 +17,10 @@ import { AboutUsComponent } from './about-us.component'
     FooterComponent,
     CarouselComponent,
     CardsComponent,
-    BannerComponent
-  ],
+    BannerComponent,
+    ReviwsComponent
+
+],
   exports: [
     AboutUsComponent
   ]
