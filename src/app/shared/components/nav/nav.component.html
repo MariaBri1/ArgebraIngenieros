@@ -46,7 +46,7 @@
       <div class="menu"  [class.open]="isMenuOpen">
         <ul class="nav-list">
           <li *ngFor="let route of routes">
-            <a [routerLink]="['/', route.path]" routerLinkActive="active" class="nav-item">
+            <a [routerLink]="['/', route.path]" routerLinkActive="active" class="nav-item" (click)="toggleMenu()">
               {{ route.name }}
             </a>
           </li>

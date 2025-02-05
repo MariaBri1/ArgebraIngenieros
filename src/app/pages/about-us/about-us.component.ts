@@ -102,4 +102,5 @@ galleryItems: Array<{ image: string, title: string, description: string }> = [] 
 
   }
 
+
 }
