@@ -17,8 +17,20 @@
     <source src="/assets/images/video-logo.mp4" type="video/mp4" alt="logo_mqv"/>
     Tu navegador no soporta el elemento de video.
 </video>
-
 </div>
+<div class="Esencia-content">
+  <h4> Nuestra Esencia</h4>
+  <div class="image-container">
+    <app-cards
+      *ngFor="let item of galleryItems"
+      [image]="item.image"
+      [title]="item.title"
+      [description]="item.description"
+      class="card-item">
+    </app-cards>
+  </div>
+</div>
+
 <div class="vision-mision">
   <div>
     <img src="/assets/images/vision.png" alt="logo-vision" class="vision" />
@@ -36,18 +48,6 @@
       de nuestros viajeros a través de una buena atención de nuestro equipo,
       diseñando viajes únicos a precios accesibles.
     </p>
-  </div>
-</div>
-<div class="Esencia-content">
-  <h4> Nuestra Esencia</h4>
-  <div class="image-container">
-    <app-cards
-      *ngFor="let item of galleryItems"
-      [image]="item.image"
-      [title]="item.title"
-      [description]="item.description"
-      class="card-item">
-    </app-cards>
   </div>
 </div>
 <div class="carousel-container">

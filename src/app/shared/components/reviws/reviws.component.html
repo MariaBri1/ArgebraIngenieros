@@ -1,5 +1,6 @@
+<button (click)="stopReviews()">stop</button>
 <div class="review-carousel">
-  <div class="review-items" [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
+  <div class="review-items" [ngClass]="{ 'stop': stopedReview }" [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
     <div class="review-item" *ngFor="let review of reviews">
       <div class="review-header">
         <div class="review-info">

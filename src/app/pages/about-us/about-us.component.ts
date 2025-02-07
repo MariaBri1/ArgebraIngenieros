@@ -23,11 +23,11 @@ export class AboutUsComponent implements OnInit {
 
 reviewList: Review[] = [
   {
-    image: '/assets/clientes/cliente.webp',
-    time: '2 días atrás',
+    image: '/assets/clientes/p.webp',
+    time: 'Lima',
     stars: 5,
-    text: 'La agencia nos diseñó un itinerario a medida que se ajustaba perfectamente a nuestros gustos.La elección de los  hoteles fue excelente, muy cómodos y bien ubicados',
-    name: 'Carlos Pérez'
+    text: 'Excelente servicio y atención personalizada. El equipo de Más Que Vacaciones se encargó de cada detalle de mi viaje, asegurándose de que todo saliera excelente 😁 realmente los recomiendo',
+    name: 'Pamela Goicochea'
   },
   {
     image: '/assets/clientes/juana.jpg',

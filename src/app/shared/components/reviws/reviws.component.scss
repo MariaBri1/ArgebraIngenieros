@@ -10,6 +10,11 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 20px; /* Espacio entre elementos */
+    &.stop {
+      transform: translateX(0) !important;
+      flex-wrap: wrap;
+
+    }
 
     @media (max-width: 768px) { // Pantallas más pequeñas
     gap: 0;

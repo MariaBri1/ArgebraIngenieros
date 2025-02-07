@@ -61,6 +61,7 @@ body {
     margin-bottom: 15px;
     color: #333;
     margin-left: 10%;
+    margin: 0;
 
     @media (max-width: 768px) {
       margin-left: 0;
@@ -74,7 +75,7 @@ body {
     color: #585656;
     line-height: 1.6;
     text-align: justify;
-    flex: 1;
+    max-width: 80%;
 
     @media (max-width: 768px) {
       text-align: center;

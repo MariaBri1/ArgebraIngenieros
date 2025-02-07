@@ -1,5 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { NgClass, NgFor } from '@angular/common';
+import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
+import { interval, Subject, takeUntil } from 'rxjs';
 export interface Review {
   image: string;
   time: string;
@@ -11,7 +12,10 @@ export interface Review {
 @Component({
   selector: 'app-reviws',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    NgClass,
+    NgFor
+  ],
   templateUrl: './reviws.component.html',
   styleUrls: ['./reviws.component.scss']
 })
@@ -19,12 +23,23 @@ export class ReviwsComponent implements OnInit, OnDestroy {
   @Input() reviews: Review[] = [];
   currentIndex: number = 0;
   itemsToShow: number = 3; // Número de reseñas a mostrar
-  intervalId: any;
+  stopedReview: boolean = false
+
+  private readonly _stopReviews$ = new Subject<void>()
+
+  @HostListener('window.resize')
+  handleResize (): void {
+    this.adjustItemsToShow()
+  }
 
   ngOnInit(): void {
     this.adjustItemsToShow();
-    window.addEventListener('resize', () => this.adjustItemsToShow());
     this.startAutoSlide();
+  }
+
+  ngOnDestroy(): void {
+    this._stopReviews$.next()
+    this._stopReviews$.complete()
   }
 
   adjustItemsToShow(): void {
@@ -42,14 +57,17 @@ export class ReviwsComponent implements OnInit, OnDestroy {
   }
 
   startAutoSlide(): void {
-    this.intervalId = setInterval(() => {
-      if (this.reviews.length > this.itemsToShow) {
-        this.currentIndex = (this.currentIndex + 1) % (this.reviews.length - (this.itemsToShow - 1));
-      }
-    }, 3000); // Cambio automático cada 3 segundos
+    interval(3000)
+      .pipe(takeUntil(this._stopReviews$))
+      .subscribe(() => {
+        if (this.reviews.length > this.itemsToShow) {
+          this.currentIndex = (this.currentIndex + 1) % (this.reviews.length - (this.itemsToShow - 1));
+        }
+      })
   }
 
-  ngOnDestroy(): void {
-    clearInterval(this.intervalId); // Limpiar intervalo al destruir el componente
+  stopReviews (): void {
+    this._stopReviews$.next()
+    this.stopedReview = true
   }
 }
