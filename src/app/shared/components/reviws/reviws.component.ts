@@ -68,10 +68,17 @@ export class ReviwsComponent implements OnInit, OnDestroy {
       });
   }
 
-  stopReviews (): void {
-    this._stopReviews$.next();
-    this.stopedReview = true;
+  toggleReviews(): void {
+    if (this.stopedReview) {
+      // Reinicia el carrusel
+      this.startAutoSlide();
+    } else {
+      // Detiene el carrusel
+      this._stopReviews$.next();
+    }
+    this.stopedReview = !this.stopedReview; // Cambia el estado
   }
+
 
   toggleReadMore(index: number): void {
     // Solo cambia el estado de la reseña específica
