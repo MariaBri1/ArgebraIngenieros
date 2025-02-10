@@ -1,7 +1,7 @@
 <button (click)="stopReviews()">stop</button>
 <div class="review-carousel">
   <div class="review-items" [ngClass]="{ 'stop': stopedReview }" [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
-    <div class="review-item" *ngFor="let review of reviews">
+    <div class="review-item" *ngFor="let review of reviews; let i = index">
       <div class="review-header">
         <div class="review-info">
           <div class="review-name">{{ review.name }}</div>
@@ -17,7 +17,10 @@
       </div>
 
       <div class="review-text">
-        {{ review.text }}
+        {{ truncateText(review.text, i) }}
+        <button *ngIf="review.text.split(' ').length > 50" (click)="toggleReadMore(i)" class="read-more-btn">
+          {{ expandedReviews[i] ? 'Leer menos' : 'Leer más' }}
+        </button>
       </div>
 
       <div class="review-google-icon">

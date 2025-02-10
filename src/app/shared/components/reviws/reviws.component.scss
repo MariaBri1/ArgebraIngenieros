@@ -30,7 +30,7 @@
     position: relative; /* Agregado para posicionar el icono de Google */
 
     @media (max-width: 768px) { // Pantallas más pequeñas
-      flex: 0 0 calc(100% / 1); // Mostrar 2 items
+      flex: 0 0 calc(100% / 1 - 10px); // Mostrar 2 items
     }
 
     .review-header {
@@ -77,6 +77,16 @@
       color: #333;
       line-height: 20px;
       text-align: justify;
+
+      .read-more-btn {
+        background: none;
+        border: none;
+        color: #181919;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: 5px;
+      }
     }
 
     .review-google-icon {
@@ -92,3 +102,13 @@
     }
   }
 }
+button{
+  width: 100px;
+  background: none;
+  border: 2px solid rgb(86, 165, 255);
+  border-radius: 3px;
+  margin-left: 89%;
+  cursor: pointer;
+
+}
+

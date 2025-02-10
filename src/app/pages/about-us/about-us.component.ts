@@ -30,25 +30,81 @@ reviewList: Review[] = [
     name: 'Pamela Goicochea'
   },
   {
-    image: '/assets/clientes/juana.jpg',
-    time: '3 días atrás',
+    image: '/assets/clientes/bra.png',
+    time: 'Arequipa',
     stars: 5,
-    text: 'Todo estaba perfectamente organizado, desde los traslados hasta las actividades. La agencia nos proporcionó toda la  información necesaria para disfrutar  al máximo nuestro viaje.',
-    name: 'Juana Flores'
+    text: 'Muy buena atención durante la compra de pasajes y seguro de viajes.',
+    name: 'Braulio Rugel Robles'
   },
   {
-    image: '/assets/clientes/predeterminada.webp',
-    time: '1 semana atrás',
+    image: '/assets/clientes/deya.png',
+    time: 'Lima',
     stars: 5,
-    text: 'El precio del paquete turístico fue muy competitivo y el servicio fue de primera calidad.',
-    name: 'Jose fernandez'
+    text: 'Buenísima atención tanto en la coordinación para los paquetes de turismo y en los tours, los guías son muy atentos.',
+    name: 'Deyanira Goicochea'
   },
   {
-    image: '/assets/clientes/mario.jpg',
-    time: '3 semanas atrás',
+    image: '/assets/clientes/vic.png',
+    time: 'Arequipa',
     stars: 5,
-    text: 'Excelente servicio, muy recomendado.',
-    name: 'Mario Rojas'
+    text: 'Tomamos servíos de turismo en Arequipa y fue lo máximo, lo recomiendo.',
+    name: 'Victor Manuel Alvarez'
+  },
+  {
+    image: '/assets/clientes/ale.png',
+    time: 'Lima',
+    stars: 5,
+    text: 'La guía muy bien preparada super atenta. La movilidad cómoda y limpia. Muy buen conductor.',
+    name: 'Alexandra de Bautista'
+  },
+  {
+    image: '/assets/clientes/osc.png',
+    time: 'Sao Paulo',
+    stars: 5,
+    text: 'Bonita experiencia impresionado con lo bello que es Sao Paulo',
+    name: 'Oscar Eduardo Aragon'
+  },
+  {
+    image: '/assets/clientes/jor.png',
+    time: 'Lima',
+    stars: 5,
+    text: 'La agencia nos ha preparado todo muy bien y nos ha ayudado a resolver las incidencias que nos han ocurrido. Sin duda la recomiendo para cualquiera que quiera visitar Perú.',
+    name: 'Jorge Gonzalez'
+  },
+  {
+    image: '/assets/clientes/cam.png',
+    time: 'Arequipa',
+    stars: 5,
+    text: 'Compré dos tours en Más que vacaciones: 1- para el colca y otra para las salinas, ambas en Arequipa. Mi proceso fue súper sencillo, un amigo me recomendó, luego hablé con Mónica que me guió con los precios y comunicaciones, de forma clara y rápida. Lo acordado en hora de salida, informaciones adicionales a tomar en cuenta. En los dos tours pasé súper bien y seguro solo recomiendo!',
+    name: 'Camila Diles'
+  },
+  {
+    image: '/assets/clientes/pab.png',
+    time: 'Lima',
+    stars: 5,
+    text: 'Es la agencia que se encarga de mis gestiones laborales y familiares, con la cual se encuentro muy satisfecho por las atenciones apropiadas, la paciencia para atenderme y ayudarme cuando fue necesario, la recomiendo.',
+    name: 'Pablo Carhuachin'
+  },
+  {
+    image: '/assets/clientes/a.png',
+    time: 'Lima',
+    stars: 5,
+    text: 'Excelente servicio. Son super atentos, toman en cuenta todos los detalles y hacen que realmente disfrute de las vacaciones. Recomiendo muchísimo los servicios de esta agencia.',
+    name: 'Ahyde Ruíz'
+  },
+  {
+    image: '/assets/clientes/i.png',
+    time: 'Lima',
+    stars: 5,
+    text: 'Viajamos a Peru con la agencia más que vacaciones con unas espectativas muy altas pero que se han visto superadas con creces. Una muy buena organización y siempre a pendiente de todo y de cómo estás. Viajar a Peru nos ha sorprendido su comida exquisita y que vamos a decir de sus paisajes, sus pueblos, su gente maravillosa y amable, es decir todo en general ha sido expectacular que recomiendo viajar al menos una vez en la vida. Gracias Más que vacaciones por todo y hasta pronto',
+    name: 'Idoia Rodriguez'
+  },
+  {
+    image: '/assets/clientes/erika.png',
+    time: 'Arequipa',
+    stars: 5,
+    text: '100% Recomendado!!! total garantía te asesoran de principio a fin! me encanto su servicio brindado.',
+    name: 'Erika Agurto'
   }
 
   // Puedes agregar más reseñas aquí

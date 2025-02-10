@@ -1,4 +1,4 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subject, takeUntil } from 'rxjs';
 export interface Review {
@@ -14,7 +14,8 @@ export interface Review {
   standalone: true,
   imports: [
     NgClass,
-    NgFor
+    NgFor,
+    NgIf
   ],
   templateUrl: './reviws.component.html',
   styleUrls: ['./reviws.component.scss']
@@ -22,14 +23,15 @@ export interface Review {
 export class ReviwsComponent implements OnInit, OnDestroy {
   @Input() reviews: Review[] = [];
   currentIndex: number = 0;
-  itemsToShow: number = 3; // Número de reseñas a mostrar
-  stopedReview: boolean = false
+  itemsToShow: number = 3;
+  stopedReview: boolean = false;
+  expandedReviews: { [key: number]: boolean } = {}; // Objeto para controlar la expansión
 
-  private readonly _stopReviews$ = new Subject<void>()
+  private readonly _stopReviews$ = new Subject<void>();
 
   @HostListener('window.resize')
   handleResize (): void {
-    this.adjustItemsToShow()
+    this.adjustItemsToShow();
   }
 
   ngOnInit(): void {
@@ -38,8 +40,8 @@ export class ReviwsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this._stopReviews$.next()
-    this._stopReviews$.complete()
+    this._stopReviews$.next();
+    this._stopReviews$.complete();
   }
 
   adjustItemsToShow(): void {
@@ -63,11 +65,29 @@ export class ReviwsComponent implements OnInit, OnDestroy {
         if (this.reviews.length > this.itemsToShow) {
           this.currentIndex = (this.currentIndex + 1) % (this.reviews.length - (this.itemsToShow - 1));
         }
-      })
+      });
   }
 
   stopReviews (): void {
-    this._stopReviews$.next()
-    this.stopedReview = true
+    this._stopReviews$.next();
+    this.stopedReview = true;
+  }
+
+  toggleReadMore(index: number): void {
+    // Solo cambia el estado de la reseña específica
+    this.expandedReviews[index] = !this.expandedReviews[index];
+  }
+
+  truncateText(text: string, index: number): string {
+    if (this.expandedReviews[index]) {
+      return text;
+    }
+
+    const words = text.split(' ');
+    if (words.length > 50) {
+      return words.slice(0, 50).join(' ') + '...';
+    }
+
+    return text;
   }
 }
