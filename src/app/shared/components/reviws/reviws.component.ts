@@ -91,10 +91,13 @@ export class ReviwsComponent implements OnInit, OnDestroy {
     }
 
     const words = text.split(' ');
-    if (words.length > 50) {
-      return words.slice(0, 50).join(' ') + '...';
+    if (words.length > 30) {
+      return words.slice(0, 30).join(' ') + '...';
     }
 
     return text;
+  }
+  navigateToGoogle() {
+    window.open('https://www.google.com/search?sca_esv=aa4709d8f74669be&sxsrf=AHTn8zoj8lh-kiLGFaMXT8FG53ZmOEMxpQ:1739209062674&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzZC6xsZ4nn6BHEC4R3vwqPr7Ti7ZIUrsmdnf6hbpHbf6px3I4Qhz7hKJZkR8VdkyznkVUEj0tPB2AL2hHF79RVWMzqsBgf6ODczqqeR8rSZ9kfE5A_u0LKA0502tWnWucQ4AG0M%3D&q=M%C3%A1s+Que+Vacaciones+Agencia+de+viajes+Opiniones&sa=X&ved=2ahUKEwi9s_vS0rmLAxXKrpUCHeexLUkQ0bkNegQILhAD&biw=1366&bih=605&dpr=1#lrd=0x9105d1b811728b65:0xdc1cb95de5468ae1,1,,,,', '_blank');
   }
 }

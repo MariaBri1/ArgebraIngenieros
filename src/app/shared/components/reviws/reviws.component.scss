@@ -6,16 +6,22 @@
   padding: 20px 0;
   margin-bottom: 20px;
 
+
   .review-items {
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 20px; /* Espacio entre elementos */
+    min-height: 270px;
+
     &.stop {
       transform: translateX(0) !important;
       flex-wrap: wrap;
 
+      .review-item {
+        min-height: 270px !important; // Forzar altura mínima en modo STOP
+        justify-content: space-between; // Para evitar que el contenido empuje la tarjeta
+      }
     }
-
     @media (max-width: 768px) { // Pantallas más pequeñas
     gap: 0;
     }
@@ -37,8 +43,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-
 
       .review-info {
         .review-name {
@@ -91,6 +95,7 @@
 
     .review-google-icon {
       position: absolute;
+      margin-top: 10%;
       bottom: 10px;
       right: 25px;
       width: 20px; /* Tamaño pequeño */
@@ -115,5 +120,14 @@ button{
   border-radius: 3px;
   cursor: pointer;
 }
+}
+button{
+ // width: 180px;
+  margin-left: 450px;
+  height: 35px;
+  background: none;
+  border: 2px solid #072D75;
+  border-radius: 3px;
+  cursor: pointer;
 }
 

@@ -1,7 +1,6 @@
 <div class="head">
 <h4>Lo que nuestro clientes piensan de nosotros</h4>
 <button (click)="toggleReviews()">{{ stopedReview ? 'Reanudar' : 'Detener' }}</button>
-
 </div>
 <div class="review-carousel">
   <div class="review-items" [ngClass]="{ 'stop': stopedReview }" [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
@@ -22,14 +21,16 @@
 
       <div class="review-text">
         {{ truncateText(review.text, i) }}
-        <button *ngIf="review.text.split(' ').length > 50" (click)="toggleReadMore(i)" class="read-more-btn">
+        <button *ngIf="review.text.split(' ').length > 30" (click)="toggleReadMore(i)" class="read-more-btn">
           {{ expandedReviews[i] ? 'Leer menos' : 'Leer más' }}
         </button>
       </div>
-
       <div class="review-google-icon">
         <img src="assets/logos/google-icon.png" alt="Google Review">
       </div>
     </div>
+      <div>
+        <button (click)="navigateToGoogle()"> Ver todas las Reseñas</button>
+      </div>
   </div>
 </div>
