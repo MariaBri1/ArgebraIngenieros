@@ -6,7 +6,6 @@
   padding: 20px 0;
   margin-bottom: 20px;
 
-
   .review-items {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -23,7 +22,7 @@
       }
     }
     @media (max-width: 768px) { // Pantallas más pequeñas
-    gap: 0;
+    gap: 20px;
     }
   }
 
@@ -34,9 +33,14 @@
     background-color: #F2F6FF;
     text-align: left;
     position: relative; /* Agregado para posicionar el icono de Google */
+    height: fit-content; // Esto permite que cada item tenga su propia altura
+    min-height: 270px; // Altura mínima base
 
     @media (max-width: 768px) { // Pantallas más pequeñas
       flex: 0 0 calc(100% / 1 - 10px); // Mostrar 2 items
+      width: 100%;
+      position: relative;
+      overflow: hidden;
     }
 
     .review-header {
@@ -121,8 +125,8 @@ button{
   cursor: pointer;
 }
 }
-button{
- // width: 180px;
+.see-more{
+  width: 180px;
   margin-left: 450px;
   height: 35px;
   background: none;
