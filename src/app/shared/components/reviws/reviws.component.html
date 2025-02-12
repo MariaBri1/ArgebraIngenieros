@@ -1,9 +1,12 @@
 <div class="head">
 <h4>Lo que nuestro clientes piensan de nosotros</h4>
-<button (click)="toggleReviews()">{{ stopedReview ? 'Reanudar' : 'Detener' }}</button>
+<button (click)="toggleReviews()">{{ stopedReview ? 'reanudar' : 'detener' }}</button>
 </div>
 <div class="review-carousel">
-  <div class="review-items" [ngClass]="{ 'stop': stopedReview }" [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
+  <div class="review-items"
+  [ngClass]="{ 'stop': stopedReview }"
+  [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
+
     <div class="review-item" *ngFor="let review of reviews; let i = index">
       <div class="review-header">
         <div class="review-info">

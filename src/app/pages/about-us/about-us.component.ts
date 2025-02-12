@@ -1,4 +1,4 @@
-import { Component, inject, type OnInit } from '@angular/core';
+import { Component, type OnInit } from '@angular/core';
 import { DomSanitizer, type SafeResourceUrl } from '@angular/platform-browser';
 import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel.interface';
 import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface';
@@ -10,10 +10,34 @@ import { ReviwsComponent, type Review } from 'src/app/shared/components/reviws/r
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
-  private readonly sanitizer = inject(DomSanitizer)
-  videoUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-    'https://www.youtube.com/embed/nWk6Y5h4Ovo?autoplay=1&mute=0&controls=0&loop=1&playlist=nWk6Y5h4Ovo&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3'
-  )
+  videoUrl: SafeResourceUrl | undefined;
+  isMuted: boolean = true;
+
+  constructor(private sanitizer: DomSanitizer) {
+    this.updateVideoUrl();
+  }
+
+  updateVideoUrl(): void {
+    const baseUrl = 'https://www.youtube.com/embed/nWk6Y5h4Ovo';
+    const params = new URLSearchParams({
+      autoplay: '1',
+      mute: this.isMuted ? '1' : '0',
+      controls: '0',
+      loop: '1',
+      playlist: 'nWk6Y5h4Ovo',
+      modestbranding: '1',
+      rel: '0',
+      showinfo: '0',
+      iv_load_policy: '3',
+      origin: window.location.origin
+    });
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`${baseUrl}?${params.toString()}`);
+  }
+
+  toggleMute(): void {
+    this.isMuted = !this.isMuted;
+    this.updateVideoUrl();
+  }
 
   carouselItems1: CarouselItem[] = []
   carouselItems2: SimpleCarouselItem[] = []

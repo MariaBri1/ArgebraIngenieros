@@ -19,6 +19,6 @@ import { PagesComponent } from './pages.component'
   exports: [
     NavComponent,
     FooterComponent
-  ]
+  ],
 })
 export class PagesModule { }

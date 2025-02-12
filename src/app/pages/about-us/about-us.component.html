@@ -1,8 +1,18 @@
-<app-banner
-  [isVideo]="true"
-  [videoUrl]="videoUrl"
-  title=""
-></app-banner>
+<app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
+  <iframe
+    width="100%"
+    height="100%"
+    [src]="videoUrl"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</app-banner>
+
+<button class="mute-toggle" (click)="toggleMute()" [title]="isMuted ? 'Unmute' : 'Mute'">
+  <i class="fas" [class.fa-volume-up]="!isMuted" [class.fa-volume-mute]="isMuted"></i>
+</button>
+
 <div class="know-content">
   <p> Conócenos</p>
 </div>

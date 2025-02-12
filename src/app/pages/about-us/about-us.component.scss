@@ -1,7 +1,6 @@
 body {
   background-image: none;
 }
-
 .banner-container {
   .banner-video {
     overflow: hidden;
@@ -298,7 +297,30 @@ body {
   }
 }
 
+.mute-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 80px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
 
+.mute-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
 
+.mute-toggle i {
+  color: white;
+  font-size: 20px;
+}
 
 

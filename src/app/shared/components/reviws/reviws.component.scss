@@ -9,7 +9,7 @@
   .review-items {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    gap: 20px; /* Espacio entre elementos */
+    gap: 20px;
     min-height: 270px;
 
     &.stop {
@@ -19,10 +19,11 @@
       .review-item {
         min-height: 270px !important; // Forzar altura mínima en modo STOP
         justify-content: space-between; // Para evitar que el contenido empuje la tarjeta
+        gap: 20px; /* Espacio entre elementos */
       }
     }
     @media (max-width: 768px) { // Pantallas más pequeñas
-    gap: 20px;
+    gap: 0;
     }
   }
 
@@ -36,12 +37,11 @@
     height: fit-content; // Esto permite que cada item tenga su propia altura
     min-height: 270px; // Altura mínima base
 
-    @media (max-width: 768px) { // Pantallas más pequeñas
-      flex: 0 0 calc(100% / 1 - 10px); // Mostrar 2 items
+    @media (max-width: 768px) {
+      flex: 0 0 100%; // Cada uno ocupará la mitad del ancho
       width: 100%;
-      position: relative;
-      overflow: hidden;
     }
+
 
     .review-header {
       display: flex;
