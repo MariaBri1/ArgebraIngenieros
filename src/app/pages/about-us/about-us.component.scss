@@ -1,65 +1,50 @@
 body {
   background-image: none;
 }
-.banner-container {
-  .banner-video {
-    overflow: hidden;
-    position: relative;
-    padding-top: 56.25%; // Aspect ratio 16:9
 
-    iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
+.banner-container .banner-video {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%; // Aspect ratio 16:9
 
-      @media (max-width: 768px) {
-        width: 100%;
-        height: 100%;
-
-      }
-    }
+  iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
 }
 
 .know-content {
-  color: #444444;
+  color: #444;
   font-size: 1.6rem;
   font-weight: bold;
   padding: 10px;
-  margin-top: 20px;
-  margin-left: 7%;
+  margin: 20px 0 0 7%;
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
-   // margin-left: 5%;
   }
 }
 
 .history-content {
-  background-color: #fafafa;
+  background: #fafafa;
   padding: 30px;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  //align-items: center;
   gap: 50px;
 
-  .part1{
-    margin-left: 10%;
-  }
-  .part2{
-    margin-right: 10%;
-  }
+  .part1 { margin-left: 10%; }
+  .part2 { margin-right: 10%; }
 
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
-    margin-left: 0;
     align-items: center;
   }
 
@@ -67,14 +52,7 @@ body {
     font-size: 1.3rem;
     margin-bottom: 15px;
     color: #333;
-    margin-left: 10%;
-    margin: 0;
-
-    @media (max-width: 768px) {
-      margin-left: 0;
-      width: 100%;
-      text-align: center;
-    }
+    text-align: center;
   }
 
   .text-content {
@@ -92,7 +70,6 @@ body {
   }
 
   .Logo_imagen {
-
     max-width: 300px;
     height: auto;
     margin-right: 9%;
@@ -105,94 +82,75 @@ body {
 }
 
 .vision-mision {
-  margin-top: 10px;
+  margin: 10px 0 5%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  margin-bottom: 5%;
   text-align: justify;
-
 
   @media (max-width: 768px) {
     flex-direction: column;
-    margin-left: 0;
     align-items: center;
   }
 
   div {
-    margin-top: 40px;
     flex: 1;
     padding: 0 10px;
-    display: flex; // Añadido
-    flex-direction: column; // Añadido
-    align-items: center; // Añadido
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
 
     @media (max-width: 768px) {
       width: 100%;
       margin-top: 20px;
     }
+  }
 
-    .vision, .mision {
-      width: 100px;
-      height: 100px;
-      padding: 10px;
-      margin-bottom: 10px;
-      display: block; // Añadido
-      margin: 0 auto 10px; // Añadido
+  .vision, .mision {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 0 auto 10px;
 
-
-      @media (max-width: 768px) {
-        width: 80px;
-        height: 80px;
-      }
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
     }
+  }
 
-    h3 {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin: 10px 0; // Ajustado
-      color: #585656;
-      text-align: center; // Añadido
-    }
+  h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #585656;
+    text-align: center;
+  }
 
-    p {
-      width: 65%;
-      font-size: 1rem;
-      color: #585656;
-      line-height: 1.5;
-      margin: 0 auto 10px; // Modificado
-      text-align: justify;
-
-      @media (max-width: 768px) {
-        width: 90%;
-        margin: 0 auto;
-        text-align: justify;
-      }
-    }
+  p {
+    width: 65%;
+    font-size: 1rem;
+    color: #585656;
+    line-height: 1.5;
+    margin: 0 auto;
+    text-align: justify;
   }
 }
 
 .Esencia-content {
   margin-top: 3%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  width: 100%; // Asegura que el contenedor tome el ancho completo
+  width: 100%;
 
   h4 {
     font-size: 1.3rem;
     color: #333;
     margin-top: 20px;
-    margin-left: 20px;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      margin-left: 0;
-      width: 100%; // Asegura que el título tome el ancho completo
-    }
+    text-align: center;
   }
 
   .image-container {
@@ -202,48 +160,24 @@ body {
     gap: 3.75rem;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%; // Asegura que el contenedor tome el ancho completo
-    padding: 0 1rem; // Cambiado a 1rem para mejor consistencia
+    width: 100%;
+    padding: 0 1rem;
 
     @media (max-width: 768px) {
       gap: 2rem;
       padding: 10%;
-      align-content: center; // Reduce el padding en móviles
-    }
-  }
-
-  .card-item {
-    width: 300px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center; // Centra el contenido de la card
-
-    @media (max-width: 768px) {
-      width: calc(100% - 2rem); // Ajusta el ancho considerando el padding
-      max-width: 300px;
-      margin: 0 auto; // Centra la card
-      padding: 0.5rem; // Reduce el padding en móviles
-    }
-
-    img {
-      width: 200px;
-      height: auto;
-      margin: 0 auto; // Centra la imagen
-
-      @media (max-width: 768px) {
-        width: 150px;
-      }
     }
   }
 }
+
 .carousel-container {
   width: 80%;
   height: 100%;
   place-self: center;
 
-  h4{
+  h4 {
     margin-top: 5%;
+    text-align: center;
   }
 
   p {
@@ -255,18 +189,9 @@ body {
     line-height: 1.5;
   }
 
-
   @media (max-width: 768px) {
     width: 95%;
   }
-
-  h4 {
-    @media (max-width: 768px) {
-      text-align: center;
-      margin-left: 0;
-    }
-  }
-
 }
 
 .whatsapp-container {
@@ -282,18 +207,6 @@ body {
     height: 50px;
     bottom: 15px;
     right: 15px;
-  }
-
-  .whatsapp-button img {
-    @media (max-width: 768px) {
-      width: 30px;
-      height: 30px;
-    }
-  }
-}
-.reseña{
-  img{
-    width: 20px;
   }
 }
 
@@ -312,15 +225,38 @@ body {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  i {
+    color: white;
+    font-size: 20px;
+  }
 }
 
-.mute-toggle:hover {
-  background: rgba(0, 0, 0, 0.8);
+.card-item {
+  width: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Centra el contenido de la card
+
+  @media (max-width: 768px) {
+    width: calc(100% - 2rem); // Ajusta el ancho considerando el padding
+    max-width: 300px;
+    margin: 0 auto; // Centra la card
+    padding: 0.5rem; // Reduce el padding en móviles
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto; // Centra la imagen
+
+    @media (max-width: 768px) {
+      width: 150px;
+    }
+  }
 }
-
-.mute-toggle i {
-  color: white;
-  font-size: 20px;
-}
-
-
