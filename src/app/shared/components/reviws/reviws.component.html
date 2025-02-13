@@ -8,9 +8,14 @@
 <div class="review-carousel">
   <div class="review-items"
   [ngClass]="{ 'stop': stopedReview }"
-  [style.transform]="'translateX(' + (-currentIndex * 100 / itemsToShow) + '%)'">
+  [ngStyle]="reviewItemsStyle"
+>
 
-    <div class="review-item" *ngFor="let review of reviews; let i = index">
+    <div
+      class="review-item"
+      *ngFor="let review of reviews; let i = index"
+      [style.flex]="currentFlexItem"
+    >
       <div class="review-header">
         <div class="review-info">
           <div class="review-name">{{ review.name }}</div>
@@ -22,7 +27,7 @@
       </div>
 
       <div class="review-stars">
-        <span *ngFor="let star of getStarsArray(review.stars)">★</span>
+        <span>{{ '★'.repeat(review.stars) }}</span>
       </div>
 
       <div class="review-text">

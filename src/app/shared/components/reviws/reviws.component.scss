@@ -17,39 +17,29 @@
       transform: translateX(0) !important;
       flex-wrap: wrap;
 
-      .review-item {
-        min-height: 270px !important; // Forzar altura mínima en modo STOP
-        justify-content: space-between; // Para evitar que el contenido empuje la tarjeta
-        gap: 20px; /* Espacio entre elementos */
 
+      .review-item {
+        min-height: 270px !important;
+        justify-content: space-between;
+       // gap: 20px;
       }
-    }
-    @media (max-width: 768px) { // Pantallas más pequeñas
-    gap: 20px;
     }
   }
 
   .review-item {
-    flex: 0 0 calc(100% / 3 - 20px); /* Mostrar 3 elementos a la vez */
-    box-sizing: border-box;
     padding: 20px;
     border-radius: 10px;
     background-color: #F2F6FF;
     text-align: left;
-    position: relative; /* Agregado para posicionar el icono de Google */
-    height: fit-content; // Esto permite que cada item tenga su propia altura
-    min-height: 270px; // Altura mínima base
-
-    @media (max-width: 768px) { // Pantallas más pequeñas
-      flex: 0 0 100%;
-      margin-right: 0; // Elimina el gap derecho
-    }
+    position: relative;
+    height: fit-content;
+    min-height: 270px;
 
     .review-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+      flex-shrink: 0;
 
       .review-info {
         .review-name {
@@ -88,6 +78,16 @@
       color: #333;
       line-height: 20px;
       text-align: justify;
+      position: relative;
+      flex-grow: 1;
+      overflow: hidden;
+      margin-bottom: 30px; // Espacio para el icono de Google
+
+      &.expanded {
+        overflow: auto;
+        max-height: calc(100% - 120px); // Altura total menos el espacio para header y footer
+      }
+    }
 
       .read-more-btn {
         background: none;
@@ -114,7 +114,6 @@
     }
   }
 
-}
 .head{
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subject, takeUntil } from 'rxjs';
 export interface Review {
@@ -15,7 +15,8 @@ export interface Review {
   imports: [
     NgClass,
     NgFor,
-    NgIf
+    NgIf,
+    NgStyle
   ],
   templateUrl: './reviws.component.html',
   styleUrls: ['./reviws.component.scss']
@@ -25,11 +26,12 @@ export class ReviwsComponent implements OnInit, OnDestroy {
   currentIndex: number = 0;
   itemsToShow: number = 3;
   stopedReview: boolean = false;
+  currentGap: number = 20
   expandedReviews: { [key: number]: boolean } = {}; // Objeto para controlar la expansión
 
   private readonly _stopReviews$ = new Subject<void>();
 
-  @HostListener('window.resize')
+  @HostListener('window:resize')
   handleResize (): void {
     this.adjustItemsToShow();
   }
@@ -47,15 +49,11 @@ export class ReviwsComponent implements OnInit, OnDestroy {
   adjustItemsToShow(): void {
     if (window.innerWidth < 768) {
       this.itemsToShow = 1;
-    } else if (window.innerWidth < 1024) {
-      this.itemsToShow = 2;
+      this.currentGap = 0
     } else {
       this.itemsToShow = 3;
+      this.currentGap = 20
     }
-  }
-
-  getStarsArray(numStars: number): number[] {
-    return new Array(numStars);
   }
 
   startAutoSlide(): void {
@@ -79,10 +77,12 @@ export class ReviwsComponent implements OnInit, OnDestroy {
     this.stopedReview = !this.stopedReview; // Cambia el estado
   }
 
-
   toggleReadMore(index: number): void {
-    // Solo cambia el estado de la reseña específica
     this.expandedReviews[index] = !this.expandedReviews[index];
+    const reviewText = document.querySelector(`.review-item:nth-child(${index + 1}) .review-text`);
+    if (reviewText) {
+      reviewText.classList.toggle('expanded');
+    }
   }
 
   truncateText(text: string, index: number): string {
@@ -99,5 +99,16 @@ export class ReviwsComponent implements OnInit, OnDestroy {
   }
   navigateToGoogle() {
     window.open('https://www.google.com/search?sca_esv=aa4709d8f74669be&sxsrf=AHTn8zoj8lh-kiLGFaMXT8FG53ZmOEMxpQ:1739209062674&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzZC6xsZ4nn6BHEC4R3vwqPr7Ti7ZIUrsmdnf6hbpHbf6px3I4Qhz7hKJZkR8VdkyznkVUEj0tPB2AL2hHF79RVWMzqsBgf6ODczqqeR8rSZ9kfE5A_u0LKA0502tWnWucQ4AG0M%3D&q=M%C3%A1s+Que+Vacaciones+Agencia+de+viajes+Opiniones&sa=X&ved=2ahUKEwi9s_vS0rmLAxXKrpUCHeexLUkQ0bkNegQILhAD&biw=1366&bih=605&dpr=1#lrd=0x9105d1b811728b65:0xdc1cb95de5468ae1,1,,,,', '_blank');
+  }
+
+  get currentFlexItem (): string {
+    return `0 0 calc(100% / ${this.itemsToShow} - ${this.currentGap}px)`
+  }
+
+  get reviewItemsStyle () {
+    return {
+      'transform': 'translateX(' + (-this.currentIndex * 100 / this.itemsToShow) + '%)',
+      'gap': `${this.currentGap}px`
+    }
   }
 }
