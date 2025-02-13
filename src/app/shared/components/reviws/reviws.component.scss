@@ -1,4 +1,5 @@
 .review-carousel {
+  margin-left: 1%;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -20,15 +21,17 @@
         min-height: 270px !important; // Forzar altura mínima en modo STOP
         justify-content: space-between; // Para evitar que el contenido empuje la tarjeta
         gap: 20px; /* Espacio entre elementos */
+
       }
     }
     @media (max-width: 768px) { // Pantallas más pequeñas
-    gap: 0;
+    gap: 20px;
     }
   }
 
   .review-item {
     flex: 0 0 calc(100% / 3 - 20px); /* Mostrar 3 elementos a la vez */
+    box-sizing: border-box;
     padding: 20px;
     border-radius: 10px;
     background-color: #F2F6FF;
@@ -37,16 +40,16 @@
     height: fit-content; // Esto permite que cada item tenga su propia altura
     min-height: 270px; // Altura mínima base
 
-    @media (max-width: 768px) {
-      flex: 0 0 100%; // Cada uno ocupará la mitad del ancho
-      width: 100%;
+    @media (max-width: 768px) { // Pantallas más pequeñas
+      flex: 0 0 100%;
+      margin-right: 0; // Elimina el gap derecho
     }
-
 
     .review-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
 
       .review-info {
         .review-name {
@@ -110,21 +113,54 @@
       }
     }
   }
+
 }
 .head{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  .head-text{
+    width: 60%;
+  }
+  @media (max-width: 768px) {
+    .head-text{
+      width: 100%;
+      margin-bottom: 5%;
+    }
+    }
+
+  p {
+    margin-top: 5px;
+    margin-bottom: 2%;
+    text-align: justify;
+    font-size: 1rem;
+    color: #585656;
+    line-height: 1.5;
+    margin-left: 1%;
+  }
 
 button{
-  width: 120px;
+  width: 180px;
   height: 35px;
   background: none;
   border: 2px solid #072D75;
   border-radius: 3px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  button{
+    width: 285px;
+  }
 }
+}
+
+@media (max-width: 768px) {
+  .head{
+    align-items: flex-start;
+    display: grid;
+  }
+  }
+
 .see-more{
   width: 180px;
   margin-left: 450px;
@@ -134,4 +170,15 @@ button{
   border-radius: 3px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .see-more {
+    margin-left: 0;
+    width: 100%; // Se ajusta al ancho de la pantalla
+    text-align: center;
+    width: 285px;
+  }
 
+h4{
+  margin-left: 1%;
+}
+}

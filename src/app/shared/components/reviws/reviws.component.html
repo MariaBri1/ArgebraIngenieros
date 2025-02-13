@@ -1,6 +1,9 @@
 <div class="head">
+<div class="head-text">
 <h4>Lo que nuestro clientes piensan de nosotros</h4>
-<button (click)="toggleReviews()">{{ stopedReview ? 'reanudar' : 'detener' }}</button>
+<p>En Mas que vacaciones, la confianza no se da por sentada, se gana día a día. Nuestros clientes son el pilar fundamental sobre el cual construimos nuestro éxito.</p>
+</div>
+<button (click)="toggleReviews()">{{ stopedReview ? 'Contraer opiniones⬆️' : 'Ver mas opiniones⬇️' }}</button>
 </div>
 <div class="review-carousel">
   <div class="review-items"
@@ -33,7 +36,7 @@
       </div>
     </div>
       <div>
-        <button class="see-more" (click)="navigateToGoogle()"> Ver todas las Reseñas</button>
+        <button class="see-more" (click)="navigateToGoogle()">Ver todas las reseñas➡️</button>
       </div>
   </div>
 </div>
