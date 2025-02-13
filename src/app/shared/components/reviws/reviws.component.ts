@@ -49,7 +49,7 @@ export class ReviwsComponent implements OnInit, OnDestroy {
   adjustItemsToShow(): void {
     if (window.innerWidth < 768) {
       this.itemsToShow = 1;
-      this.currentGap = 0
+      this.currentGap = 20
     } else {
       this.itemsToShow = 3;
       this.currentGap = 20
