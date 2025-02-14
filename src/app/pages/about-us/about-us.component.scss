@@ -80,7 +80,7 @@ body {
     text-align: start;
 
     @media (min-width: 1720px) {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -182,7 +182,7 @@ body {
     text-align: start;
 
     @media (min-width: 1720px) {
-      font-size: 1.8rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -213,6 +213,15 @@ body {
   height: 100%;
   place-self: center;
 
+  h4 {
+    margin-top: 5%;
+    text-align: start;
+    margin-left: 1%;
+  @media (min-width: 1720px) {
+    font-size: 1.3rem;
+  }
+  }
+
 }
   @media (min-width: 1720px) {
     .carousel-container {
@@ -220,14 +229,7 @@ body {
     }
   }
 
-  h4 {
-    margin-top: 5%;
-    text-align: start;
-    margin-left: 1%;
-  @media (min-width: 1720px) {
-    font-size: 1.8rem;
-  }
-  }
+
 .whatsapp-container {
   position: fixed;
   bottom: 2%;
