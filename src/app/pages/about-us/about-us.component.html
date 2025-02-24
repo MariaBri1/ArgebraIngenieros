@@ -1,4 +1,3 @@
-
 <app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
   <iframe
     width="100%"
@@ -9,14 +8,20 @@
     allowfullscreen>
   </iframe>
 </app-banner>
-
 <button class="mute-toggle" (click)="toggleMute()" [title]="isMuted ? 'Unmute' : 'Mute'">
   <i class="fas" [class.fa-volume-up]="!isMuted" [class.fa-volume-mute]="isMuted"></i>
 </button>
 
+<div class="color">
 <div class="know-content">
   <h4> Conócenos</h4>
+  <div class="camera" >
+    <img  src="/assets/logos/respald-icons/ytu-icon.webp" alt="y tu que planes" width="75px" height="75px" >
+    <img  src="/assets/logos/respald-icons/camera-comercy-icon.png" alt="Camara de Comercio" width="140px" height="120px" >
+    <img  src="/assets/logos/respald-icons/agency_r-icon.png" alt="Camara de Comercio" width="120px" height="100px" >
+    </div>
 </div>
+
 <div class="history-content">
   <div class="part1">
   <h2> Más Que Vacaciones</h2>
@@ -34,7 +39,7 @@
 </div>
 </div>
 <div class="Esencia-content">
-  <h4> Nuestra Esencia</h4>
+  <h4>¿Que Nos Caracteriza?</h4>
   <div class="image-container">
     <app-cards
       *ngFor="let item of galleryItems"
@@ -46,33 +51,15 @@
   </div>
 </div>
 
-<div class="vision-mision">
-  <div>
-    <img src="/assets/images/vision.png" alt="logo-vision" class="vision" />
-    <h3>Visión</h3>
-    <p>
-      Ser reconocida como una de las agencias líderes en el mundo
-      de turismo destacando nuestra atención personalizada y calidad de servicio.
-    </p>
-  </div>
-  <div>
-    <img src="/assets/images/mission.png" alt="logo-mision" class="mision"/>
-    <h3>Misión</h3>
-    <p>
-      Ofrecer un excelente servicio a fin de lograr la máxima satisfacción
-      de nuestros viajeros a través de una buena atención de nuestro equipo,
-      diseñando viajes únicos a precios accesibles.
-    </p>
-  </div>
-</div>
 <div class="carousel-container">
 
-  <div class="reseña">
-  <app-reviws [reviews]="reviewList"></app-reviws>
+    <div class="reseña">
+    <app-reviws [reviews]="reviewList"></app-reviws>
+
   </div>
-  <h4>Socios Estratégicos</h4>
+  <h4>Nuestros Socios Estratégicos</h4>
   <p>
-    Gracias a nuestros años de experiencia en la industria del turismo, en Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector. Estas colaboraciones nos permiten ofrecer a nuestros clientes servicios de alta calidad, garantizando experiencias de viaje únicas e inolvidables.
+    Gracias a nuestros años de experiencia en la industria del turismo, en Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
   </p>
   <app-carousel
     [items]="carouselItems1"
@@ -83,7 +70,7 @@
 
   <h4>Respaldados Por:</h4>
   <p>
-    A lo largo de nuestra trayectoria en la industria del turismo, en Más que vacaciones, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas. Estas valiosas alianzas estratégicas nos permiten ofrecer a nuestros clientes servicios de altísima calidad, asegurando así experiencias de viaje excepcionales e inolvidables.
+    A lo largo de nuestra trayectoria en la industria del turismo, en Más que vacaciones, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
   </p>
   <app-carousel
     [items]="carouselItems2"
@@ -100,4 +87,4 @@
   </a>
 </div>
 <router-outlet></router-outlet>
-
+</div>
