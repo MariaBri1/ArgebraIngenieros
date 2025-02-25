@@ -31,12 +31,11 @@
   .review-item {
     padding: 20px;
     border-radius: 10px;
-    background-color: #F2F6FF;
+    background-color: #ffffff;
     text-align: left;
     position: relative;
-    height: fit-content;
     min-height: 270px;
-
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     .review-header {
       display: flex;
       align-items: center;
@@ -120,6 +119,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 96%;
   .head-text{
     width: 60%;
   }
@@ -137,14 +137,13 @@
     font-size: 1rem;
     color: #585656;
     line-height: 1.5;
-    margin-left: 1%;
   }
 
 button{
   width: 180px;
   height: 35px;
   background: none;
-  border: 2px solid #072D75;
+  border: 2px solid #000000;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -167,7 +166,7 @@ button{
   margin-left: 450px;
   height: 35px;
   background: none;
-  border: 2px solid #072D75;
+  border: 2px solid #000000;
   border-radius: 3px;
   cursor: pointer;
 }

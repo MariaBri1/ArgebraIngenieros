@@ -56,7 +56,7 @@ export interface SimpleCarouselItem {
 export class CarouselComponent implements OnInit, OnDestroy {
   @Input() showNavigation: boolean = true;
   @Input() items: Array<CarouselItem | SimpleCarouselItem> = [];
-  @Input() itemsToShow: number = 5; // Por defecto, 5 items
+  @Input() itemsToShow: number = 4; // Por defecto, 5 items
   @Input() autoRotate: boolean = true;
   @Input() rotationInterval: number = 3000; // 3 segundos por defecto
 
@@ -118,7 +118,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
     if (screenWidth <= 768) {
       this.itemsToShow = 2; // Mostrar 2 items en pantallas pequeñas
     } else {
-      this.itemsToShow = 5; // Mostrar 5 items en pantallas grandes
+      this.itemsToShow = 4; // Mostrar 5 items en pantallas grandes
     }
   }
 }

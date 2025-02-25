@@ -150,13 +150,13 @@ galleryItems: Array<{ image: string, title: string, description: string }> = [] 
       },
       {
         image: '/assets/images/our-essence.webp',
-        title: 'Soluciones holísticas',
+        title: 'Experiencia',
         description: 'Abordamos cada desafío de manera integral, considerando todos los aspectos y variables involucradas'
       }
     ]
     this.carouselItems1 = [
       { image: 'assets/logos/agil_peru_logo.png', title: 'Agil (Destinos Mundiales SAC)', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/continental_travel_logo.jpg', title: 'Continental Travel SAC', description: 'Proveedor con 10 años de experiencia' },
+      { image: 'assets/logos/continental_travel_logo.webp', title: 'Continental Travel SAC', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/mundo_representaciones.png', title: 'Mundo Representaciones', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/logo_dm.png', title: 'DM Hoteles', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/dynamics_Inkasiko.png', title: 'Dynamics Inkasiko', description: 'Proveedor con 10 años de experiencia' },

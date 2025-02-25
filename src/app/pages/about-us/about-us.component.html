@@ -16,9 +16,9 @@
 <div class="know-content">
   <h4> Conócenos</h4>
   <div class="camera" >
-    <img  src="/assets/logos/respald-icons/ytu-icon.webp" alt="y tu que planes" width="75px" height="75px" >
-    <img  src="/assets/logos/respald-icons/camera-comercy-icon.png" alt="Camara de Comercio" width="140px" height="120px" >
-    <img  src="/assets/logos/respald-icons/agency_r-icon.png" alt="Camara de Comercio" width="120px" height="100px" >
+    <img class="camera-image"  src="/assets/logos/respald-icons/ytu-icon.webp" alt="y tu que planes"  >
+    <img class="camera-image"   src="/assets/logos/respald-icons/camera-comercy-icon.png" alt="Camara de Comercio"  >
+    <img class="camera-image"  src="/assets/logos/respald-icons/agency_r-icon.png" alt="Camara de Comercio" >
     </div>
 </div>
 
@@ -51,13 +51,14 @@
   </div>
 </div>
 
+<div class="part-sections1"></div>
+
 <div class="carousel-container">
-
-    <div class="reseña">
-    <app-reviws [reviews]="reviewList"></app-reviws>
-
-  </div>
-  <h4>Nuestros Socios Estratégicos</h4>
+ <div class="reseña">
+   <app-reviws [reviews]="reviewList"></app-reviws>
+ </div>
+ <div class="part-sections"></div>
+    <h4>Nuestros Socios Estratégicos</h4>
   <p>
     Gracias a nuestros años de experiencia en la industria del turismo, en Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
   </p>
@@ -67,7 +68,7 @@
     [autoRotate]="true"
     [rotationInterval]="3000"
   ></app-carousel>
-
+  <div class="part-sections"></div>
   <h4>Respaldados Por:</h4>
   <p>
     A lo largo de nuestra trayectoria en la industria del turismo, en Más que vacaciones, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
@@ -79,6 +80,17 @@
     [autoRotate]="true"
     [rotationInterval]="3000"
   ></app-carousel>
+</div>
+
+<div class="background-section">
+  <div class="content">
+      <h2>Mónica Villanueva</h2>
+      <p>Con más de una década de experiencia en el sector turístico, nuestra fundadora ha demostrado ser una líder visionaria y apasionada, destacando por su capacidad para crear experiencias de viaje únicas y personalizadas, anticipando las tendencias del mercado. </p>
+  </div>
+  <div class="image-container">
+      <img src="/assets/images/imagen1.jpg"  class="img-1">
+      <img src="/assets/images/imagen2.jpg"  class="img-2">
+  </div>
 </div>
 
 <div class="whatsapp-container">

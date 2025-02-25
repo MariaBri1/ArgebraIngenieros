@@ -40,11 +40,35 @@ body {
   .camera {
     display: flex;
     align-items: center; /* Centra verticalmente */
-    margin-left: 46%;
+    margin-left: 50%;
     gap: 20px; /* Espacio entre imágenes */
     width: 100%;
     height: 80px;
+    .camera-image{
+      width: 90px;
+      height: 90px;
+    }
   }
+  @media (max-width: 768px) {
+    .camera{
+      margin-left: 10%;
+      .camera-image{
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+  }
+  @media (min-width: 1720px) {
+    .camera{
+      margin-left: 45%;
+      .camera-image{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
 }
 }
 .history-content {
@@ -174,15 +198,16 @@ body {
 }
 
 .carousel-container {
-  margin-top: 4%;
-  width: 80%;
+  margin-top: 3%;
+  width: 75%;
   height: 100%;
   place-self: center;
 
   h4 {
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: start;
     margin-left: 1%;
+
   @media (min-width: 1720px) {
     font-size: 1.3rem;
   }
@@ -300,5 +325,142 @@ p {
 
 @media (max-width: 768px) {
   width: 95%;
+}
+}
+.background-section {
+  width: 100%;
+  height: 600px; // Ocupa toda la pantalla
+  background-image: url('/assets/images/arequipa.jpg'); // Imagen de fondo
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13%; // Margen en los lados
+  position: relative;
+
+  .content {
+      max-width: 40%;
+      color: rgb(255, 255, 255);
+
+      h2 {
+          font-size: 2rem;
+          font-weight: bold;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+          font-size: 0.9rem;
+          color: rgb(255, 255, 255);
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+  }
+
+  .image-container {
+      display: flex;
+      gap: 10px;
+      margin-right: 25%;
+      position: relative;
+
+      .img-1 {
+          width: 230px;
+          height: auto;
+          border-radius: 10px;
+      }
+
+      .img-2 {
+          width: 230px;
+          height: auto;
+          border-radius: 10px;
+          position: absolute;
+          top: 30px;
+          margin-left: 300px; // Se solapa ligeramente sobre la otra imagen
+      }
+  }
+}
+@media (max-width: 768px) {
+  .background-section{
+    display: grid;
+    padding: 20% 5%;
+    width: 100%;
+    height: 500px;
+    .content {
+      max-width: 100%;
+      h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      p {
+        font-size: 0.9rem;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .image-container {
+      width: 100px;
+      height: 150px;
+      gap: 0px;
+      margin-top: 10%;
+      .img-1 {
+        content-visibility: hidden;
+      }
+      .img-2 {
+        width: 130px;
+        border-radius: 10px;
+        position: absolute;
+        top: 0px;
+        margin-left: 100%;
+    }
+    }
+
+  }
+}
+
+@media (min-width: 1720px) {
+  .background-section{
+    width: 100%;
+    height: 500px;
+    padding: 0 22%; // Margen en los lados
+  }
+}
+
+
+
+
+
+
+.part-sections {
+  margin-top: 3%;
+  width: 100%;
+  height: 100px; // Puedes ajustar la altura según necesites
+  background-image: url('/assets/images/line.png'); // Sustituye 'ruta-de-la-imagen.jpg' con la ruta de tu imagen
+  background-size: cover; // Ajusta la imagen para que cubra todo el div
+  background-position: center; // Centra la imagen en el div
+  background-repeat: no-repeat; // Evita que la imagen se repita
+  opacity: 0.5;
+}
+.part-sections1 {
+  width: 80%;
+  margin-top: 3%;
+  margin-left: 10%;
+  height: 100px; // Puedes ajustar la altura según necesites
+  background-image: url('/assets/images/line.png'); // Sustituye 'ruta-de-la-imagen.jpg' con la ruta de tu imagen
+  background-size: cover; // Ajusta la imagen para que cubra todo el div
+  background-position: center; // Centra la imagen en el div
+  background-repeat: no-repeat; // Evita que la imagen se repita
+  opacity: 0.5;
+  @media (min-width: 1720px) {
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 20%;
+    height: 120px;
+    background-image: url('/assets/images/line.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
 }
 }
