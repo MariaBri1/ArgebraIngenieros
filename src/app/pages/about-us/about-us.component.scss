@@ -1,7 +1,6 @@
 body {
   background-image: none;
 }
-
 .banner-container .banner-video {
   overflow: hidden;
   position: relative;
@@ -154,7 +153,6 @@ body {
     }
   }
 }
-
 
 .Esencia-content {
   margin-top: 3%;
@@ -426,31 +424,25 @@ p {
     padding: 0 22%; // Margen en los lados
   }
 }
-
-
-
-
-
-
 .part-sections {
   margin-top: 3%;
   width: 100%;
-  height: 100px; // Puedes ajustar la altura según necesites
-  background-image: url('/assets/images/line.png'); // Sustituye 'ruta-de-la-imagen.jpg' con la ruta de tu imagen
-  background-size: cover; // Ajusta la imagen para que cubra todo el div
-  background-position: center; // Centra la imagen en el div
-  background-repeat: no-repeat; // Evita que la imagen se repita
+  height: 100px;
+  background-image: url('/assets/images/line.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.5;
 }
 .part-sections1 {
   width: 80%;
   margin-top: 3%;
   margin-left: 10%;
-  height: 100px; // Puedes ajustar la altura según necesites
-  background-image: url('/assets/images/line.png'); // Sustituye 'ruta-de-la-imagen.jpg' con la ruta de tu imagen
-  background-size: cover; // Ajusta la imagen para que cubra todo el div
-  background-position: center; // Centra la imagen en el div
-  background-repeat: no-repeat; // Evita que la imagen se repita
+  height: 100px;
+  background-image: url('/assets/images/line.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.5;
   @media (min-width: 1720px) {
     width: 60%;
