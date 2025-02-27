@@ -8,24 +8,38 @@
 
   .review-items {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    /* Aumentamos los tiempos de transición */
+    transition: transform 0.8s ease-in-out, opacity 0.7s ease;
     gap: 20px;
     min-height: 270px;
+
+    &.animating {
+      opacity: 0.3; /* Reducimos más la opacidad para mayor efecto */
+    }
 
     &.stop {
       transform: translateX(0) !important;
       flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      opacity: 1;
+      /* Agregamos transición también al volver a la normalidad */
+      transition: opacity 1s ease-in-out, transform 2s ease-in-out;
+
       .review-item {
         min-height: 270px !important;
         justify-content: space-between;
+        /* Añadimos transición a los items también */
+        transition: all 0.5s ease-in-out;
       }
-      @media (max-width: 768px) {
-        .review-item {
-        gap: 20px;
-        }
-        }
-    }
 
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        .review-item {
+          gap: 20px;
+        }
+      }
+    }
   }
 
   .review-item {

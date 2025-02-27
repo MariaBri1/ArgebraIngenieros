@@ -65,16 +65,29 @@ export class ReviwsComponent implements OnInit, OnDestroy {
         }
       });
   }
-
   toggleReviews(): void {
-    if (this.stopedReview) {
-      // Reinicia el carrusel
-      this.startAutoSlide();
-    } else {
-      // Detiene el carrusel
-      this._stopReviews$.next();
-    }
-    this.stopedReview = !this.stopedReview; // Cambia el estado
+    const reviewItems = document.querySelector('.review-items');
+
+    // Agregamos la clase de animación
+    reviewItems?.classList.add('animating');
+
+    // Aumentamos el tiempo de espera antes de cambiar el display
+    setTimeout(() => {
+      if (this.stopedReview) {
+        // Reinicia el carrusel
+        this.startAutoSlide();
+      } else {
+        // Detiene el carrusel
+        this._stopReviews$.next();
+      }
+
+      this.stopedReview = !this.stopedReview; // Cambia el estado
+
+      // Aumentamos también el tiempo antes de quitar la clase de animación
+      setTimeout(() => {
+        reviewItems?.classList.remove('animating');
+      }, 30); // Un poco más de tiempo para estabilizar
+    }, 900); // Aumentamos el tiempo de espera para un cambio más gradual
   }
 
   toggleReadMore(index: number): void {

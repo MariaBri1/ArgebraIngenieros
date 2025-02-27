@@ -13,6 +13,7 @@ export class AboutUsComponent implements OnInit {
   videoUrl: SafeResourceUrl | undefined;
   isMuted: boolean = true;
 
+
   constructor(private sanitizer: DomSanitizer) {
     this.updateVideoUrl();
   }
@@ -181,6 +182,4 @@ galleryItems: Array<{ image: string, title: string, description: string }> = [] 
     ]
 
   }
-
-
 }
