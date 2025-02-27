@@ -4,6 +4,7 @@ import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel
 import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface';
 import { ReviwsComponent, type Review } from 'src/app/shared/components/reviws/reviws.component';
 
+
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
@@ -12,7 +13,6 @@ import { ReviwsComponent, type Review } from 'src/app/shared/components/reviws/r
 export class AboutUsComponent implements OnInit {
   videoUrl: SafeResourceUrl | undefined;
   isMuted: boolean = true;
-
 
   constructor(private sanitizer: DomSanitizer) {
     this.updateVideoUrl();

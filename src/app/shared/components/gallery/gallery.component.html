@@ -1,0 +1,30 @@
+<div class="gallery">
+  <div class="gallery-item" *ngFor="let img of images.slice(0, 5); let i = index">
+    <div class="image-wrapper" (click)="openImage(img)">
+      <img [src]="img" alt="Imagen">
+
+      <!-- Botón "Ver más" solo en la quinta imagen -->
+      <button *ngIf="i === 4" class="view-more-btn" (click)="toggleGallery($event)">Ver más</button>
+    </div>
+  </div>
+
+  <!-- Modal para mostrar todas las imágenes -->
+  <div class="modal" *ngIf="showAllImages" (click)="toggleGallery()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close-btn" (click)="toggleGallery()">✖</span>
+      <div class="modal-gallery">
+        <div class="modal-gallery-item" *ngFor="let img of images">
+          <div class="image-wrapper" (click)="openImage(img)">
+            <img [src]="img" alt="Imagen">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para imagen ampliada -->
+  <div class="enlarged-view" *ngIf="selectedImage" (click)="closeImage()">
+    <img class="enlarged-image" [src]="selectedImage" alt="Imagen Ampliada">
+    <span class="enlarged-close" (click)="closeImage()">✖</span>
+  </div>
+</div>
