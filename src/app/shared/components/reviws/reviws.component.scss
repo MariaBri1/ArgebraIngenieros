@@ -24,7 +24,7 @@
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       opacity: 1;
       /* Agregamos transición también al volver a la normalidad */
-      transition: opacity 1s ease-in-out, transform 2s ease-in-out;
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
       .review-item {
         min-height: 270px !important;
@@ -45,7 +45,7 @@
   .review-item {
     padding: 20px;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #f6f9ff;
     text-align: left;
     position: relative;
     min-height: 270px;

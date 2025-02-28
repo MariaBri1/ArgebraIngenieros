@@ -140,7 +140,7 @@ galleryItems: Array<{ image: string, title: string, description: string }> = [] 
   ngOnInit (): void {
     this.galleryItems = [
       {
-        image: '/assets/images/our-essence.webp',
+        image: '/assets/images/i-service.jpg',
         title: 'Servicio Integral',
         description: 'Nos enorgullece proporcionar una solución que cubre todos los aspectos de tus requerimientos'
       },
@@ -150,9 +150,9 @@ galleryItems: Array<{ image: string, title: string, description: string }> = [] 
         description: 'Adaptamos nuestros servicios para proporcionarte una experiencia única'
       },
       {
-        image: '/assets/images/our-essence.webp',
+        image: '/assets/images/experience.jpg',
         title: 'Experiencia',
-        description: 'Abordamos cada desafío de manera integral, considerando todos los aspectos y variables involucradas'
+        description: 'Tenemos 10 años cumpliendo sueños, brindando la confianza y seguridad que necesitas para viajar sin preocupaciones.'
       }
     ]
     this.carouselItems1 = [

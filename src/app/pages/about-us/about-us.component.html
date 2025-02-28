@@ -26,9 +26,10 @@
   <div class="part1">
   <h2> Más Que Vacaciones</h2>
   <p class="text-content">
-    Nació en 2014 con el sueño de ofrecer un servicio de viajes integral.
-    Nos dedicamos a crear experiencias de viaje inolvidables con pasajes aéreos,
-    paquetes turísticos, seguros de viaje y cruceros, siempre a precios accesibles.
+    Nació en el año 2014 Con años de experiencia en turismo,
+    emprendí el sueño de crear MÁS QUE VACACIONES.
+    Así comenzó la aventura de dedicarnos a diseñar el viaje ideal que genere experiencias inolvidables,
+    brindando la confianza que buscas en una agencia de viajes.
   </p>
   </div>
   <div class="part2">
@@ -38,8 +39,27 @@
 </video>
 </div>
 </div>
+<div class="background-section">
+<div>
+  <h3>Nuestra Fundadora</h3>
+</div>
+<div class="order">
+  <div class="content">
+      <h2>Mónica Villanueva</h2>
+      <p>
+        Mi pasión por el turismo nació en el año 2000, cuando fui víctima de una estafa al comprar un pasaje aéreo. Al descubrir que mi boleto era falso, me sumergí en el mundo de los vuelos y encontré en el turismo un camino fascinante que me llevó a formarme profesionalmente.
+        Con 20 años de trayectoria, mi mayor satisfacción es conectar a las personas con sus sueños de viaje, ya sea reencontrándose con seres queridos o explorando nuevos destinos. Aspiro a ser una embajadora del Perú, promoviendo su riqueza cultural y natural, contribuyendo así a la sostenibilidad de nuestras comunidades.
+        Te invito a descubrir las maravillas que nos rodean.
+      </p>
+  </div>
+  <div class="image-container">
+      <img src="/assets/images/imagen1.jpg"  class="img-1">
+  </div>
+</div>
+</div>
+</div>
 <div class="Esencia-content">
-  <h4>¿Que Nos Caracteriza?</h4>
+  <h4>¿Qué Nos Caracteriza?</h4>
   <div class="image-container">
     <app-cards
       *ngFor="let item of galleryItems"
@@ -63,7 +83,7 @@
 
     <h4>Nuestros Socios Estratégicos</h4>
   <p>
-    Gracias a nuestros años de experiencia en la industria del turismo, en Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
+    En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
   </p>
   <app-carousel
     [items]="carouselItems1"
@@ -74,7 +94,7 @@
   <div class="part-sections"></div>
   <h4>Respaldados Por:</h4>
   <p>
-    A lo largo de nuestra trayectoria en la industria del turismo, en Más que vacaciones, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
+    A lo largo de nuestra trayectoria en la industria del turismo, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
   </p>
   <app-carousel
     [items]="carouselItems2"
@@ -85,21 +105,10 @@
   ></app-carousel>
 </div>
 
-<div class="background-section">
-  <div class="content">
-      <h2>Mónica Villanueva</h2>
-      <p>Con más de una década de experiencia en el sector turístico, nuestra fundadora ha demostrado ser una líder visionaria y apasionada, destacando por su capacidad para crear experiencias de viaje únicas y personalizadas, anticipando las tendencias del mercado. </p>
-  </div>
-  <div class="image-container">
-      <img src="/assets/images/imagen1.jpg"  class="img-1">
-      <img src="/assets/images/imagen2.jpg"  class="img-2">
-  </div>
-</div>
-
 <div class="whatsapp-container">
   <a href="https://wa.me/+51932244747" class="whatsapp-button" target="_blank">
       <img class="wa-image" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" >
   </a>
 </div>
 <router-outlet></router-outlet>
-</div>
+

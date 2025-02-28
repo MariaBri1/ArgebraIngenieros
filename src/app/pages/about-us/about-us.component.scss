@@ -332,18 +332,32 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 13%; // Margen en los lados
   position: relative;
 
+  h3 {
+    font-size: 2rem;
+    padding: 3% 0%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Montserrat';
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+ .order{
+  display: flex;
+      margin-top: 2%;
+      gap: 15%;
+      align-items: center;
+      padding: 0% 20%;
+ }
   .content {
-      max-width: 40%;
+      max-width: 60%;
       color: rgb(255, 255, 255);
 
       h2 {
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: bold;
           text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
       }
@@ -356,24 +370,10 @@ p {
   }
 
   .image-container {
-      display: flex;
-      gap: 10px;
-      margin-right: 25%;
-      position: relative;
-
       .img-1 {
-          width: 230px;
-          height: auto;
+          width: 200px;
+          height: 250px;
           border-radius: 10px;
-      }
-
-      .img-2 {
-          width: 230px;
-          height: auto;
-          border-radius: 10px;
-          position: absolute;
-          top: 30px;
-          margin-left: 300px; // Se solapa ligeramente sobre la otra imagen
       }
   }
 }

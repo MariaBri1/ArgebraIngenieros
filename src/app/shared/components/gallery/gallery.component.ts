@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
+  standalone: true,
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
-  standalone: true,
-  imports: [NgFor,
+  imports: [
+    NgFor,
     NgIf
   ]
 })
@@ -21,11 +22,16 @@ export class GalleryComponent {
     '/assets/clientes/client-section/img7.jpg',
     '/assets/clientes/client-section/img8.jpg',
     '/assets/clientes/client-section/img9.jpg',
-    '/assets/clientes/client-section/img10.jpg'
+    '/assets/clientes/client-section/img10.jpg',
+    '/assets/clientes/client-section/img11.jpg',
+    '/assets/clientes/client-section/img12.jpg',
+    '/assets/clientes/client-section/img13.jpg',
+    '/assets/clientes/client-section/img15.jpg',
   ];
 
   showAllImages = false;
   selectedImage: string | null = null;
+  currentIndex = 0;
 
   toggleGallery(event?: Event) {
     if (event) {
@@ -34,12 +40,25 @@ export class GalleryComponent {
     this.showAllImages = !this.showAllImages;
   }
 
-  openImage(img: string) {
+  openImage(img: string, index: number) {
     this.selectedImage = img;
+    this.currentIndex = index;
   }
 
-  closeImage() {
-    this.selectedImage = null; // Ahora solo cierra la imagen sin afectar la galería
+  closeImage(event?: Event) {
+    if (event) {
+      event.stopPropagation();
+    }
+    this.selectedImage = null;
+  }
+
+  navigateImage(direction: number, event: Event) {
+    event.stopPropagation();
+    const newIndex = this.currentIndex + direction;
+
+    if (newIndex >= 0 && newIndex < this.images.length) {
+      this.currentIndex = newIndex;
+      this.selectedImage = this.images[newIndex];
+    }
   }
 }
-
