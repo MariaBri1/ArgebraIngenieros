@@ -50,7 +50,12 @@
 
 @media (min-width: 1600px) {
   .main-container {
-    width: 1700px;
+    width: 1400px;
   }
 }
 
+@media (min-width: 1720px) {
+  .main-container {
+    width: 1700px;
+  }
+}
