@@ -39,7 +39,9 @@ body {
 
     @media (min-width: 1600px) {
       font-size: 2rem;
-      margin-left: 15%;
+      h4 {
+        margin-left: 12%;
+      }
     }
   }
 
@@ -391,7 +393,6 @@ p {
   .background-section{
     width: 100%;
     height: 500px;
-    padding: 0 17%; // Margen en los lados
   }
   .image-container {
     width: 100px;
@@ -425,7 +426,7 @@ p {
     margin-top: 2%;
     margin-left: 20%;
     height: 120px;
-    background-image: url('/assets/images/line.png');
+    background-image: url('/assets/images/separator-nazca1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
