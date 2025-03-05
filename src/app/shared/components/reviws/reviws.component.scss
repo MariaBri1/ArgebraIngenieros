@@ -167,13 +167,13 @@
   button:hover {
     background: #ffffff; /* Fondo blanco al pasar el mouse */
     color: #042f59; /* Texto azul */
-    border: 1px #042f59 ;
+    border: 2px solid #042f59 ;
   }
 
   button:active {
     background: #ffffff; /* Fondo blanco al hacer clic */
     color: #042f59; /* Texto azul */
-    border: 1px #042f59 ;
+    border: 2px solid #042f59 ;
   }
 
 @media (max-width: 768px) {
@@ -192,17 +192,32 @@
 
 .see-more{
   width: 180px;
-  margin-left: 450px;
-  height: 35px;
-  background: none;
-  border: 2px solid #000000;
-  border-radius: 3px;
-  cursor: pointer;
-}
+    height: 35px;
+    background: #042f59;
+    margin-left: 850px;
+    color: #f6f9ff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease; /* Para una transición suave */
+  }
+
+  button:hover {
+    background: #ffffff; /* Fondo blanco al pasar el mouse */
+    color: #042f59; /* Texto azul */
+    border: 2px solid #042f59 ;
+  }
+
+  button:active {
+    background: #ffffff; /* Fondo blanco al hacer clic */
+    color: #042f59; /* Texto azul */
+    border: 2px solid #042f59 ;
+  }
 
 @media (min-width: 1720px) {
   .see-more {
-    margin-left: 910px;
+    margin-left: 1080px;
+    margin-top: 3%;
   }
 }
 @media (max-width: 768px) {
