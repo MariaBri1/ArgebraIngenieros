@@ -16,17 +16,22 @@ body {
     pointer-events: none;
   }
 }
-.color{
-  background: #fafafa;
-
   .know-content {
     display: flex;
     align-items: center; /* Centra verticalmente */
+    background: #fafafa;
     color: #444;
     font-size: 1.6rem;
     font-weight: bold;
     padding: 1%;
-    margin: 0% 0 0 7%;
+
+    h4 {
+      margin-left: 7%;
+      font-size: 1.4rem;
+      color: #2e2e2e;
+      margin-top: 2%;
+      text-align: start;
+    }
 
     @media (max-width: 768px) {
       font-size: 1.3rem;
@@ -36,16 +41,8 @@ body {
       font-size: 2rem;
       margin-left: 15%;
     }
-
-    h4 {
-      font-size: 1.4rem;
-      color: #2e2e2e;
-      margin-top: 2%;
-      text-align: start;
-    }
   }
 
-}
 .history-content {
   background: #fafafa;
   padding: 30px;
@@ -418,7 +415,7 @@ p {
   margin-bottom: 3%;
   margin-left: 10%;
   height: 100px;
-  background-image: url('/assets/images/line.png');
+  background-image: url('/assets/images/separator-nazca1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -435,3 +432,4 @@ p {
     opacity: 0.5;
 }
 }
+
