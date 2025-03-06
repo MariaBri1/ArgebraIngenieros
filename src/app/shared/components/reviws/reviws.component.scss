@@ -135,7 +135,11 @@
   align-items: flex-start;
   width: 96%;
   .head-text{
-    width: 60%;
+    width: 61%;
+    h4 {
+      font-size: 16px;
+      color: #2e2e2e;
+    }
   }
   @media (max-width: 768px) {
     .head-text{
