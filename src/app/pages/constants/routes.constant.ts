@@ -10,12 +10,12 @@ export const ROUTE_CONTACT = {
 
 export const ROUTE_ABOUT = {
   path: 'about-us',
-  name: 'Conócenos👥'
+  name: 'Conócenos 👥'
 }
 
 export const ROUTE_PACKAGES = {
   path: 'packages',
-  name: 'Paquetes📦'
+  name: 'Paquetes 📦'
 }
 export const ROUTE_NEW_ADVENTURE = {
   path: 'new-adventure',
