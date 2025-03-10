@@ -1,25 +1,25 @@
 export const ROUTE_HOME = {
   path: 'home',
-  name: 'Inicio 🏠'
+  name: '🏠Inicio'
 }
 
 export const ROUTE_CONTACT = {
   path: 'contact',
-  name: 'Contáctanos 💻'
+  name: '📞Contáctanos'
 }
 
 export const ROUTE_ABOUT = {
   path: 'about-us',
-  name: 'Conócenos 👥'
+  name: '👥Conócenos'
 }
 
 export const ROUTE_PACKAGES = {
   path: 'packages',
-  name: 'Paquetes 📦'
+  name: '✈️Paquetes'
 }
 export const ROUTE_NEW_ADVENTURE = {
   path: 'new-adventure',
-  name: 'Próxima Aventura ✈️'
+  name: '🏞️Próxima Aventura'
 }
 export const ROUTE_FAQ = {
   path: 'faq',

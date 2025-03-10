@@ -19,13 +19,13 @@ export class AboutUsComponent implements OnInit {
   }
 
   updateVideoUrl(): void {
-    const baseUrl = 'https://www.youtube.com/embed/nWk6Y5h4Ovo';
+    const baseUrl = 'https://www.youtube.com/embed/cC_zjR1TtKM';
     const params = new URLSearchParams({
       autoplay: '1',
       mute: this.isMuted ? '1' : '0',
       controls: '0',
       loop: '1',
-      playlist: 'nWk6Y5h4Ovo',
+      playlist: 'cC_zjR1TtKM',
       modestbranding: '1',
       rel: '0',
       showinfo: '0',
@@ -151,7 +151,7 @@ galleryItems: Array<{ image: string, title: string, description: string }> = [] 
       },
       {
         image: '/assets/images/experience.jpg',
-        title: 'Experiencia',
+        title: 'Confianza de cliente',
         description: 'Tenemos 10 años cumpliendo sueños, brindando la confianza y seguridad que necesitas para viajar sin preocupaciones.'
       }
     ]

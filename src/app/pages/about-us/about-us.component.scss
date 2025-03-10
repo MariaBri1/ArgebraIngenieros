@@ -2,20 +2,26 @@ body {
   background-image: none;
 }
 .banner-container .banner-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
   overflow: hidden;
-  position: relative;
-  padding-top: 56.25%; // Aspect ratio 16:9
 
   iframe {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100vw;
+    height: 100vh;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
     pointer-events: none;
+    border: none;
   }
 }
+
   .know-content {
     display: flex;
     align-items: center; /* Centra verticalmente */
@@ -147,7 +153,10 @@ body {
       font-size: 1.3rem;
     }
   }
-
+  p {
+    font-size: 0.9rem;
+    color: #585656;
+  }
   .image-container {
     display: flex;
     flex-wrap: wrap;
@@ -172,11 +181,8 @@ body {
 }
 
 .carousel-container {
- // margin-top: 3%;
- // width: 75%;
   height: 100%;
   padding: 3% 12% 3%;
- // place-self: center;
 
   h4 {
     margin-top: 3%;
@@ -286,22 +292,23 @@ body {
       width: 60%;
     }
   }
-}
-p {
-  margin-top: 10px;
-  margin-bottom: 2%;
-  text-align: justify;
-  font-size: 1rem;
-  color: #585656;
-  line-height: 1.5;
-  margin-left: 1%;
-  @media (min-width: 1600px) {
-    font-size: 1.2rem;
-  }
+  p {
+    margin-top: 10px;
+    margin-bottom: 2%;
+    text-align: justify;
+    font-size: 1rem;
+    color: #585656;
+    line-height: 1.5;
+    margin-left: 1%;
+    @media (min-width: 1600px) {
+      font-size: 1.2rem;
+    }
 
-@media (max-width: 768px) {
-  width: 95%;
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 }
+
 }
 .background-section {
   width: 100%;
@@ -316,19 +323,19 @@ p {
 
   h3 {
     font-size: 2rem;
-    padding: 3% 0%;
+    padding: 3% 12%;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-family: 'Montserrat';
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    text-align: center;
+
 }
  .order{
   display: flex;
-      margin-top: 2%;
-      gap: 15%;
-      align-items: center;
-      padding: 0% 12%;
+  margin-top: 2%;
+  gap: 15%;
+  align-items: center;
+  padding: 0% 12%;
  }
   .content {
       max-width: 60%;
@@ -344,6 +351,8 @@ p {
           font-size: 0.9rem;
           color: rgb(255, 255, 255);
           text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          text-align: justify;
+          line-height: 1.5;
       }
   }
 
@@ -361,6 +370,17 @@ p {
     padding: 10% 0%;
     width: 100%;
     height: 600px;
+
+    h3 {
+      font-size: 1.6rem;
+      padding: 3% 12%;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      font-family: 'Montserrat';
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+  }
     .order{
       display: grid;
       margin-top: 2%;
@@ -396,10 +416,18 @@ p {
 @media (min-width: 1600px) {
   .order{
         padding: 0% 16% !important;
+        align-items: normal !important;
       }
   .background-section{
     width: 100%;
     height: 500px;
+    h2{
+      margin-top: 4%;
+    }
+    h3{
+      width: 60%;
+      padding: 3% 16% 0%;
+    }
   }
   .image-container {
     width: 100px;
