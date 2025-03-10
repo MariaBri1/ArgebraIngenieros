@@ -1,3 +1,14 @@
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 .banner-container {
   width: 100%;
@@ -47,14 +58,14 @@
 /* Ajuste específico para pantallas extra grandes */
 @media (min-width: 1600px) {
   .banner-video iframe {
-    transform: translate(-50%, -48%); /* Desplaza ligeramente hacia arriba para mostrar más contenido inferior */
+    transform: translate(-50%, -50%); /* Desplaza ligeramente hacia arriba para mostrar más contenido inferior */
   }
 }
 
 /* Ajuste específico para pantallas de 1920px */
 @media (min-width: 1920px) {
   .banner-video iframe {
-    transform: translate(-50%, -46%); /* Desplaza aún más hacia arriba para pantallas muy grandes */
+    transform: translate(-50%, -50%); /* Desplaza aún más hacia arriba para pantallas muy grandes */
     width: 177.78vh; /* Mantiene la relación de aspecto correcta */
     height: 100vh;
   }
@@ -62,6 +73,10 @@
 
 /* Ajuste en móviles */
 @media (max-width: 768px) {
+  .banner-container{
+    width: 100%;
+    height: 22vh;
+  }
   .banner-video iframe {
     width: 100vw;
     height: 56.25vw; /* Mantiene relación 16:9 */
