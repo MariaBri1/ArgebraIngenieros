@@ -67,14 +67,21 @@
 </div>
 
 <div class="part-sections1"></div>
+<div class="reseña">
+  <app-reviws [reviews]="reviewList"></app-reviws>
+</div>
+<div class="part-sections">
+  <img src="/assets/images/separador4.png" alt="Separador" class="separator-img">
+</div>
+
+<div class="galery">
+  <app-gallery></app-gallery>
+</div>
+<div class="part-sections">
+  <img src="/assets/images/separador-i.png" alt="Separador" class="separator-img">
+</div>
 
 <div class="carousel-container">
- <div class="reseña">
-   <app-reviws [reviews]="reviewList"></app-reviws>
- </div>
-<div class="part-sections"></div>
-<app-gallery></app-gallery>
-<div class="part-sections"></div>
 
     <h4>Nuestros Socios Estratégicos</h4>
   <p>
@@ -86,7 +93,6 @@
     [autoRotate]="true"
     [rotationInterval]="3000"
   ></app-carousel>
-  <div class="part-sections"></div>
   <h4>Impulsados por:</h4>
   <p>
     A lo largo de nuestra trayectoria en la industria del turismo, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.

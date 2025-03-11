@@ -179,7 +179,15 @@ body {
     }
   }
 }
+.reseña{
+  height: 100%;
+  padding: 3% 12% 0%;
+}
 
+.galery{
+  height: 100%;
+  padding: 3% 12% 0%;
+}
 .carousel-container {
   height: 100%;
   padding: 3% 12% 3%;
@@ -187,7 +195,6 @@ body {
   h4 {
     margin-top: 3%;
     text-align: start;
-    margin-left: 1%;
     font-size: 16px;
     color: #2e2e2e;
 
@@ -199,7 +206,7 @@ body {
 }
   @media (min-width: 1600px) {
     .carousel-container {
-      padding: 3% 17% 3%;
+      padding: 3% 12% 3%;
     }
   }
 
@@ -361,6 +368,7 @@ body {
           width: 200px;
           height: 250px;
           border-radius: 10px;
+
       }
   }
 }
@@ -439,20 +447,28 @@ body {
   margin-top: 3%;
   width: 100%;
   height: 100px;
-  background-image: url('/assets/images/line.png');
+//  background-image: url('/assets/images/line.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 0.7;
+
+  .separator-img {
+    width: 100%;
+    height: auto;
+    display: block; // Para evitar espacios debajo de la imagen
+    opacity: 0.5;
+  }
+
+
   @media (min-width: 1600px) {
     height: 120px;
 }
 }
 .part-sections1 {
-  width: 80%;
+  width: 100%;
   margin-top: 3%;
   margin-bottom: 3%;
-  margin-left: 10%;
   height: 100px;
   background-image: url('/assets/images/separator-nazca1.png');
   background-size: cover;
@@ -460,9 +476,8 @@ body {
   background-repeat: no-repeat;
   opacity: 0.5;
   @media (min-width: 1600px) {
-    width: 60%;
+    width: 100%;
     margin-top: 2%;
-    margin-left: 20%;
     height: 120px;
     background-image: url('/assets/images/separator-nazca1.png');
     background-size: cover;
@@ -474,4 +489,5 @@ body {
 .air{
   width: 380px;
   height: auto;
+  opacity: 0.5;
 }

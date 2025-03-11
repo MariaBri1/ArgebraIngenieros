@@ -70,8 +70,13 @@
 
 .carousel-item {
   flex: 0 0 calc(100% / 4); // Para mostrar 4 items
-  padding: 10px;
+  padding: 10px 40px !important;
   text-align: center;
+
+  @media (max-width: 1920px) {
+      padding: 10px 60px;
+  }
+
 
   @media (max-width: 768px) { // Pantallas más pequeñas
     flex: 0 0 calc(100% / 1); // Mostrar 2 items
