@@ -76,6 +76,12 @@
 }
 @media (min-width: 1600px) {
   .card{
+    min-width: 330px;
+    min-height: 500px;
+  }
+}
+@media (min-width: 1720px) {
+  .card{
     min-width: 377px;
     min-height: 500px;
   }
