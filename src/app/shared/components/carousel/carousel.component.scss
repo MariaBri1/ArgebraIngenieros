@@ -18,12 +18,12 @@
     z-index: 10;
     padding: 0 10px;
   }
+
   h4 {
     margin-bottom: 20px;
     font-size: 1.3rem;
     color: #333;
   }
-
 }
 
 .nav-button {
@@ -35,8 +35,6 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-
-
 
   &:disabled {
     opacity: 0.5;
@@ -63,29 +61,37 @@
 
 .carousel-items {
   display: flex;
-  transition:
-  transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   margin-bottom: 40px;
 }
 
 .carousel-item {
-  flex: 0 0 calc(100% / 4); // Para mostrar 4 items
+  flex: 0 0 calc((100% / 4) - 50px); // Reducimos 50px del ancho original
+  margin: 0 25px; // Agregamos margen de 25px a cada lado para separación
   padding: 10px 40px !important;
   text-align: center;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 
-  @media (max-width: 1920px) {
-      padding: 10px 60px;
+  &:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   }
 
+  @media (max-width: 1920px) {
+    padding: 10px 60px;
+  }
 
-  @media (max-width: 768px) { // Pantallas más pequeñas
-    flex: 0 0 calc(100% / 1); // Mostrar 2 items
+  @media (max-width: 768px) {
+    flex: 0 0 calc(100% - 50px); // Ajuste en móviles para mantener el margen
   }
 
   img {
     max-width: 100%;
     height: auto;
-    width: 100px; // Ajusta según necesites
+    width: 100px;
     border-radius: 8px;
   }
 
