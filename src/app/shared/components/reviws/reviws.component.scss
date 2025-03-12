@@ -146,6 +146,9 @@
       width: 100%;
       margin-bottom: 5%;
     }
+    p{
+      margin-left: 8%;
+    }
     }
 
   p {
@@ -183,6 +186,7 @@
 @media (max-width: 768px) {
   button{
     width: 285px;
+    margin: auto;
   }
 }
 }
@@ -232,7 +236,8 @@
     width: 285px;
   }
 h4{
-  margin-left: 1%;
+  margin-left: 8%;
+  margin-bottom: 3%;
 }
 
 }

@@ -70,7 +70,7 @@ body {
   padding: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 50px;
   width: 100%;
   box-sizing: border-box;
@@ -167,7 +167,7 @@ body {
     margin-right: 9%;
 
     @media (max-width: 768px) {
-      margin: 20px auto;
+      margin: 20px 69px;
       max-width: 250px;
       width: 100%;
     }
@@ -207,7 +207,7 @@ body {
   p {
     font-size: 0.9rem;
     color: #585656;
-    text-align: center;
+    text-align: justify;
     width: 90%;
   }
 
@@ -243,7 +243,7 @@ body {
 
 .review{
   height: 100%;
-  padding: 3% 12% 0%;
+  padding: 0% 12% 0%;
   width: 100%;
   box-sizing: border-box;
 
@@ -254,7 +254,7 @@ body {
 
 .galery{
   height: 100%;
-  padding: 3% 12% 0%;
+  padding: 0% 12% 0%;
   width: 100%;
   box-sizing: border-box;
 
@@ -265,7 +265,7 @@ body {
 
 .carousel-container {
   height: 100%;
-  padding: 3% 12% 3%;
+  padding: 0% 12% 3%;
   width: 100%;
   box-sizing: border-box;
 
@@ -285,11 +285,13 @@ body {
   }
 
   p {
-    text-align: center;
+    margin-top: 8px;
+    text-align: start;
 
     @media (max-width: 768px) {
       width: 90%;
-      margin: 0 auto;
+      margin: 10px auto;
+      text-align: justify;
     }
   }
 
@@ -526,7 +528,7 @@ body {
         font-size: 0.9rem;
         color: rgb(255, 255, 255);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        padding: 0 5px;
+        padding: 5% 0%;
       }
     }
 
@@ -570,37 +572,38 @@ body {
     gap: 0px;
   }
 }
+.mobile {
+  display: none; // Ocultar en pantallas grandes
+}
+
+.desktop {
+  display: block; // Mostrar la versión de escritorio por defecto
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none; // Ocultar la imagen de escritorio en mobile
+  }
+
+  .mobile {
+    display: block; // Mostrar la imagen para mobile
+    width: 90%;
+    max-width: 250px;
+  }
+}
 
 .part-sections {
-  margin-top: 3%;
   width: 100%;
-  height: auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.7;
+  max-width: 100%;
+  margin: 3% auto;
+  opacity: 0.6;
 
   .separator-img {
     width: 100%;
-    height: auto;
-    display: block;
-    opacity: 0.5;
     max-width: 100%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1599px) {
-  .part-sections {
-    width: 100%;
-    max-width: 100%;
-    margin: 3% auto;
-
-    .separator-img {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-}
 
 @media (min-width: 1600px) {
   .part-sections {
