@@ -77,14 +77,26 @@ body {
 
   .histori-header{
     display: flex;
-    gap: 2%;
+    gap: 0%;
     align-items: center;
   }
 
-  .air{
-    width: 230px;
-    height: auto;
-    opacity: 0.5;
+  @media (max-width: 767px) {
+    .air{
+      content-visibility: hidden;
+    }
+    .histori-header{
+      display: grid;
+      margin-bottom: 5px;
+      gap: 0%;
+      align-items: center;
+    }
+  }
+  .air {
+    margin-left: 1%;
+    width: 35%;
+    max-width: 100%;
+    opacity: 0.6;
   }
 
   .part1 {
@@ -96,11 +108,12 @@ body {
   }
 
   @media (min-width: 1600px) {
-    padding: 1.5% 0%;
+    padding: 1.5% 0% 3%;
     gap: 1.5%;
 
     .part1 {
       margin-left: 16%;
+      width: 40%;
     }
     .part2 {
       margin-right: 18%;
@@ -121,14 +134,10 @@ body {
       width: 100%;
     }
 
-    .air {
-      width: 150px;
-    }
   }
 
   h2 {
     font-size: 1.3rem;
-    margin-bottom: 15px;
     color: #333;
     text-align: start;
 
@@ -142,21 +151,21 @@ body {
   }
 
   .text-content {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #585656;
     line-height: 1.6;
     text-align: justify;
     max-width: 90%;
-    margin-top: 2%;
+
 
     @media (max-width: 768px) {
-      text-align: center;
+      text-align: justify;
       padding: 0;
       max-width: 100%;
     }
 
     @media (min-width: 1600px) {
-      font-size: 1.2rem;
+      font-size: 0.9rem;
       max-width: 120%;
     }
   }
@@ -180,7 +189,6 @@ body {
 }
 
 .Esencia-content {
-  margin-top: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,7 +215,7 @@ body {
   p {
     font-size: 0.9rem;
     color: #585656;
-    text-align: justify;
+    text-align: center;
     width: 90%;
   }
 
@@ -444,8 +452,8 @@ body {
   box-sizing: border-box;
 
   h3 {
-    font-size: 2rem;
-    padding: 3% 12%;
+    font-size: 1.7rem;
+    padding: 8% 12% 0%;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-family: 'Montserrat';
@@ -454,7 +462,6 @@ body {
 
   .order{
     display: flex;
-    margin-top: 2%;
     gap: 15%;
     align-items: center;
     padding: 0% 12%;
@@ -465,7 +472,7 @@ body {
     color: rgb(255, 255, 255);
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: bold;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
@@ -476,6 +483,7 @@ body {
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
       text-align: justify;
       line-height: 1.5;
+      margin-top: 10px;
     }
   }
 
@@ -562,7 +570,7 @@ body {
 
     h3{
       width: 60%;
-      padding: 3% 16% 0%;
+      padding: 6% 16% 0%;
     }
   }
 
@@ -613,5 +621,6 @@ body {
     opacity: 0.5;
   }
 }
+
 
 
