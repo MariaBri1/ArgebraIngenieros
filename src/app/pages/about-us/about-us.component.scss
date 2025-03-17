@@ -67,7 +67,7 @@ body {
 
 .history-content {
   background: #fafafa;
-  padding: 30px;
+  padding: 60px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -195,7 +195,7 @@ body {
   gap: 1rem;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 10px;
+  padding: 10px 10px;
 
   h4 {
     font-size: 1.3rem;
@@ -458,6 +458,7 @@ body {
     font-weight: bold;
     font-family: 'Montserrat';
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
   }
 
   .order{
@@ -486,14 +487,16 @@ body {
       margin-top: 10px;
     }
   }
-
   .image-container {
     .img-1 {
       width: 200px;
-      height: 250px;
-      border-radius: 10px;
+      height: 200px; /* Hacer que el ancho y la altura sean iguales */
+      border-radius: 50%; /* Hace que la imagen sea circular */
+      border: 3px solid #042f59; /* Borde azul */
+      object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
     }
   }
+
 }
 
 @media (max-width: 768px) {
