@@ -8,15 +8,13 @@
 .carousel-navigation {
   .button-group {
     position: absolute;
-    top: 35%;
-    left: 0;
-    right: 0;
+    top: 44%;
     transform: translateY(-50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 10;
-    padding: 0 10px;
+    padding: 0px 10px 0px 31px;
   }
 
   h4 {

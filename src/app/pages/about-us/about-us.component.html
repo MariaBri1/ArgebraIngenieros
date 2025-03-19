@@ -70,54 +70,42 @@
   </div>
 </div>
 
-<div class="part-sections">
-  <img src="/assets/images/nazca-opacidad.png" alt="Separador" class="separator-img desktop">
-  <img src="/assets/images/nazca-mobile.png" alt="Separador Mobile" class="separator-img mobile">
+<div class="review_container">
+  <div class="review">
+    <app-reviws [reviews]="reviewList"></app-reviws>
+  </div>
 </div>
 
-
-
-<div class="review">
-  <app-reviws [reviews]="reviewList"></app-reviws>
-</div>
-<div class="part-sections">
-  <img src="/assets/images/separador4.png" alt="Separador" class="separator-img desktop">
-  <img src="/assets/images/separador4-mobile.png" alt="Separador Mobile" class="separator-img mobile">
-</div>
 <div class="galery">
   <app-gallery></app-gallery>
 </div>
-<div class="part-sections">
-  <img src="/assets/images/separador-inkas1.png" alt="Separador" class="separator-img desktop">
-  <img src="/assets/images/separador inkas-mobile.png" alt="Separador Mobile" class="separator-img mobile">
+
+
+<div class="carousel_fondo">
+    <div class="carousel-container">
+        <h4>Nuestros Socios Estratégicos</h4>
+      <p>
+        En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
+      </p>
+      <app-carousel
+        [items]="carouselItems1"
+        [itemsToShow]="5"
+        [autoRotate]="true"
+        [rotationInterval]="3000"
+      ></app-carousel>
+    <h4>Impulsados por:</h4>
+    <p>
+      A lo largo de nuestra trayectoria en la industria del turismo, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
+    </p>
+    <app-carousel
+      [items]="carouselItems2"
+      [itemsToShow]="5"
+      [showNavigation]="false"
+      [autoRotate]="true"
+      [rotationInterval]="3000"
+    ></app-carousel>
+  </div>
 </div>
-
-
-<div class="carousel-container">
-
-    <h4>Nuestros Socios Estratégicos</h4>
-  <p>
-    En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
-  </p>
-  <app-carousel
-    [items]="carouselItems1"
-    [itemsToShow]="5"
-    [autoRotate]="true"
-    [rotationInterval]="3000"
-  ></app-carousel>
-  <h4>Impulsados por:</h4>
-  <p>
-    A lo largo de nuestra trayectoria en la industria del turismo, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
-  </p>
-  <app-carousel
-    [items]="carouselItems2"
-    [itemsToShow]="5"
-    [showNavigation]="false"
-    [autoRotate]="true"
-    [rotationInterval]="3000"
-  ></app-carousel>
-</div>
-
 <div class="whatsapp-container">
   <a href="https://wa.me/+51932244747" class="whatsapp-button" target="_blank">
       <img class="wa-image" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" >
