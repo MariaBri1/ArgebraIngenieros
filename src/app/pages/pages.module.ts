@@ -4,8 +4,12 @@ import { FooterComponent } from '../shared/components/footer/footer.component'
 import { GalleryComponent } from '../shared/components/gallery/gallery.component'
 import { NavComponent } from '../shared/components/nav/nav.component'
 import { ReviwsComponent } from '../shared/components/reviws/reviws.component'
+import { ServiciosComponent } from '../shared/components/servicios/servicios.component'
 import { PagesRoutingModule } from './pages-routing.module'
 import { PagesComponent } from './pages.component'
+
+
+
 @NgModule({
   declarations: [
     PagesComponent
@@ -16,7 +20,10 @@ import { PagesComponent } from './pages.component'
     FooterComponent,
     ReviwsComponent,
     CommonModule,
-    GalleryComponent
+    GalleryComponent,
+    ServiciosComponent,
+
+
   ],
   exports: [
     NavComponent,

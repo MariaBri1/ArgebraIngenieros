@@ -2,7 +2,7 @@ import { Component, type OnInit } from '@angular/core';
 import { DomSanitizer, type SafeResourceUrl } from '@angular/platform-browser';
 import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel.interface';
 import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface';
-import { ReviwsComponent, type Review } from 'src/app/shared/components/reviws/reviws.component';
+import { type Review } from 'src/app/shared/components/reviws/reviws.component';
 
 
 @Component({
@@ -42,7 +42,7 @@ export class AboutUsComponent implements OnInit {
 
   carouselItems1: CarouselItem[] = []
   carouselItems2: SimpleCarouselItem[] = []
-  carouselItems3: ReviwsComponent[]=[]
+
 
 
 
@@ -155,7 +155,7 @@ galleryItems: Array<{ image: string, title: string, description: string }> = [] 
         description: 'Tenemos 10 años cumpliendo sueños, brindando la confianza y seguridad que necesitas para viajar sin preocupaciones.'
       }
     ]
-    this.carouselItems1 = [
+    this.carouselItems1= [
       { image: 'assets/logos/agil_peru_logo.png', title: 'Agil (Destinos Mundiales SAC)', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/continental_travel_logo.webp', title: 'Continental Travel SAC', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/mundo_representaciones.png', title: 'Mundo Representaciones', description: 'Proveedor con 10 años de experiencia' },

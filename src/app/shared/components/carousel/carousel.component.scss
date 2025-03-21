@@ -16,6 +16,16 @@
     z-index: 10;
     padding: 0px 10px 0px 31px;
   }
+  @media (max-width: 768px) {
+    .button-group {
+      padding: 0px 20px 0px 21px;
+    }
+  }
+  @media (min-width: 1599px) {
+    .button-group {
+      padding: 0px 19px;
+    }
+  }
 
   h4 {
     margin-bottom: 20px;
