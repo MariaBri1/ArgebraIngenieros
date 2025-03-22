@@ -1,13 +1,42 @@
 footer {
+  position: relative;
   background: #f6f6f6ee;
+  padding-top: 50px; // Reducimos el padding para que el contenido no baje tanto
   width: 100%;
-  padding: 0 110px;
   box-sizing: border-box;
-  border-top: 2px solid #042f59; // Ajusta el grosor y color según prefieras
+  overflow: hidden; // Aseguramos que el SVG no desborde
+}
+
+.footer-wave {
+  position: absolute;
+  top: 246px;// Levanta el SVG para que no cubra el contenido
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scaleY(0.8); // Ajustamos la altura del SVG para que no tape demasiado
+  }
+}
+@media (min-width: 1599px) {
+  .footer-wave{
+    top: 111px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-wave{
+    top: 1145px;
+  }
 }
 
 .footer-container {
-  margin-top: 20px;
+  position: relative; // Asegura que el contenido esté encima del SVG
+  z-index: 2; // Pone el contenido por encima de la ola
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -23,7 +52,7 @@ footer {
     flex-direction: column;
     padding: 20px;
     gap: 20px;
-   align-content: center;
+    align-content: center;
   }
 }
 
