@@ -60,7 +60,7 @@ footer {
 
 @media (max-width: 768px) {
   .footer-wave {
-    top: 1145px;
+    top: 1077px;
   }
 }
 
@@ -84,6 +84,11 @@ footer {
     padding: 20px;
     gap: 20px;
     align-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container{
+    margin-left: 0px !important;
   }
 }
 

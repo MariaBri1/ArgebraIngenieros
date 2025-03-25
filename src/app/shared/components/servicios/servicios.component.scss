@@ -30,6 +30,12 @@
   gap: 2rem;
   margin: 20px 12%;
 }
+@media (min-width: 1599px) {
+  .servicios-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px 16%;
+  }
+}
 
 .servicio-card {
   display: flex;

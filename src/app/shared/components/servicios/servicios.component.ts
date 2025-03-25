@@ -55,16 +55,40 @@ export class ServiciosComponent {
   // Servicios adicionales (visibles al expandir)
   serviciosAdicionales: Servicio[] = [
     {
-      icono: 'gavel',
-      titulo: 'Asesoría Legal Tributaria'
+      icono: 'directions_bus',
+      titulo: 'Pasajes terrestre'
     },
     {
-      icono: 'business',
-      titulo: 'Consultoría en Comercio Exterior'
+      icono: 'directions_car',
+      titulo: 'Alquiler de autos'
     },
     {
-      icono: 'security',
-      titulo: 'Implementación de Programas de Integridad'
+      icono: 'train',
+      titulo: 'Boletos de Trenes'
+    },
+    {
+      icono: 'assignment',
+      titulo: 'Servicio de trámite de pasaporte'
+    },
+    {
+      icono: 'health_and_safety',
+      titulo: 'Seguro de asistencia'
+    },
+    {
+      icono: 'diamond',
+      titulo: 'Evento de bodas'
+    },
+    {
+      icono: 'beach_access',
+      titulo: 'Luna de miel'
+    },
+    {
+      icono: 'school',
+      titulo: 'Viajes escolares'
+    },
+    {
+      icono: 'location_on',
+      titulo: 'excursiones'
     }
   ];
 

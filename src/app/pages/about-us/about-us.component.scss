@@ -174,7 +174,7 @@ body {
   }
 
   .Logo_imagen {
-    width: 300px;
+    width: 600px;
     height: auto;
     margin-right: 9%;
 
@@ -229,11 +229,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5%;
-    max-width: 80%;
     margin: 0 auto;
     width: 100%;
-    padding: 0 1%;
+    gap: 5%;
 
     @media (max-width: 768px) {
       gap: 1rem;
@@ -243,7 +241,7 @@ body {
 
     @media (min-width: 1600px) {
       max-width: 70%;
-      gap: 16%;
+      gap: 17%;
       height: auto;
     }
 
@@ -261,8 +259,7 @@ body {
 }
 
 .review_container{
-  background: #f3faff;
-  min-height: 550px;
+  min-height: 500px;
   background-repeat: no-repeat;
   .review{
     height: 100%;
@@ -276,7 +273,7 @@ body {
   }
 }
 .galery{
-  height: 100%;
+
   padding: 0% 12% 0%;
   width: 100%;
   box-sizing: border-box;
