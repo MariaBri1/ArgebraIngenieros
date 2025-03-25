@@ -1,4 +1,3 @@
-/* servicios.component.scss */
 .servicios-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -6,28 +5,30 @@
 }
 
 .servicios-titulo {
-  text-align: center;
-  margin-bottom: 3rem;
+  display: flex;
+  align-items: center; // Alineación vertical del botón con el título
+  justify-content: center;
+  gap: 10px; // Espaciado entre el título y el botón
 
   h2 {
-    color: #005595;
-    font-size: 2rem;
+    color: #333;
+    font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
   }
+}
 
   hr {
     width: 60px;
     border: 2px solid #005595;
     margin: 0 auto;
   }
-}
+
 
 .servicios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin: 20px 12%;
 }
 
 .servicio-card {
@@ -47,7 +48,7 @@
 }
 
 .servicio-icono {
-  background-color: #e7f1f9;
+  background-color: #042f59;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -58,13 +59,14 @@
 
   mat-icon {
     font-size: 40px;
+    color: #ffffff;
     width: 40px;
     height: 40px;
   }
 }
 
 .servicio-titulo {
-  color: #005595;
+  color: #042f59;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -84,16 +86,29 @@
 
 .ver-mas-container {
   display: flex;
-  justify-content: center;
-  margin: 2rem 0;
+  align-items: center; // Centrado verticalmente
+  justify-content: center; // Centrado horizontalmente
 
   button {
+    background: none; // Sin fondo
+    border: none; // Sin borde
     display: flex;
     align-items: center;
-    padding: 0.5rem 2rem;
-    font-weight: bold;
+    justify-content: center;
+    cursor: pointer;
+
+    mat-icon {
+      color: #333; // Color del icono
+      font-size: 40px; // Tamaño del icono
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
+
 
 .servicios-adicionales {
   margin-top: 1rem;

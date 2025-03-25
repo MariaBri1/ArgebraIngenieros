@@ -39,16 +39,16 @@ export class ServiciosComponent {
   // Servicios iniciales (siempre visibles)
   serviciosPrincipales: Servicio[] = [
     {
-      icono: 'home',
-      titulo: 'Compliance – Revisión de cumplimiento normativo del OCE, OI y terceros'
+      icono: 'flight',
+      titulo: 'Boletos nacionales e internacionales'
     },
     {
-      icono: 'fact_check',
-      titulo: 'Asesoría en implementación del sistema de prevención de LAFT – UIF'
+      icono: 'hiking',
+      titulo: 'Full days'
     },
     {
-      icono: 'search',
-      titulo: 'Asesoría en perfil de cumplimiento – D. Leg N° 1535'
+      icono: 'directions_boat',
+      titulo: 'Crucero '
     }
   ];
 

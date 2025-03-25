@@ -1,16 +1,15 @@
-<!-- servicios.component.html -->
 <div class="servicios-container">
   <div class="servicios-titulo">
     <h2>SERVICIOS</h2>
-      <!-- Botón Ver más -->
-  <div class="ver-mas-container">
-    <button mat-raised-button color="primary" (click)="toggleExpansion()">
-      {{ expandido ? 'Ver menos' : 'Ver más' }}
-      <mat-icon>{{ expandido ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
-    </button>
+    <!-- Botón sin fondo y sin texto -->
+    <div class="ver-mas-container">
+      <button mat-button (click)="toggleExpansion()">
+        <mat-icon>{{ expandido ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+      </button>
+    </div>
   </div>
+</div>
 
-  </div>
 
   <!-- Servicios principales (siempre visibles) -->
   <div class="servicios-grid">
@@ -20,7 +19,6 @@
       </div>
       <h3 class="servicio-titulo">{{servicio.titulo}}</h3>
 
-      <button mat-raised-button color="primary" class="escribenos-btn">ESCRÍBENOS</button>
     </div>
   </div>
 
@@ -33,8 +31,7 @@
           <mat-icon color="primary">{{servicio.icono}}</mat-icon>
         </div>
         <h3 class="servicio-titulo">{{servicio.titulo}}</h3>
-        <button mat-raised-button color="primary" class="escribenos-btn">ESCRÍBENOS</button>
       </div>
     </div>
   </div>
-</div>
+
