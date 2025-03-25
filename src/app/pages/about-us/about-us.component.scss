@@ -33,7 +33,6 @@ body {
 .know-content {
   display: flex;
   align-items: center;
-  background: #fafafa;
   color: #444;
   font-size: 1.6rem;
   font-weight: bold;
@@ -66,7 +65,7 @@ body {
 }
 
 .history-content {
-  background: #fafafa;
+
   padding: 0px 30px 60px;
   display: flex;
   justify-content: space-between;
@@ -291,13 +290,11 @@ body {
 .carousel_fondo{
   background: #f3faff;
   margin: 50px 0px 0px;
-  min-height: 450px;
-  background-repeat: no-repeat;
 }
 
 .carousel-container {
   height: 100%;
-  padding: 0% 12% 3%;
+  padding: 4% 12%;
   width: 100%;
   box-sizing: border-box;
 
@@ -317,7 +314,7 @@ body {
   }
 
   p {
-    margin: 16px 0px;
+    margin: 16px 0px 30px;
     color: #414141;
     text-align: start;
 
@@ -469,65 +466,6 @@ body {
   }
 }
 
-.background-section {
-  width: 100%;
-  min-height: 600px;
-  background-image: url('/assets/images/fondo_fundadora.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  box-sizing: border-box;
-
-  h3 {
-    font-size: 1.4rem;
-    padding: 6% 20% 0%;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-family: 'Montserrat';
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 5px;
-  }
-
-  .order{
-    display: flex;
-    gap: 15%;
-    align-items: center;
-    padding: 12% 12%
-  }
-
-  .content {
-    max-width: 60%;
-    color: rgb(255, 255, 255);
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    p {
-      font-size: 0.9rem;
-      color: rgb(255, 255, 255);
-      text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.5);
-      text-align: justify;
-      line-height: 1.5;
-      margin-top: 10px;
-    }
-  }
-  .image-container {
-    .img-1 {
-      width: 200px;
-      height: 200px; /* Hacer que el ancho y la altura sean iguales */
-      border-radius: 50%; /* Hace que la imagen sea circular */
-      border: 3px solid #e3e3e3;
-      object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
-    }
-  }
-
-}
 
 @media (max-width: 768px) {
   .background-section{

@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 interface Servicio {
   icono: string;
   titulo: string;
-  descripcion: string;
 }
 
 @Component({
@@ -40,19 +39,16 @@ export class ServiciosComponent {
   // Servicios iniciales (siempre visibles)
   serviciosPrincipales: Servicio[] = [
     {
-      icono: 'description',
-      titulo: 'Compliance – Revisión de cumplimiento normativo del OCE, OI y terceros',
-      descripcion: 'Busca prevenir la configuración de infracciones y sanciones de los OCE, OI y terceros ante la SUNAT – Administración Aduanera.'
+      icono: 'home',
+      titulo: 'Compliance – Revisión de cumplimiento normativo del OCE, OI y terceros'
     },
     {
       icono: 'fact_check',
-      titulo: 'Asesoría en implementación del sistema de prevención de LAFT – UIF',
-      descripcion: 'Busca prevenir la configuración de infracciones y sanciones ante la Unidad de Inteligencia Financiera – UIF del Perú.'
+      titulo: 'Asesoría en implementación del sistema de prevención de LAFT – UIF'
     },
     {
       icono: 'search',
-      titulo: 'Asesoría en perfil de cumplimiento – D. Leg N° 1535',
-      descripcion: 'Ayudamos a las empresas a cumplir con las normativas, reducir sanciones y mejorar su reputación.'
+      titulo: 'Asesoría en perfil de cumplimiento – D. Leg N° 1535'
     }
   ];
 
@@ -60,18 +56,15 @@ export class ServiciosComponent {
   serviciosAdicionales: Servicio[] = [
     {
       icono: 'gavel',
-      titulo: 'Asesoría Legal Tributaria',
-      descripcion: 'Ofrecemos asesoría especializada en materia tributaria para evitar contingencias fiscales y optimizar la carga impositiva.'
+      titulo: 'Asesoría Legal Tributaria'
     },
     {
       icono: 'business',
-      titulo: 'Consultoría en Comercio Exterior',
-      descripcion: 'Brindamos apoyo en operaciones de importación y exportación, cumpliendo con la normativa aduanera vigente.'
+      titulo: 'Consultoría en Comercio Exterior'
     },
     {
       icono: 'security',
-      titulo: 'Implementación de Programas de Integridad',
-      descripcion: 'Ayudamos a establecer mecanismos de prevención y detección de actos de corrupción en su organización.'
+      titulo: 'Implementación de Programas de Integridad'
     }
   ];
 
