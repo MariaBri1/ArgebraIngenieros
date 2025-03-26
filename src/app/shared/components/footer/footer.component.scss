@@ -54,7 +54,7 @@ footer {
 // Ajustes responsivos para las olas
 @media (min-width: 1599px) {
   .footer-wave {
-    top: 111px;
+    top: 136px;
   }
 }
 
@@ -91,6 +91,12 @@ footer {
     margin-left: 0px !important;
   }
 }
+@media (min-width: 1599px) {
+  .footer-container{
+    padding: 50px 12% 39px;
+  }
+}
+
 
 .first-column {
   display: flex;

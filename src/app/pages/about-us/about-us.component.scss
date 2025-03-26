@@ -40,13 +40,15 @@ body {
   color: #444;
   font-size: 1.6rem;
   font-weight: bold;
-  padding: 1%;
+  padding: 1% 1% 0%;
   width: 100%;
   box-sizing: border-box;
 
   h4 {
-    margin-left: 7%;
+    font-family: "Winky Sans", sans-serif;
+    margin-left: 11%;
     font-size: 1.4rem;
+    font-weight: lighter;
     color: #2e2e2e;
     margin-top: 2%;
     text-align: start;
@@ -63,13 +65,12 @@ body {
   @media (min-width: 1600px) {
     font-size: 2rem;
     h4 {
-      margin-left: 12%;
+      margin-left: 15%;
     }
   }
 }
 
 .history-content {
-
   padding: 0px 30px 60px;
   display: flex;
   justify-content: space-between;
@@ -111,8 +112,15 @@ body {
   }
 
   @media (min-width: 1600px) {
-    padding: 1.5% 0% 3%;
+    padding: 0% 0% 3%;
     gap: 1.5%;
+
+    h2{
+      color: #2e2e2e;
+      text-align: start;
+      font-size: 2.1rem;
+      font-family: "Winky Sans";
+    }
 
     .part1 {
       margin-left: 16%;
@@ -140,9 +148,10 @@ body {
   }
 
   h2 {
-    font-size: 1.3rem;
-    color: #333;
+    color: #2e2e2e;
     text-align: start;
+    font-size: 2.3rem;
+    font-family: 'Winky Sans';
 
     @media (min-width: 1720px) {
       font-size: 1.4rem;
@@ -190,17 +199,64 @@ body {
     }
   }
 }
-
+.ave {
+  position: absolute;
+  left: 2%;
+  transform: translateY(-50%);
+  max-width: 200px; // Ajusta el tamaño según necesites
+  z-index: 10;
+}
+.guaca {
+  position: absolute;
+  right: 10px;
+  top: 417%;
+  transform: translateY(-50%);
+  max-width: 200px; // Ajusta el tamaño según necesites
+  z-index: 10;
+}
+@media (min-width: 1800px) {
+  .guaca{
+    right: 8% !important;
+    top: 292% !important;
+  }
+  .ave{
+    top: 130% !important;
+    left: 9% !important;
+  }
+}
+@media (min-width: 1600px){
+  .guaca{
+    right: 6%;
+    top: 331%;
+  }
+  .ave{
+    left: 8% ;
+    top: 138%;
+  }
+}
+@media (max-width: 768px) {
+  .guaca{
+    content-visibility: hidden;
+  }
+  .ave{
+    content-visibility: hidden;
+  }
+  .tourist{
+    content-visibility: hidden;
+  }
+}
 
 
 .Esencia-content {
+  background: #f3faff;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 10px;
+  padding: 40px 10px;
 
   h4 {
     font-size: 1.3rem;
@@ -259,11 +315,11 @@ body {
 }
 
 .review_container{
-  min-height: 500px;
-  background-repeat: no-repeat;
+  min-height: 565px;
+  background: #f3faff;
   .review{
     height: 100%;
-    padding: 5% 16% 0%;
+    padding: 5% 11% 0%;
     width: 100%;
     box-sizing: border-box;
 
@@ -285,6 +341,15 @@ body {
 @media (min-width: 1599px) {
   .galery{
   padding: 0% 16% 0%;
+  }
+  .review{
+    padding: 5% 16% 0%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .review{
+    padding: 5% 16% 0% !important;
   }
 }
 
@@ -657,4 +722,30 @@ body {
       margin: 0;
     }
   }
+}
+.tourist{
+  position: absolute;
+  transform: translateY(-50%);
+  max-width: 290px;
+  top: 242%;
+  right: 0;
+  z-index: 10;
+}
+@media (min-width: 1599px) {
+  .tourist{
+    max-width: 390px;
+    top: 213%;
+    right: 25px;
+  }
+}
+@media (min-width: 1800px) {
+  .tourist{
+    max-width: 450px !important;
+    top: 193% !important;
+    right: 96px !important;
+  }
+}
+.servicios-container{
+  min-height: 500px;
+  padding: 4% 0px 0px;
 }

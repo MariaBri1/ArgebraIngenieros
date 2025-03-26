@@ -1,12 +1,12 @@
 <app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
   <iframe
-    width="100%"
-    height="100%"
-    [src]="videoUrl"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+  #videoFrame
+  [src]="videoUrl"
+  width="100%"
+  height="100%"
+  frameborder="0"
+  (click)="preventPause($event)"
+></iframe>
 </app-banner>
 <button class="mute-toggle" (click)="toggleMute()" [title]="isMuted ? 'Unmute' : 'Mute'">
   <i class="fas" [class.fa-volume-up]="!isMuted" [class.fa-volume-mute]="isMuted"></i>
@@ -19,9 +19,10 @@
 <div class="history-content">
   <div class="part1">
     <div class="histori-header">
-      <h2> Más Que Vacaciones</h2>
+      <h2>Somos, Más Que Vacaciones</h2>
         <img src="/assets/images/airplane-mobile.png" alt="ornament" class="air">
-    </div>
+      </div>
+
   <p class="text-content">
     Nació en el año 2014 Con años de experiencia en turismo,
     emprendí el sueño de crear MÁS QUE VACACIONES.
@@ -37,6 +38,7 @@
     </video>
   </div>
 </div>
+<img src="/assets/images/bordes/ave.png" alt="ornament" class="ave">
 
 <div class="Esencia-content">
   <h4>¿Qué nos caracteriza?</h4>
@@ -51,8 +53,10 @@
     </app-cards>
   </div>
 </div>
-
+<img src="/assets/images/bordes/tourist.png" alt="ornament" class="tourist">
+<div class="servicios-container">
 <app-servicios></app-servicios>
+</div>
 
 <div class="review_container">
   <div class="review">
@@ -60,6 +64,7 @@
   </div>
 </div>
 
+<img src="/assets/images/bordes/guacamayo.png" alt="ornament" class="guaca">
 <div class="galery">
   <app-gallery></app-gallery>
 </div>

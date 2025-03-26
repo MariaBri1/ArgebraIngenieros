@@ -1,50 +1,110 @@
-import { Component, type OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, type OnInit } from '@angular/core';
 import { DomSanitizer, type SafeResourceUrl } from '@angular/platform-browser';
 import { type CarouselItem } from 'src/app/shared/components/interfaces/carousel.interface';
 import { type SimpleCarouselItem } from 'src/app/shared/components/interfaces/simplecarousel.interface';
 import { type Review } from 'src/app/shared/components/reviws/reviws.component';
 
+declare var YT: any; // Declaración para el API de YouTube
 
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss']
 })
-export class AboutUsComponent implements OnInit {
+export class AboutUsComponent implements OnInit, AfterViewInit {
+  @ViewChild('videoFrame') videoFrame: ElementRef = {} as ElementRef;
+
   videoUrl: SafeResourceUrl | undefined;
   isMuted: boolean = true;
+  private player: any; // Instancia del reproductor de YouTube
+
+  carouselItems1: CarouselItem[] = []
+  carouselItems2: SimpleCarouselItem[] = []
 
   constructor(private sanitizer: DomSanitizer) {
     this.updateVideoUrl();
   }
 
+  ngAfterViewInit() {
+    // Cargar API de YouTube
+    if (!(window as any).YT) {
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
+
+      (window as any).onYouTubeIframeAPIReady = () => {
+        this.initPlayer();
+      };
+    } else {
+      this.initPlayer();
+    }
+  }
+
+  initPlayer() {
+    if (this.videoFrame && this.videoFrame.nativeElement) {
+      this.player = new YT.Player(this.videoFrame.nativeElement, {
+        events: {
+          'onReady': this.onPlayerReady.bind(this),
+          'onStateChange': this.onPlayerStateChange.bind(this)
+        }
+      });
+    }
+  }
+
+  onPlayerReady(event: any) {
+    event.target.playVideo();
+  }
+
+  onPlayerStateChange(event: any) {
+    // Si el video se pausa, inmediatamente reproducirlo de nuevo
+    if (event.data === YT.PlayerState.PAUSED) {
+      event.target.playVideo();
+    }
+  }
+
   updateVideoUrl(): void {
     const baseUrl = 'https://www.youtube.com/embed/cC_zjR1TtKM';
     const params = new URLSearchParams({
-      autoplay: '1',
+      autoplay: '1',      // Iniciar reproducción automática
       mute: this.isMuted ? '1' : '0',
-      controls: '0',
-      loop: '1',
+      controls: '0',      // Ocultar controles de reproducción
+      loop: '1',          // Reproducción en bucle
       playlist: 'cC_zjR1TtKM',
       modestbranding: '1',
-      rel: '0',
-      showinfo: '0',
-      iv_load_policy: '3',
+      rel: '0',           // No mostrar videos relacionados
+      showinfo: '0',      // Ocultar información del video
+      iv_load_policy: '3', // Ocultar anotaciones
+      disablekb: '1',     // Deshabilitar controles del teclado
+      fs: '0',            // Deshabilitar pantalla completa
+      enablejsapi: '1',   // Habilitar API de JavaScript
       origin: window.location.origin
     });
+
     this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`${baseUrl}?${params.toString()}`);
   }
 
   toggleMute(): void {
     this.isMuted = !this.isMuted;
     this.updateVideoUrl();
+
+    // Si el player ya está inicializado, actualizar el estado de silencio
+    if (this.player) {
+      this.isMuted ? this.player.mute() : this.player.unMute();
+    }
   }
 
-  carouselItems1: CarouselItem[] = []
-  carouselItems2: SimpleCarouselItem[] = []
+  // Método para prevenir pausa por clic
+  preventPause(event: MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
 
-
-
+    if (this.player) {
+      // Si está pausado, volver a reproducir
+      if (this.player.getPlayerState() === YT.PlayerState.PAUSED) {
+        this.player.playVideo();
+      }
+    }
+  }
 
 reviewList: Review[] = [
   {
