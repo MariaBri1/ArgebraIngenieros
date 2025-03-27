@@ -208,7 +208,7 @@ body {
 }
 .guaca {
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 417%;
   transform: translateY(-50%);
   max-width: 200px; // Ajusta el tamaño según necesites
@@ -216,7 +216,7 @@ body {
 }
 @media (min-width: 1800px) {
   .guaca{
-    right: 8% !important;
+    left: 8% !important;
     top: 292% !important;
   }
   .ave{
@@ -226,7 +226,7 @@ body {
 }
 @media (min-width: 1600px){
   .guaca{
-    right: 6%;
+    left: 6%;
     top: 331%;
   }
   .ave{
