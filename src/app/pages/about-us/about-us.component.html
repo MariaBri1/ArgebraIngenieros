@@ -1,36 +1,37 @@
 <app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
   <iframe
-  #videoFrame
-  [src]="videoUrl"
-  width="100%"
-  height="100%"
-  frameborder="0"
-  (click)="preventPause($event)"
-></iframe>
+    #videoFrame
+    [src]="videoUrl"
+    width="100%"
+    height="100%"
+    frameborder="0"
+    (click)="preventPause($event)"
+  ></iframe>
 </app-banner>
+
 <button class="mute-toggle" (click)="toggleMute()" [title]="isMuted ? 'Unmute' : 'Mute'">
   <i class="fas" [class.fa-volume-up]="!isMuted" [class.fa-volume-mute]="isMuted"></i>
 </button>
 
 <div class="know-content">
-  <h4> Conócenos</h4>
+  <h4>Conócenos</h4>
 </div>
 
-<div class="history-content">
+<div class="history-content" #historyContent>
   <div class="part1">
     <div class="histori-header">
       <h2>Somos, Más Que Vacaciones</h2>
-        <img src="/assets/images/airplane-mobile.png" alt="ornament" class="air">
-      </div>
+      <img src="/assets/images/airplane-mobile.png" alt="ornament" class="air">
+    </div>
 
-  <p class="text-content">
-    Nació en el año 2014 Con años de experiencia en turismo,
-    emprendí el sueño de crear MÁS QUE VACACIONES.
-    Así comenzó la aventura de dedicarnos a diseñar el viaje ideal que genere experiencias inolvidables,
-    brindando la confianza que buscas en una agencia de viajes.
-  </p>
-
+    <p class="text-content">
+      Nació en el año 2014 Con años de experiencia en turismo,
+      emprendí el sueño de crear MÁS QUE VACACIONES.
+      Así comenzó la aventura de dedicarnos a diseñar el viaje ideal que genere experiencias inolvidables,
+      brindando la confianza que buscas en una agencia de viajes.
+    </p>
   </div>
+
   <div class="part2">
     <video class="Logo_imagen" autoplay muted loop>
       <source src="/assets/images/video-logo.mp4" type="video/mp4" alt="logo_mqv"/>
@@ -38,11 +39,13 @@
     </video>
   </div>
 </div>
+
 <img src="/assets/images/bordes/ave.png" alt="ornament" class="ave">
 
-<div class="Esencia-content">
+<div class="Esencia-content" #esenciaContent>
   <h4>¿Qué nos caracteriza?</h4>
   <p>En Mas Que Vacaciones, destacamos por nuestro compromiso, atención personalizada y experiencias inolvidables que nos distinguen de las demás.</p>
+
   <div class="image-container">
     <app-cards
       *ngFor="let item of galleryItems"
@@ -53,9 +56,11 @@
     </app-cards>
   </div>
 </div>
+
 <img src="/assets/images/bordes/tourist.png" alt="ornament" class="tourist">
+
 <div class="servicios-container">
-<app-servicios></app-servicios>
+  <app-servicios></app-servicios>
 </div>
 
 <div class="review_container">
@@ -65,23 +70,24 @@
 </div>
 
 <img src="/assets/images/bordes/guacamayo.png" alt="ornament" class="guaca">
+
 <div class="galery">
   <app-gallery></app-gallery>
 </div>
 
-
 <div class="carousel_fondo">
-    <div class="carousel-container">
-        <h4>Nuestros Socios Estratégicos</h4>
-      <p>
-        En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
-      </p>
-      <app-carousel
-        [items]="carouselItems1"
-        [itemsToShow]="5"
-        [autoRotate]="true"
-        [rotationInterval]="3000"
-      ></app-carousel>
+  <div class="carousel-container">
+    <h4>Nuestros Socios Estratégicos</h4>
+    <p>
+      En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados del sector.
+    </p>
+    <app-carousel
+      [items]="carouselItems1"
+      [itemsToShow]="5"
+      [autoRotate]="true"
+      [rotationInterval]="3000"
+    ></app-carousel>
+
     <h4>Impulsados por:</h4>
     <p>
       A lo largo de nuestra trayectoria en la industria del turismo, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
@@ -95,10 +101,11 @@
     ></app-carousel>
   </div>
 </div>
+
 <div class="whatsapp-container">
   <a href="https://wa.me/+51932244747" class="whatsapp-button" target="_blank">
-      <img class="wa-image" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" >
+    <img class="wa-image" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 </div>
-<router-outlet></router-outlet>
 
+<router-outlet></router-outlet>
