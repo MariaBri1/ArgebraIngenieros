@@ -163,13 +163,21 @@ p {
       font-size: 1.8rem;
     }
   }
+
+  @media (min-width: 1800px) {
+    font-size: 2rem;
+
+    h4 {
+      margin-left: 13% !important;
+      font-size: 1.8rem;
+    }
+  }
 }
 
 /* Historia */
 .history-content {
   padding: 0px 30px 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 50px;
   width: 100%;
@@ -268,7 +276,6 @@ p {
   .Logo_imagen {
     width: 600px;
     height: auto;
-    margin-right: 9%;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 
     &:hover {
@@ -332,8 +339,7 @@ p {
     }
 
     .part2 {
-      margin-right: 18%;
-      margin-left: 2%;
+      margin-left: 3%;
 
       &.animate-slideInRight {
         animation-duration: 1.2s;
@@ -348,15 +354,44 @@ p {
         transform: scale(1.08) rotate(2deg);
       }
     }
+
   }
 
   @media (min-width: 1800px) {
+    .part1 {
+      margin-left: 14%;
+      max-width: 100% !important;
+      width: 1100px;
+
+
+      &.animate-slideInLeft {
+        animation-duration: 1.2s;
+      }
+    }
+    .part2 {
+      margin-right: 14%;
+      margin-left: 0% !important;
+
+      &.animate-slideInRight {
+        animation-duration: 1.2s;
+      }
+    }
+
     .part1, .part2 {
       animation-duration: 1.5s;
     }
 
     &:hover {
       transform: translateY(-8px);
+    }
+    .text-content{
+      width: 950px;
+      max-width: 100% !important;
+    }
+    .Logo_imagen{
+      width: 450px;
+      margin-top: 7%;
+      height: auto;
     }
   }
 }
@@ -435,19 +470,19 @@ p {
   }
 
   .guaca {
-    left: 8% !important;
-    top: 292% !important;
+    left: 10% !important;
+    top: 310% !important;
   }
 
   .ave {
-    top: 130% !important;
+    top: 148% !important;
     left: 9% !important;
   }
 
   .tourist {
     max-width: 450px !important;
-    top: 193% !important;
-    right: 96px !important;
+    top: 209% !important;
+    right: 37px !important;
 
     &:hover {
       transform: translateY(-50%) scale(1.15) rotate(5deg);
