@@ -364,16 +364,18 @@ p {
   @media (min-width: 1800px) {
     .part1 {
       margin-left: 14%;
-      width: 100% !important;
-
-
+      width: 50% !important;
 
       &.animate-slideInLeft {
         animation-duration: 1.2s;
       }
     }
+    .histori-header{
+      width: 90%;
+    }
+
     .text-content{
-      max-width: 90%;
+      max-width: 100%;
       font-size: 1rem;
     }
 
@@ -479,18 +481,18 @@ p {
   }
 
   .guaca {
-    left: 10% !important;
-    top: 310% !important;
+    left: 12% !important;
+    top: 309% !important;
   }
 
   .ave {
-    top: 154% !important;
+    top: 144% !important;
     left: 9% !important;
   }
 
   .tourist {
     max-width: 450px !important;
-    top: 209% !important;
+    top: 206% !important;
     right: 37px !important;
 
     &:hover {
