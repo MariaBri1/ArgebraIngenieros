@@ -48,7 +48,7 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #666;
     margin-left: 10px;
     margin-right: 10px;
@@ -79,10 +79,16 @@
     min-width: 330px;
     min-height: 500px;
   }
+  .p{
+    font-size: 1rem;
+  }
 }
-@media (min-width: 1720px) {
+@media (min-width: 1800px) {
   .card{
     min-width: 377px;
     min-height: 500px;
+  }
+  .p{
+    font-size: 1rem;
   }
 }

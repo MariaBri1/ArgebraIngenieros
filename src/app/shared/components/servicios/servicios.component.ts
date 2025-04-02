@@ -34,7 +34,7 @@ interface Servicio {
   ]
 })
 export class ServiciosComponent {
-  expandido: boolean = false;
+  expandido: boolean = true;
 
   // Servicios iniciales (siempre visibles)
   serviciosPrincipales: Servicio[] = [
@@ -48,16 +48,17 @@ export class ServiciosComponent {
     },
     {
       icono: 'directions_boat',
-      titulo: 'Crucero '
+      titulo: 'Cruceros'
+    },
+    {
+      icono: 'directions_bus',
+      titulo: 'Pasajes terrestre'
     }
   ];
 
   // Servicios adicionales (visibles al expandir)
   serviciosAdicionales: Servicio[] = [
-    {
-      icono: 'directions_bus',
-      titulo: 'Pasajes terrestre'
-    },
+
     {
       icono: 'directions_car',
       titulo: 'Alquiler de autos'

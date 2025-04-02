@@ -26,14 +26,14 @@
 
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
   margin: 20px 12%;
 }
 @media (min-width: 1599px) {
   .servicios-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0px 16%;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    margin: 16px 16%;
   }
 }
 
@@ -54,7 +54,6 @@
 }
 
 .servicio-icono {
-  background-color: #042f59;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -65,7 +64,7 @@
 
   mat-icon {
     font-size: 40px;
-    color: #ffffff;
+    color: #042f59;
     width: 40px;
     height: 40px;
   }
@@ -73,7 +72,7 @@
 
 .servicio-titulo {
   color: #042f59;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -125,5 +124,11 @@
 @media (max-width: 768px) {
   .servicios-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1800px) {
+  .servicio-titulo{
+    font-size: 1.2rem !important;
   }
 }
