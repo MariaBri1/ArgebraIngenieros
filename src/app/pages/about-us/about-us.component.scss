@@ -482,11 +482,11 @@ p {
 
   .guaca {
     left: 12% !important;
-    top: 309% !important;
+    top: 310% !important;
   }
 
   .ave {
-    top: 144% !important;
+    top: 143% !important;
     left: 9% !important;
   }
 
@@ -611,6 +611,10 @@ p {
       &:hover {
         transform: translateY(-10px);
       }
+    }
+
+    p {
+      font-size: 1.2rem;
     }
   }
 }
@@ -860,7 +864,7 @@ p {
     margin-top: 3%;
     text-align: start;
     font-size: 16px;
-    color: #414141;
+    color: #000000;
     transition: all 0.3s ease;
 
     &:hover {
@@ -1183,3 +1187,49 @@ p {
     right: 10px;
   }
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+  grid-template-rows: repeat(2, auto);  /* 2 filas */
+  gap: 16px;
+  justify-content: center;
+  padding: 20px;
+
+  @media (max-width: 768px) {  /* Para tablets y móviles grandes */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, auto);  /* 2 filas */
+  }
+
+  @media (max-width: 480px) {  /* Para móviles */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-rows: repeat(3, auto);  /* 3 filas */
+  }
+}
+
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+

@@ -42,14 +42,14 @@
   h3 {
     margin-top: 20px;
     font-size: 1.2rem;
-    color: #333;
+    color: #000000;
     text-align: start;
     margin-bottom: 10px;
   }
 
   p {
     font-size: 0.8rem;
-    color: #666;
+    color: #141414;
     margin-left: 10px;
     margin-right: 10px;
     text-align: justify;
@@ -57,7 +57,9 @@
     margin-top: 10px;
     flex-grow: 1;
     overflow-wrap: break-word; // Rompe palabras largas para evitar desbordes
+
   }
+
 
   .btn {
     margin-top: auto;
@@ -87,8 +89,9 @@
   .card{
     min-width: 377px;
     min-height: 500px;
+    p{
+      font-size: 1rem !important;
+    }
   }
-  .p{
-    font-size: 1rem;
-  }
+
 }

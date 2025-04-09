@@ -91,7 +91,7 @@
 
     .review-text {
       font-size: 14px;
-      color: #333;
+      color: #000000;
       line-height: 20px;
       text-align: justify;
       position: relative;
@@ -129,6 +129,13 @@
       }
     }
   }
+    @media (max-width: 768px) {
+      .review-carousel{
+        padding: 20px 0px 0px 20px;
+      }
+  }
+
+
 
 .head{
   display: flex;
@@ -187,7 +194,7 @@
 
 @media (max-width: 768px) {
   button{
-    width: 285px;
+    width: 245px;
     margin: auto;
   }
 }

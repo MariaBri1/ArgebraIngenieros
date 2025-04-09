@@ -93,13 +93,13 @@
     <p>
       A lo largo de nuestra trayectoria en la industria del turismo, hemos tenido el privilegio de contar con el respaldo de las siguientes empresas.
     </p>
-    <app-carousel
-      [items]="carouselItems2"
-      [itemsToShow]="5"
-      [showNavigation]="false"
-      [autoRotate]="true"
-      [rotationInterval]="3000"
-    ></app-carousel>
+    <div class="grid-container">
+      <div *ngFor="let item of carouselItems2" class="card">
+        <img [src]="item.image" [alt]="item.title" class="card-image">
+        <h3 class="card-title">{{ item.title }}</h3>
+      </div>
+    </div>
+
   </div>
 </div>
 

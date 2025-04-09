@@ -116,9 +116,9 @@ export class CarouselComponent implements OnInit, OnDestroy {
   private adjustItemsToShow(): void {
     const screenWidth = window.innerWidth;
     if (screenWidth <= 768) {
-      this.itemsToShow = 1; // Mostrar 2 items en pantallas pequeñas
+      this.itemsToShow = 1;
     } else {
-      this.itemsToShow = 4; // Mostrar 5 items en pantallas grandes
+      this.itemsToShow = 4;
     }
   }
 }

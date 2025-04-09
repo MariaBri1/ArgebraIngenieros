@@ -1,10 +1,11 @@
+
 footer {
   position: relative;
   background: #f6f6f6ee;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
-  border-top: 2px dashed #042f59;
+
 }
 
 .footer-wave {
@@ -60,7 +61,7 @@ footer {
 
 @media (max-width: 768px) {
   .footer-wave {
-    top: 1077px;
+    top: 1119px;
   }
 }
 
@@ -228,4 +229,28 @@ footer {
   @media (max-width: 768px) {
     justify-content: center;
   }
+}
+
+.airplane-container {
+  position: relative;
+  width: 100%;
+  height: 50px; /* Ajusta la altura según sea necesario */
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.dashed-line {
+  width: 100%;
+  height: 2px;
+  border-top: 2px dashed #042f59;
+  position: absolute;
+  top: 50%; /* Centra la línea en el contenedor */
+  left: 0;
+}
+
+.airplane-footer {
+  width: 40px;
+  position: absolute;
+  top: calc(50% - 19px);
+  right: 0;
 }
