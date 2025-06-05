@@ -1,27 +1,24 @@
-<div class="servicios-container">
-  <div class="servicios-titulo">
-    <h2>SERVICIOS</h2>
-    <!-- Botón sin fondo y sin texto -->
+
+<div class="container">
+  <h2>Servicios</h2>
+  <!-- Botón sin fondo y sin texto -->
     <div class="ver-mas-container">
       <button mat-button (click)="toggleExpansion()">
         <mat-icon>{{ expandido ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
       </button>
     </div>
-  </div>
-</div>
-
-
-  <!-- Servicios principales (siempre visibles) -->
-  <div class="servicios-grid">
+   <div class="servicios-titulo">
+    
+      <!-- Servicios principales (siempre visibles) -->
+    <div class="servicios-grid">
     <div class="servicio-card" *ngFor="let servicio of serviciosPrincipales">
       <div class="servicio-icono">
         <mat-icon color="primary">{{servicio.icono}}</mat-icon>
       </div>
       <h3 class="servicio-titulo">{{servicio.titulo}}</h3>
-
     </div>
   </div>
-
+  </div>
 
   <!-- Servicios adicionales (expandibles) -->
   <div [@expandCollapse]="expandido ? 'expanded' : 'collapsed'" class="servicios-adicionales">
@@ -34,4 +31,8 @@
       </div>
     </div>
   </div>
+</div>
+
+
+
 

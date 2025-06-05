@@ -33,6 +33,19 @@ export class GalleryComponent {
   selectedImage: string | null = null;
   currentIndex = 0;
 
+  
+  highlightedImages: string[] = [];
+  secondaryImages: string[] = [];
+  initialImages: string[] = [];
+
+  constructor() {
+    this.prepareImages();
+  }
+
+  changeImages() {
+    this.prepareImages();
+  }
+
   toggleGallery(event?: Event) {
     if (event) {
       event.stopPropagation();
@@ -61,4 +74,18 @@ export class GalleryComponent {
       this.selectedImage = this.images[newIndex];
     }
   }
+
+  shuffleArray<T>(array: T[]): T[] {
+    return array
+      .map(value => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value);
+  }
+
+  prepareImages() {
+  this.highlightedImages = this.images.slice(10, 14);
+  this.secondaryImages = this.images.slice(6, 11);
+  this.initialImages = this.images.slice(0, 4);
+}
+
 }

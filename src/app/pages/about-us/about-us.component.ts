@@ -15,19 +15,24 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   @ViewChild('videoFrame') videoFrame!: ElementRef;
   @ViewChild('historyContent') historyContent!: ElementRef;
   @ViewChild('esenciaContent') esenciaContent!: ElementRef;
+  @ViewChild('audioRef') audioRef!: ElementRef<HTMLAudioElement>;
 
+
+  audioPaused = true;
   videoUrl: SafeResourceUrl | undefined;
   isMuted: boolean = true;
   private player: any;
 
   carouselItems1: CarouselItem[] = [];
   carouselItems2: SimpleCarouselItem[] = [];
+  carouselItems3: SimpleCarouselItem[] = [];
   reviewList: Review[] = [];
   galleryItems: Array<{ image: string, title: string, description: string }> = [];
 
   constructor(private sanitizer: DomSanitizer) {
     this.updateVideoUrl();
   }
+
 
   ngOnInit(): void {
     this.reviewList = [
@@ -154,12 +159,17 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     ];
 
     this.carouselItems2 = [
-      { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Protegeme Turismo Responsable' },
-      { image: 'assets/logos/respald-icons/prom_p-icon.png', title: 'PromPerú' },
+/*       { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Protegeme Turismo Responsable' },
+ */      { image: 'assets/logos/respald-icons/prom_p-icon.png', title: 'PromPerú' },
       { image: 'assets/logos/respald-icons/min_c-icon.png', title: 'Mincetur' },
       { image: 'assets/logos/respald-icons/agency_r-icon.png', title: 'Agencia de Viajes y Turismo Registrada' },
-      { image: 'assets/logos/respald-icons/camera-comercy-icon.png', title: 'CCL Cámara de Comercio de Lima' },
       { image: 'assets/logos/respald-icons/ytu-icon.webp', title: 'Y tú qué planes' }
+    ];
+
+
+    this.carouselItems3 = [
+      { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Protegeme Turismo Responsable' }
+      /* { image: 'assets/logos/respald-icons/camera-comercy-icon.png', title: 'CCL Cámara de Comercio de Lima' } */
     ];
   }
 
@@ -177,8 +187,13 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       this.initPlayer();
     }
 
-    // Configurar animaciones
+
     this.setupAnimations();
+
+    if (this.audioRef && this.audioRef.nativeElement) {
+      this.audioRef.nativeElement.play().catch(() => {
+      });
+    }
   }
 
   initPlayer(): void {
@@ -259,7 +274,17 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     this.updateVideoUrl();
 
     if (this.player) {
-      this.isMuted ? this.player.mute() : this.player.unMute();
+      if (this.isMuted) {
+        this.player.mute();
+      } else {
+        this.player.unMute();
+      }
+    }
+  }
+
+  playAudio(): void {
+    if (this.audioRef && this.audioRef.nativeElement) {
+      this.audioRef.nativeElement.play();
     }
   }
 
@@ -270,5 +295,29 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     if (this.player && this.player.getPlayerState() === YT.PlayerState.PAUSED) {
       this.player.playVideo();
     }
+  }
+
+
+  toggleAudio(): void {
+    const audio = this.audioRef.nativeElement;
+    if (audio.paused) {
+      audio.play();
+      this.audioPaused = false;
+    } else {
+      audio.pause();
+      this.audioPaused = true;
+    }
+  }
+
+
+
+  onAudioEnded() {
+    this.audioPaused = true;
+  }
+  onAudioPaused() {
+    this.audioPaused = true;
+  }
+  onAudioPlayed() {
+    this.audioPaused = false;
   }
 }

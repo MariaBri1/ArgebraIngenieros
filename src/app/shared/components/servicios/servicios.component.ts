@@ -47,6 +47,14 @@ export class ServiciosComponent {
       titulo: 'Full days'
     },
     {
+      icono: 'train',
+      titulo: 'Boletos de Trenes'
+    },
+    {
+      icono: 'beach_access',
+      titulo: 'Luna de miel'
+    },
+    {
       icono: 'directions_boat',
       titulo: 'Cruceros'
     },
@@ -63,10 +71,7 @@ export class ServiciosComponent {
       icono: 'directions_car',
       titulo: 'Alquiler de autos'
     },
-    {
-      icono: 'train',
-      titulo: 'Boletos de Trenes'
-    },
+    
     {
       icono: 'assignment',
       titulo: 'Servicio de trámite de pasaporte'
@@ -78,10 +83,6 @@ export class ServiciosComponent {
     {
       icono: 'diamond',
       titulo: 'Evento de bodas'
-    },
-    {
-      icono: 'beach_access',
-      titulo: 'Luna de miel'
     },
     {
       icono: 'school',
