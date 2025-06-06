@@ -26,93 +26,114 @@
           familia, con amigos, por trabajo o para tomar un descanso.
           Felices de ser parte de la comunidad de embajadores marca Perú y 100% peruanos estamos comprometidos con el
           desarrollo de un turismo sostenible, promoviendo Perú al mundo.
+        </p>
+        <div class="audio-controls">
+          <button (click)="toggleAudio()" class="btn-audio">
+            <i class="fas" [class.fa-play]="audioPaused" [class.fa-pause]="!audioPaused"></i>
+            {{ audioPaused ? 'Escuchar historia' : 'Pausar historia' }}
+          </button>
+          <audio #audioRef style="display:none;" (ended)="onAudioEnded()" (pause)="onAudioPaused()"
+            (play)="onAudioPlayed()">
+            <source src="assets/audios/conocenos1.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </div>
+      <!-- Reproductor de audio oculto -->
+
+    </div>
+
+    <div class="part2">
+      <!-- Primera fila -->
+      <div class="fila-iconos">
+        <div class="iconos-imagenes-destacadas">
+          <div class="icono-box">
+            <i class="fas fa-compass"></i>
+            <span>Guía</span>
+          </div>
+        </div>
+        <div class="iconos-imagenes-destacadas">
+          <div class="icono-box">
+            <i class="fas fa-award"></i>
+            <span>Gran</span>
+            <span>Trayecto</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda fila -->
+      <div class="fila-iconos">
+        <div class="iconos-imagenes-destacadas">
+          <div class="icono-box">
+            <i class="fas fa-briefcase"></i>
+            <span>Turismo</span>
+          </div>
+        </div>
+        <div class="iconos-imagenes-destacadas">
+          <div class="icono-box">
+            <i class="fas fa-flag"></i>
+            <span>Marca</span>
+            <span>Perú</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda fila -->
+      <div class="fila-iconos">
+        <div class="iconos-imagenes-destacadas">
+          <div class="icono-box">
+            <i class="fas fa-location-arrow"></i>
+            <span>Destino</span>
+          </div>
+        </div>
+        <div class="iconos-imagenes-destacadas">
+          <div class="icono-box">
+            <i class="fas fa-users"></i>
+            <span>Viajes</span>
+            <span>Familia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="history-content" #historyContent>
+    <div class="part1">
+      <div class="histori-header">
+        <h2>Nuestra historia</h2>
+        <img src="/assets/images/airplane-mobile.png" alt="ornament" class="air">
+      </div>
+
+      <div class="text-content-bg">
+        <p class="text-content">
           La historia empezó con una mala experiencia en una agencia viajes, una estafa con la compra de un boleto aéreo
           llevo a la fundadora a buscar la forma de recuperar su dinero sin imaginar que en ese camino quedo cautivada
-          por
-          todo lo que involucra el mundo turístico. No recupero su dinero, lo perdió, pero decidió estudiar turismo y
-          así
-          empezó su formación profesional trabajando para la empresa Nuevo Mundo, Despegar.com y el Corte inglés. Hoy
-          con
-          20
+          por todo lo que involucra el mundo turístico. No recupero su dinero, lo perdió, pero decidió estudiar turismo
+          y
+          así empezó su formación profesional trabajando para la empresa Nuevo Mundo, Despegar.com y el Corte inglés.
+          Hoy
+          con 20
           años de experiencia se sigue emocionando de ser parte de la historia de muchas familias ayudando a crear
           momentos únicos e inolvidables. Experiencias para toda la vida dentro de Perú y el mundo.
           ¿Y tú que esperas para viajar con nosotros?
         </p>
       </div>
-      <!-- Reproductor de audio oculto -->
-      <div class="audio-controls">
-        <button (click)="toggleAudio()" class="btn-audio">
-          <i class="fas" [class.fa-play]="audioPaused" [class.fa-pause]="!audioPaused"></i>
-          {{ audioPaused ? 'Escuchar historia' : 'Pausar historia' }}
-        </button>
-        <audio #audioRef style="display:none;" (ended)="onAudioEnded()" (pause)="onAudioPaused()"
-          (play)="onAudioPlayed()">
-          <source src="assets/audios/conocenos1.mp3" type="audio/mp3">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-      </div>
     </div>
 
-    <div class="part2">
-      <div class="iconos-imagenes-destacadas">
-        <div class="icono-box">
-          <i class="fas fa-plane-departure"></i>
-          <span>Viajes</span>
-        </div>
-        <div class="icono-box">
-          <img src="/assets/images/video-logo.png" alt="img" class="fundadora-image">
-          <span>Aventura</span>
-        </div>
-
-        <div class="icono-box">
-          <img
-            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?crop=entropy&cs=tinysrgb&fit=crop&h=80&w=80"
-            alt="Deporte" class="fundadora-image">
-          <span>Deporte</span>
-        </div>
-      </div>
-
-      <div class="iconos-imagenes-destacadas">
-        <div class="icono-box">
-          <i class="fas fa-globe-americas"></i>
-          <span>Destinos</span>
-        </div>
-        <div class="icono-box">
-          <img src="/assets/images/1.png" alt="img" class="fundadora-image">
-          <span>Cultura</span>
-        </div>
-
-        <div class="icono-box">
-          <img
-            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=crop&h=80&w=80"
-            alt="Familia" class="fundadora-image">
-          <span>Familia</span>
-        </div>
-      </div>
-
-      <div class="iconos-imagenes-destacadas">
-        <div class="icono-box">
-          <i class="fas fa-map"></i>
-          <span>Ubicaciones</span>
-        </div>
-        <div class="icono-box">
-          <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=crop&h=80&w=80"
-            alt="Naturaleza" class="fundadora-image">
-          <span>Naturaleza</span>
-        </div>
-
-        <div class="icono-box">
-          <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?crop=entropy&cs=tinysrgb&fit=crop&h=80&w=80"
-            alt="Naturaleza" class="fundadora-image">
-          <span>Relajarse</span>
-        </div>
-      </div>
+    <div class="audio-controls">
+      <img src="/assets/images/video-logo.png" alt="img" class="fundadora-image">
+      <img src="/assets/images/1.png" alt="img" class="fundadora-image">
     </div>
-
   </div>
 </div>
+
+
 
 <img src="/assets/images/bordes/ave.png" alt="ornament" class="ave">
 
@@ -147,41 +168,67 @@
 </div>
 
 <div class="carousel_fondo">
-  <div class="carousel-container">
-    <h4>Nuestros Socios Estratégicos</h4>
-    <p>
-      En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y destacados
-      del sector.
-    </p>
-    <app-carousel [items]="carouselItems1" [itemsToShow]="5" [autoRotate]="true"
-      [rotationInterval]="3000"></app-carousel>
 
-    <h4>Aliados que certifican nuestra trayectoria</h4>
-    <p>
-      A lo largo de nuestra trayectoria en el sector turístico, hemos contado con el valioso respaldo de
-      reconocidas instituciones que confían en nuestro compromiso y profesionalismo.
-    </p>
-    <div class="grid-container">
-      <div *ngFor="let item of carouselItems2" class="card">
-        <img [src]="item.image" [alt]="item.title" class="card-image">
-        <h3 class="card-title">{{ item.title }}</h3>
+  <div class="gallery-container">
+    <div class="gallery">
+      <div class="carousel-container">
+
+        <h4 class="icon-heading">
+          <i class="fas fa-users"></i>
+          Nuestros Socios Estratégico
+        </h4>
+        <p>
+          En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y
+          destacados
+          del sector.
+        </p>
+        <app-carousel [items]="carouselItems1" [itemsToShow]="5" [autoRotate]="true"
+          [rotationInterval]="3000"></app-carousel>
       </div>
     </div>
-
-    <h4>Turismo con valores: orgullosos de pertenecer a Protégeme Turismo Responsable</h4>
-    <p>
-
-      Formamos parte de Protégeme Turismo Responsable, una iniciativa que promueve un turismo seguro,
-      ético y sostenible.
-    </p>
-    <div class="grid-container">
-      <div *ngFor="let item of carouselItems3" class="card">
-        <img [src]="item.image" [alt]="item.title" class="card-image">
-        <h3 class="card-title">{{ item.title }}</h3>
-      </div>
-    </div>
-
   </div>
+
+
+
+  <div class="gallery">
+    <div class="carousel-container">
+      <h4 class="icon-heading">
+        <i class="fas fa-handshake"></i>
+        Aliados que certifican nuestra trayectoria
+      </h4>
+      <p>
+        A lo largo de nuestra trayectoria en el sector turístico, hemos contado con el valioso respaldo de
+        reconocidas instituciones que confían en nuestro compromiso y profesionalismo.
+      </p>
+      <div class="grid-container">
+        <div *ngFor="let item of carouselItems2" class="card">
+          <img [src]="item.image" [alt]="item.title" class="card-image">
+          <h3 class="card-title">{{ item.title }}</h3>
+        </div>
+      </div>
+
+      <h4 class="icon-heading">
+        <i class="fas fa-hotel"></i>
+        Turismo con valores : orgullosos de pertenecer a Protégeme Turismo Responsable
+      </h4>
+      <p>
+        Formamos parte de Protégeme Turismo Responsable, una iniciativa que promueve un turismo seguro,
+        ético y sostenible.
+      </p>
+      <div class="grid-container">
+        <div *ngFor="let item of carouselItems3" class="card">
+          <img [src]="item.image" [alt]="item.title" class="card-image">
+          <h3 class="card-title">{{ item.title }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="gallery">
+  </div>
+
+
 </div>
 
 <div class="whatsapp-container">
