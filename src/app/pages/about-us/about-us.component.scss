@@ -120,23 +120,13 @@ p {
   }
 }
 
-.fundadora-image {
-  height: 220px;
-  width: auto;
-  transition: all 0.5s ease;
-
-  &:hover {
-    transform: scale(1.05) rotate(2deg);
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
-  }
-}
-
 /* Historia */
 
 .container {
   max-width: 1300px;
   margin: 40px auto 10px auto;
   width: 95%;
+
   background: linear-gradient(120deg, #12466d 40%, #1976d2 70%, #12466d 100%);
 
   color: #fff;
@@ -146,15 +136,18 @@ p {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 2rem 1rem;
-  gap: 32px;
+  padding: 1rem 2rem;
   position: relative;
   z-index: 2;
   font-family: Arial, sans-serif;
 
+  flex-wrap: wrap; // permite que se acomoden en pantallas pequeñas
+  justify-content: center; // centra horizontalmente si sobra espacio
+  gap: 1rem; // puedes reducir este valor si quieres que estén más juntos
+
   @media (max-width: 900px) {
     .container {
-      padding: 1.5rem;
+      padding: 1rem;
       gap: 24px;
     }
   }
@@ -168,7 +161,7 @@ p {
   }
 
   .history-content {
-    padding: 0px 30px 60px;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     width: 100%;
@@ -269,12 +262,14 @@ p {
     }
 
     .part1 {
-      margin-left: 0%;
+      margin-left: 1%;
       opacity: 1;
       pointer-events: auto;
       align-items: flex-start;
       width: 56%;
       transition: all 0.6s ease;
+
+
 
       &.animate-slideInLeft {
         opacity: 1;
@@ -283,16 +278,76 @@ p {
     }
 
     .part2 {
-      margin-left: 3%;
-      width: 18%;
-      opacity: 0;
-      display: flex;
+      margin-left: 1%;
+      opacity: 1;
+      pointer-events: auto;
+      align-items: flex-start;
+      width: 56%;
       transition: all 0.6s ease;
 
-      &.animate-slideInRight {
+
+      &.animate-slideInLeft {
         opacity: 1;
-        animation: slideInFromRight 1s ease-out forwards;
+        animation: slideInFromLeft 1s ease-out forwards;
       }
+
+    }
+
+    // Nueva clase para móviles
+    .fundadora-mobile {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      max-width: 100%;
+      margin: 0 auto;
+
+      img {
+        max-width: 50%;
+        height: auto;
+      }
+
+      .fundadora-image {
+        height: 220px;
+        width: auto;
+        max-width: 100%;
+        display: block;
+        object-fit: contain;
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: scale(1.05) rotate(2deg);
+          filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+        }
+      }
+    }
+
+    // Ajustes para pantallas pequeñas
+    @media (max-width: 600px) {
+      .history-content {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .fundadora-mobile {
+        flex-direction: column;
+        gap: 0.5rem;
+
+
+        img {
+          max-width: 70%;
+        }
+      }
+    }
+
+    .fila-iconos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      row-gap: 0.2rem;
+      column-gap: 0.3rem;
     }
 
     .iconos-imagenes-destacadas {
@@ -301,31 +356,48 @@ p {
       justify-content: center;
       align-items: center;
       margin: 32px 0 0 0;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, auto);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 32px;
       margin-left: 15%;
       display: flex;
       flex-wrap: wrap;
+
     }
 
     .icono-box {
       background: rgba(255, 255, 255, 0.12);
       border-radius: 18px;
-      padding: 18px 22px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.2s, box-shadow 0.2s;
       min-width: 110px;
-
+      max-width: 120px;
+      text-align: center;
 
     }
 
     @media (max-width: 600px) {
+      .part2 {
+        width: 100%;
+        padding: 1rem;
+        align-items: center;
+      }
+
       .iconos-imagenes-destacadas {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, auto);
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      .icono-box {
+        width: 100%;
+        max-width: 200px;
       }
     }
 
@@ -446,7 +518,8 @@ p {
       }
 
       .part2 {
-        margin-left: 3%;
+        margin-left: 16%;
+        width: 40%;
 
         &.animate-slideInRight {
           animation-duration: 1.2s;
@@ -484,10 +557,10 @@ p {
       }
 
       .part2 {
-        margin-right: 14%;
-        margin-left: 0% !important;
+        margin-left: 14%;
+        width: 50% !important;
 
-        &.animate-slideInRight {
+        &.animate-slideInLeft {
           animation-duration: 1.2s;
         }
       }
@@ -553,9 +626,22 @@ p {
 
   .guaca,
   .ave,
-  .tourist,
-  .fundadora-image {
-    content-visibility: hidden;
+  .tourist {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .fundadora-mobile .fundadora-image {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.5rem; 
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -1421,19 +1507,14 @@ p {
 }
 
 .audio-controls {
-  margin: 24px 0 0 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  z-index: 10;
-  transition: all 0.5s ease;
-
-  &:hover {
-    transform: scale(1.05) rotate(2deg);
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
-  }
+  gap: 1rem;
+  margin-top: 24px;
 }
+
 
 .btn-audio {
   background: linear-gradient(90deg, #003049 60%, #003049 100%);

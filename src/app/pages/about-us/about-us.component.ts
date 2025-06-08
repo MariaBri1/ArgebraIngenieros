@@ -26,6 +26,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   carouselItems1: CarouselItem[] = [];
   carouselItems2: SimpleCarouselItem[] = [];
   carouselItems3: SimpleCarouselItem[] = [];
+  carouselItems4: SimpleCarouselItem[] = [];
   reviewList: Review[] = [];
   galleryItems: Array<{ image: string, title: string, description: string }> = [];
 
@@ -170,6 +171,10 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     this.carouselItems3 = [
       { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Protegeme Turismo Responsable' }
       /* { image: 'assets/logos/respald-icons/camera-comercy-icon.png', title: 'CCL Cámara de Comercio de Lima' } */
+    ];
+
+    this.carouselItems4 = [
+      { image: 'assets/images/1.png', title: '' }
     ];
   }
 
