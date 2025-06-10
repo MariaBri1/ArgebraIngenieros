@@ -80,6 +80,37 @@ hr {
     }
   }
 
+  .ver-mas-container {
+    display: flex;
+    justify-content: center; // o flex-end si lo prefieres alineado a la derecha
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    button {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      mat-icon {
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+
+
   .servicio-card {
     display: flex;
     flex-direction: column;
@@ -126,6 +157,58 @@ hr {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+  }
+
+  .part2 {
+    margin-left: 1%;
+    opacity: 1;
+    pointer-events: auto;
+    align-items: flex-start;
+    width: 56%;
+    transition: all 0.6s ease;
+
+
+    &.animate-slideInLeft {
+      opacity: 1;
+      animation: slideInFromLeft 1s ease-out forwards;
+    }
+
+  }
+
+  @media (max-width: 600px) {
+    .part2 {
+      width: 100%;
+      padding: 1rem;
+      align-items: center;
+    }
+
+    .iconos-imagenes-destacadas {
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .icono-box {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+
+  .part2 {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+
+}
+
+.part2 {
+  margin-left: 16%;
+  width: 40%;
+
+  &.animate-slideInRight {
+    animation-duration: 1.2s;
   }
 }
 

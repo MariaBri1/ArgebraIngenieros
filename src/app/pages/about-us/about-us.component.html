@@ -12,99 +12,6 @@
 
 <div class="container">
   <div class="history-content" #historyContent>
-    <div class="part1">
-      <h4>Conócenos</h4>
-      <div class="histori-header">
-        <h2> Más Que Vacaciones</h2>
-        <img src="/assets/images/airplane-mobile.png" alt="ornament" class="air">
-      </div>
-
-      <div class="text-content-bg">
-        <p class="text-content">
-          Somos una agencia de viajes con más de 10 años de trayectoria turística ayudando a personas a organizar viajes
-          en
-          familia, con amigos, por trabajo o para tomar un descanso.
-          Felices de ser parte de la comunidad de embajadores marca Perú y 100% peruanos estamos comprometidos con el
-          desarrollo de un turismo sostenible, promoviendo Perú al mundo.
-        </p>
-        <div class="audio-controls">
-          <button (click)="toggleAudio()" class="btn-audio">
-            <i class="fas" [class.fa-play]="audioPaused" [class.fa-pause]="!audioPaused"></i>
-            {{ audioPaused ? 'Escuchar historia' : 'Pausar historia' }}
-          </button>
-          <audio #audioRef style="display:none;" (ended)="onAudioEnded()" (pause)="onAudioPaused()"
-            (play)="onAudioPlayed()">
-            <source src="assets/audios/conocenos1.mp3" type="audio/mp3">
-            Tu navegador no soporta el elemento de audio.
-          </audio>
-        </div>
-      </div>
-      <!-- Reproductor de audio oculto -->
-
-    </div>
-
-    <!-- Primera fila -->
-    <!--
-  <div class="fila-iconos">
-    <div class="iconos-imagenes-destacadas">
-      <div class="icono-box">
-        <i class="fas fa-compass"></i>
-        <span>Guía</span>
-      </div>
-    </div>
-    <div class="iconos-imagenes-destacadas">
-      <div class="icono-box">
-        <i class="fas fa-location-arrow"></i>
-          <span>Destino</span>
-      </div>
-    </div>
-  </div>
--->
-
-    <!-- Segunda fila -->
-    <div class="fila-iconos">
-      <div class="iconos-imagenes-destacadas">
-        <div class="icono-box">
-          <i class="fas fa-award"></i>
-          <span>Gran</span>
-          <span>Trayecto</span>
-        </div>
-      </div>
-      <div class="iconos-imagenes-destacadas">
-        <div class="icono-box">
-          <i class="fas fa-users"></i>
-          <span>Viajes</span>
-          <span>Familia</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tercera fila -->
-
-    <div class="fila-iconos">
-      <div class="iconos-imagenes-destacadas">
-        <div class="icono-box">
-          <i class="fas fa-briefcase"></i>
-          <span>Turismo</span>
-          <span>Destinos</span>
-        </div>
-      </div>
-      <div class="iconos-imagenes-destacadas">
-        <div class="icono-box">
-          <i class="fas fa-flag"></i>
-          <span>Marca</span>
-          <span>Perú</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-<div class="container">
-  <div class="history-content" #historyContent>
     <div class="part2">
       <div class="histori-header">
         <h2>Nuestra historia</h2>
@@ -124,27 +31,62 @@
           momentos únicos e inolvidables. Experiencias para toda la vida dentro de Perú y el mundo.
           ¿Y tú que esperas para viajar con nosotros?
         </p>
+        <div class="audio-controls">
+          <button (click)="toggleAudio()" class="btn-audio">
+            <i class="fas" [class.fa-play]="audioPaused" [class.fa-pause]="!audioPaused"></i>
+            {{ audioPaused ? 'Escuchar historia' : 'Pausar historia' }}
+          </button>
+          <audio #audioRef style="display:none;" (ended)="onAudioEnded()" (pause)="onAudioPaused()"
+            (play)="onAudioPlayed()">
+            <source src="assets/audios/conocenos1.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="part2">
+      <div class="fundadora-mobile">
+        <img src="assets/images/1.png" alt="Imagen fundadora" class="fundadora-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="history-content" #historyContent>
+    <div class="part2">
+      <div class="histori-header">
+        <h2>Conócenos</h2>
+      </div>
+
+      <div class="text-content-bg">
+        <p class="text-content">
+          Somos una agencia de viajes con más de 10 años de trayectoria turística ayudando a personas a organizar viajes
+          en
+          familia, con amigos, por trabajo o para tomar un descanso.
+          Felices de ser parte de la comunidad de embajadores marca Perú y 100% peruanos estamos comprometidos con el
+          desarrollo de un turismo sostenible, promoviendo Perú al mundo.
+        </p>
       </div>
     </div>
 
     <div class="part2">
       <div class="fundadora-mobile">
         <img src="assets/images/video-logo.png" alt="Video logo" class="fundadora-image" />
-        <img src="assets/images/1.png" alt="Imagen fundadora" class="fundadora-image" />
       </div>
     </div>
+
 
   </div>
 </div>
 
-
-
 <!-- <img src="/assets/images/bordes/ave.png" alt="ornament" class="ave"> -->
 
 <div class="Esencia-content" #esenciaContent>
-  <h4>Nos destacamos por</h4>
-  <p>Nuestro compromiso, atención personalizada y experiencias inolvidables que
-    nos distinguen de las demás.</p>
+   <h4>Destacamos por</h4>
+  <p>ATENCION PERSONALIZADA, desde que nos contactan para organizar su viaje con los lugares que sueñan visitar, trabajamos para conectar con su necesidad y personalizarla.</p>
+  <p>CLIENTES CONTENTOS, estamos comprometidos con brindar un excelente soporte a nuestros clientes para que su experiencia de viaje sea buena, agradable y perfecta.</p>
 
   <div class="image-container">
     <app-cards *ngFor="let item of galleryItems" [image]="item.image" [title]="item.title"

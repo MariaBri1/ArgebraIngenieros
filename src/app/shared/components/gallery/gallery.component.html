@@ -21,17 +21,6 @@
       </div>
     </div>
 
-    <div class="gallery-grid">
-      <div class="gallery-item" *ngFor="let img of secondaryImages.slice(0, 4); let i = index">
-        <div class="image-wrapper" (click)="openImage(img, i + 4)">
-          <img [src]="img" alt="Imagen">
-          <!-- boton mostrar mas fotos -->
-          <button *ngIf="i === 3" class="view-more-btn" (click)="toggleGallery($event)">
-            <span class="view-more-text">Mostrar todas las fotos</span>
-          </button>
-        </div>
-      </div>
-    </div>
 
     <!-- Modal for showing all images -->
     <div class="modal" *ngIf="showAllImages" (click)="toggleGallery()">

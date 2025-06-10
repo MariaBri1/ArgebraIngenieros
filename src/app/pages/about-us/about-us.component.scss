@@ -141,23 +141,21 @@ p {
   z-index: 2;
   font-family: Arial, sans-serif;
 
-  flex-wrap: wrap; // permite que se acomoden en pantallas pequeñas
-  justify-content: center; // centra horizontalmente si sobra espacio
-  gap: 1rem; // puedes reducir este valor si quieres que estén más juntos
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 
   @media (max-width: 900px) {
-    .container {
-      padding: 1rem;
-      gap: 24px;
-    }
+    padding: 1rem;
+    gap: 24px;
+
   }
 
   @media (max-width: 600px) {
-    .container {
-      padding: 1rem;
-      border-radius: 10px;
-      gap: 16px;
-    }
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 16px;
+
   }
 
   .history-content {
@@ -225,15 +223,27 @@ p {
     }
 
     .air {
-      margin-left: 1%;
-      width: 35%;
-      max-width: 90%;
-      opacity: 0.6;
-      transition: all 0.5s ease;
+      margin: 0; // Centra la imagen horizontalmente y elimina márgenes laterales
+      width: 35%; // Reduce el ancho de la imagen
+      max-width: 50%; // Ajusta el tamaño máximo
+      opacity: 0.8; // Aumenta la opacidad para mayor visibilidad
+      transition: all 0.3s ease; // Reduce el tiempo de transición
 
       &:hover {
-        transform: rotate(5deg);
-        opacity: 0.9;
+        transform: scale(1.05) rotate(3deg); // Cambia el efecto de hover
+        opacity: 1; // Aumenta la opacidad al pasar el cursor
+      }
+    }
+
+    @media (max-width: 768px) {
+      .histori-header {
+        flex-direction: column; // Cambia a diseño vertical en móviles
+        align-items: center; // Centra los elementos
+        gap: 0.5rem; // Reduce el espacio entre elementos
+
+        .air {
+          width: 40px; // Reduce el tamaño de la imagen en móviles
+        }
       }
     }
 
@@ -247,12 +257,21 @@ p {
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
       line-height: 1.6;
       text-align: justify;
-      max-width: 500;
+      width: 105%;
+      max-width: none;
       min-width: 260px;
-      width: 100%;
-      margin-left: -1%;
-      margin-right: auto;
+
+
+      box-sizing: border-box;
+      
     }
+
+    @media (max-width: 400px) {
+  .text-content-bg {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}
 
     .text-content {
       font-size: 1.18rem; // Más grande
@@ -262,7 +281,7 @@ p {
     }
 
     .part1 {
-      margin-left: 1%;
+      margin-left: 0%;
       opacity: 1;
       pointer-events: auto;
       align-items: flex-start;
@@ -353,6 +372,8 @@ p {
     .iconos-imagenes-destacadas {
       gap: 40px;
       margin: 32px 0 0 0;
+      margin-top: 32px;
+      margin-left: 15%;
       justify-content: center;
       align-items: center;
       margin: 32px 0 0 0;
@@ -633,9 +654,9 @@ p {
   }
 
   .fundadora-mobile .fundadora-image {
-    display: flex; 
-    flex-direction: column; 
-    gap: 0.5rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     max-width: 100%;
   }
 

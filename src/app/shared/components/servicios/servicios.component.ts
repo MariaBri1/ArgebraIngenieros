@@ -43,24 +43,28 @@ export class ServiciosComponent {
       titulo: 'Boletos nacionales e internacionales'
     },
     {
-      icono: 'hiking',
-      titulo: 'Full days'
+      icono: 'emoji_events',
+      titulo: 'Viajes de incentivo'
     },
     {
       icono: 'train',
       titulo: 'Boletos de Trenes'
     },
     {
-      icono: 'beach_access',
-      titulo: 'Luna de miel'
+      icono: 'hiking',
+      titulo: 'Full days'
     },
     {
-      icono: 'directions_boat',
-      titulo: 'Cruceros'
+      icono: 'location_on',
+      titulo: 'Excursiones'
+    },
+    {
+      icono: 'assignment',
+      titulo: 'Servicio de trámite de pasaporte'
     },
     {
       icono: 'directions_bus',
-      titulo: 'Pasajes terrestre'
+      titulo: 'Pasajes nacionales e internacionales'
     }
   ];
 
@@ -71,14 +75,9 @@ export class ServiciosComponent {
       icono: 'directions_car',
       titulo: 'Alquiler de autos'
     },
-    
     {
-      icono: 'assignment',
-      titulo: 'Servicio de trámite de pasaporte'
-    },
-    {
-      icono: 'health_and_safety',
-      titulo: 'Seguro de asistencia'
+      icono: 'directions_boat',
+      titulo: 'Cruceros'
     },
     {
       icono: 'diamond',
@@ -89,12 +88,22 @@ export class ServiciosComponent {
       titulo: 'Viajes escolares'
     },
     {
-      icono: 'location_on',
-      titulo: 'excursiones'
+      icono: 'health_and_safety',
+      titulo: 'Seguro de asistencia'
+    },
+    {
+      icono: 'beach_access',
+      titulo: 'Luna de miel'
+    },
+    {
+      icono: 'family_restroom',
+      titulo: 'Viajes en familia'
     }
   ];
 
   toggleExpansion() {
     this.expandido = !this.expandido;
   }
+
+
 }
