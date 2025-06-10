@@ -1,0 +1,126 @@
+* [33m9ae8cf9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Cambios en about-us y servicios nuevo
+* [33m4e3473b[m Cambios en about-us  nuevo
+* [33m1a460ea[m Cambios en about-us  div-part2 imagen de la empresa
+* [33meaa74a4[m Descripción de los cambios que hiciste
+* [33m4112a02[m Aumento límite presupuesto para estilos en angular.json
+* [33m43a034f[m first commit
+* [33m90d8fec[m imagen fundadora incorporada
+* [33ma79392a[m ultima version
+* [33mdbec1a5[m scss mejorado
+* [33m3385730[m actualizacion
+* [33m5b22a5b[m cambios para pantallas de 1900
+* [33m74489ee[m actualizacion de weight
+* [33mcde9f5a[m animaciones iplementadas
+* [33m6e38160[m animaciones incorporadas
+* [33m994a662[m imagenes actualizadas
+* [33m3264e95[m aumento de kb del codigo
+* [33ma2332ce[m bordes mejorados
+* [33mcfdaf8e[m service section implemented
+* [33mdb962bd[m bugg de telefono subsanado
+* [33me3fcd89[m actualizacion
+* [33m46ca21e[m footer mejorado
+* [33m200544a[m servicios
+* [33m4f81ab3[m update weight
+* [33m83e0434[m Sin separadores
+* [33m21255ae[m cambios implementados
+* [33m08cac8b[m actualizacion de forma foto de biografia
+* [33m8f58d1e[m separadores con fondo
+* [33me45d3eb[m formato cards al carrusel
+* [33m7b1ce00[m imagen actualizada
+* [33madf28ab[m buggs corregidos
+* [33mcc7474b[m bugg de mobile solucionado
+* [33md2849c4[m bugg
+* [33m74f11cb[m separadores actualizados
+* [33m935f11f[m medidas de video corregidas
+* [33m63a86c8[m actualizacion
+* [33mb823795[m actualizado
+* [33m3b68449[m actualizacion
+* [33md85e58f[m final version
+* [33m72f9207[m casi final version
+* [33md500902[m actualizacion
+* [33m1a0dd9d[m conocenos actualizado
+* [33m20036b1[m actualizacion
+* [33m54a4474[m actualizacion
+* [33m2fd5922[m avance
+* [33mc391452[m actualizacion de galeria
+* [33m8e1916d[m final version
+* [33m10e23d1[m actualizacion 27/02/2025
+* [33m9d0ce56[m bug de firefox corregido
+* [33m7a109c8[m actualizado
+* [33m10cf66b[m lineas reducidas
+* [33m8e29a3b[m actualizado
+* [33mb927c90[m actualizado
+* [33m640641d[m text actualizado
+* [33m96d2601[m logo mqv implementado
+* [33md48c069[m correcion de h4 y bordes en pantallas 1920
+* [33m1a21c32[m final version
+* [33ma74ff46[m actualizacion
+* [33mdbcfa59[m final version
+* [33m4636c1d[m button
+* [33m3126141[m scss recorted
+* [33m43501fa[m button toutube implemented
+* [33m69dd645[m client section
+* [33med5d8a3[m boton ver mas reseñas add
+* [33m14be314[m boton de clientes implementados
+* [33m6c2e70f[m cambios actulizados
+* [33me44cce0[m changes subsanados
+* [33m57f268e[m subnaciones implementadas
+* [33m20d2381[m clientes section complete
+* [33m8baba73[m gap correjido
+* [33m6a95920[m gap correjido
+* [33m76b8451[m seccion clientes implementada
+* [33m20eb3e9[m cards subsanadas
+* [33mebc25ed[m footer centrado
+* [33m6b80878[m iframe configurado para moviles
+* [33md965c5a[m logo responsive implementado
+* [33m2fea832[m Menú de hamburguesa implementado y carrusel reparado para telefono
+* [33m86c9d29[m cards actualizadas
+* [33m7ea6f04[m video actualizado
+* [33m0f24978[m update slogan
+* [33m9adc767[m responsive
+* [33m8a4d3d6[m espacio entre cartas implementado
+* [33mc686c82[m logo en movimiento implementado
+* [33m37b57d7[m observaciones subsanadas
+* [33m8127fc3[m nav actualizado
+* [33mf7e66f1[m mejora del carrusel, actualizancion del nav
+* [33m0b966cb[m video banner
+* [33maeb63ca[m Cards implementadas
+* [33me3737bc[m Cards
+* [33m1c9b601[m Carousel mejorado
+* [33m7f09256[m Rutas implementadas
+* [33m4ca2224[m faq implementado
+* [33m7a1d703[m[33m ([m[1;31morigin/arielmqv[m[33m)[m faq creado
+* [33m4c8dd38[m Rutas implementadas
+* [33m6c37f74[m Rutas implementadas
+* [33m45a346e[m contact-us creado
+* [33m03d0903[m Refactor estructura de componentes y rutas: se elimina el componente Footer, se mueve a shared, se añaden nuevas rutas y se actualiza el menú de navegación.
+* [33mc1f6fd0[m Final-versions
+* [33mfb40f49[m Medidas de video actualizadas
+* [33m9912801[m Medidas de video actualizadas
+* [33m12ccf74[m Laterales corregidos
+* [33m3a58f0e[m Footer and empresas que nos respaldan agregados
+* [33ma3e33a1[m Footer and empresas que nos respaldan agregados
+* [33m2bcb741[m Footer implementado en Home
+* [33m1014cce[m Footer implementado en Home y About-us
+* [33m7984e58[m Footer implementado en Home y About-us
+* [33mb9a4308[m Image-Visibles
+* [33mc6299e0[m Image-Visibles
+* [33m7ae582f[m Descripción de los cambios
+* [33m105bc83[m Descripción de los cambios
+* [33m09aaf19[m Descripción de los cambios
+* [33mc701845[m Descripción de los cambios
+* [33ma04c09f[m Initial commit
+*   [33m2a99fe6[m Initial commit
+[32m|[m[33m\[m  
+[32m|[m * [33m4e11d31[m refactor: reorganizar componentes y rutas, eliminar componentes obsoletos
+* [33m|[m [33m6fc5558[m Initial commit
+[33m|[m[33m/[m  
+*   [33me6d2601[m Merge branch 'main' of https://github.com/patrickm20/webmqv
+[34m|[m[35m\[m  
+[34m|[m * [33mb36f33b[m Update package.json
+* [35m|[m [33mf39fcdf[m cambio de fondo de nav
+* [35m|[m [33mf2a2d4b[m Initial commit
+* [35m|[m [33m76a4576[m actualizacion de json
+[35m|[m[35m/[m  
+* [33mcef8beb[m first commit
+* [33ma0dd1b8[m initial commit
