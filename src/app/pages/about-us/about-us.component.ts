@@ -164,13 +164,13 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     ];
 
     this.carouselItems1 = [
-      { image: 'assets/logos/aerolineas/latam_logo.png', title: 'LATAM Airlines Group', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolinea/copa_logo.png', title: 'Copa Airlines', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolinea/sky_logo.png', title: 'Sky Airline', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolinea/american_airlines_logo.png', title: 'American Airlines', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolinea/delta_logo.png', title: 'Delta Air Lines', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolinea/starperu_logo.png', title: 'StarPerú', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolinea/klm_logo.png', title: 'KLM Royal Dutch Airlines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/latam_logo.png', title: 'Latam Airlines Group', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/copa_logo.png', title: 'Copa Airlines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/sky_logo.png', title: 'Sky Airline', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/american_airlines_logo.png', title: 'American Airlines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/delta_logo.png', title: 'Delta Air Lines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/starperu_logo.png', title: 'StarPerú', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/klm_logo.png', title: 'KLM Royal Dutch Airlines', description: 'Socio aéreo estratégico' },
 
 
       { image: 'assets/logos/hotel/iberostar_logo.png', title: 'Iberostar Hotels & Resorts', description: 'Socio hotelero estratégico' },
