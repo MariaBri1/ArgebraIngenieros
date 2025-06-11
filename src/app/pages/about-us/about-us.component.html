@@ -46,9 +46,16 @@
     </div>
 
     <div class="part2">
-      <div class="fundadora-mobile">
-        <img src="assets/images/1.png" alt="Imagen fundadora" class="fundadora-image" />
-      </div>
+        <div class="fundadora-mobile">
+    <img 
+      [src]="currentImage" 
+      alt="Imagen fundadora" 
+      class="fundadora-image"
+      (mouseenter)="onHover()" 
+      (mouseleave)="onLeave()" 
+      (click)="onClick()" 
+    />
+  </div>
     </div>
   </div>
 </div>
@@ -73,7 +80,10 @@
 
     <div class="part2">
       <div class="fundadora-mobile">
-        <img src="assets/images/video-logo.png" alt="Video logo" class="fundadora-image" />
+        <video class="fundadora-image-1" autoplay muted loop playsinline>
+          <source src="assets/images/video-logo.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
       </div>
     </div>
 
@@ -81,13 +91,12 @@
   </div>
 </div>
 
-<!-- <img src="/assets/images/bordes/ave.png" alt="ornament" class="ave"> -->
+<!-- <img src="/assets/images/bordes/ave.png" alt="ornament" class="ave"> 
+<img src="assets/images/video-logo.gif" alt="Logo animado" class="fundadora-image" /> 
+-->
 
 <div class="Esencia-content" #esenciaContent>
-   <h4>Destacamos por</h4>
-  <p>ATENCION PERSONALIZADA, desde que nos contactan para organizar su viaje con los lugares que sueñan visitar, trabajamos para conectar con su necesidad y personalizarla.</p>
-  <p>CLIENTES CONTENTOS, estamos comprometidos con brindar un excelente soporte a nuestros clientes para que su experiencia de viaje sea buena, agradable y perfecta.</p>
-
+  <h4>Nuestra promesa</h4>
   <div class="image-container">
     <app-cards *ngFor="let item of galleryItems" [image]="item.image" [title]="item.title"
       [description]="item.description" class="card-item">

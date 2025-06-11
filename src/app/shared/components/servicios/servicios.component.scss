@@ -2,19 +2,21 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .servicios-titulo {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center; // Alineación vertical del botón con el título
   justify-content: center;
   gap: 10px; // Espaciado entre el título y el botón
 
   .h2 {
-    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #1976d2;
     margin-top: 2%;
     text-align: start;
     letter-spacing: 0.5px;
@@ -32,7 +34,7 @@ hr {
   max-width: 1300px;
   margin: 40px auto 10px auto;
   width: 95%;
-  background: linear-gradient(120deg, #12466d 60%, #1976d2 100%);
+  background: linear-gradient(100deg, #1976d207 60%, #80b5ea25 100%);
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(0, 51, 102, 0.15);
@@ -44,7 +46,7 @@ hr {
   gap: 32px;
   position: relative;
   z-index: 2;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow: hidden;
 
   @media (max-width: 900px) {
@@ -62,6 +64,7 @@ hr {
 
   .servicios-grid {
     display: grid;
+    font-family: 'Poppins', sans-serif;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: auto auto;
     gap: 1.5rem;
@@ -81,6 +84,7 @@ hr {
   }
 
   .ver-mas-container {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center; // o flex-end si lo prefieres alineado a la derecha
     margin-top: 1rem;
@@ -112,6 +116,7 @@ hr {
 
 
   .servicio-card {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,7 +128,7 @@ hr {
     max-width: 170px;
     min-width: 140px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #002F5D; // azul
 
     &:hover {
       transform: translateY(-5px);
@@ -132,7 +137,7 @@ hr {
   }
 
   .servicio-icono {
-    background-color: #fff;
+    background-color: #fff; // blanco
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -143,7 +148,7 @@ hr {
 
     mat-icon {
       font-size: 36px;
-      color: #1d5fa9;
+      color: #fff; // azul
       width: 40px;
       height: 40px;
     }
@@ -152,11 +157,11 @@ hr {
   .servicio-titulo {
     font-weight: bold;
     font-size: 1rem;
-    color: #060a6d;
 
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
   }
 
   .part2 {
@@ -232,10 +237,10 @@ hr {
 }
 
 .container h2 {
-  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.6rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #002F5D;
   margin-top: 2%;
   text-align: center;
   letter-spacing: 0.5px;
@@ -290,8 +295,8 @@ hr {
   overflow: hidden;
 }
 
-.servicios-adicionales .servicio-card {
-  background: rgba(255, 255, 255, 0.1);
+.servicios-adicionales .servicio-card {//color de card
+  background: #002f5d;
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow:
@@ -308,7 +313,7 @@ hr {
       6px 6px 18px rgba(0, 0, 0, 0.3);
   }
 
-  .servicio-icono {
+  .servicio-icono {//este cambia iconos
     background-color: #fff;
     border-radius: 50%;
     width: 70px;
@@ -317,17 +322,18 @@ hr {
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
 
     mat-icon {
       font-size: 36px;
-      color: #1d5fa9;
+      color: #002F5D;
     }
   }
 
   .servicio-titulo {
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #ffffff;
+    color: #fff;
   }
 
   .servicio-descripcion {

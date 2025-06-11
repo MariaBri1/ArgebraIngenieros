@@ -47,24 +47,16 @@ export class ServiciosComponent {
       titulo: 'Viajes de incentivo'
     },
     {
-      icono: 'train',
-      titulo: 'Boletos de Trenes'
+      icono: 'family_restroom',
+      titulo: 'Viajes en familia'
     },
     {
-      icono: 'hiking',
-      titulo: 'Full days'
-    },
-    {
-      icono: 'location_on',
-      titulo: 'Excursiones'
-    },
-    {
-      icono: 'assignment',
-      titulo: 'Servicio de trámite de pasaporte'
+      icono: 'school',
+      titulo: 'Viajes escolares'
     },
     {
       icono: 'directions_bus',
-      titulo: 'Pasajes nacionales e internacionales'
+      titulo: 'Programas nacionales e internacionales'
     }
   ];
 
@@ -73,7 +65,7 @@ export class ServiciosComponent {
 
     {
       icono: 'directions_car',
-      titulo: 'Alquiler de autos'
+      titulo: 'Alquiler de autos & traslados'
     },
     {
       icono: 'directions_boat',
@@ -81,23 +73,15 @@ export class ServiciosComponent {
     },
     {
       icono: 'diamond',
-      titulo: 'Evento de bodas'
-    },
-    {
-      icono: 'school',
-      titulo: 'Viajes escolares'
+      titulo: 'Evento de bodas & Luna de miel'
     },
     {
       icono: 'health_and_safety',
       titulo: 'Seguro de asistencia'
     },
     {
-      icono: 'beach_access',
-      titulo: 'Luna de miel'
-    },
-    {
-      icono: 'family_restroom',
-      titulo: 'Viajes en familia'
+      icono: 'hiking',
+      titulo: 'Full days'
     }
   ];
 

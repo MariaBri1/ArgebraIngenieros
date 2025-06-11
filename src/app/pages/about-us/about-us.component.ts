@@ -35,6 +35,33 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   }
 
 
+  imagenes: string[] = [
+    'assets/images/4.jpeg',
+    'assets/images/2.jpeg',
+    'assets/images/3.jpeg'
+  ];
+
+  currentIndex = 0;
+  hover = false;
+
+  get currentImage(): string {
+    return this.hover
+      ? this.imagenes[(this.currentIndex + 1) % this.imagenes.length]
+      : this.imagenes[this.currentIndex];
+  }
+
+  onHover() {
+    this.hover = true;
+  }
+
+  onLeave() {
+    this.hover = false;
+  }
+
+  onClick() {
+    this.currentIndex = (this.currentIndex + 1) % this.imagenes.length;
+  }
+
   ngOnInit(): void {
     this.reviewList = [
       {
@@ -126,22 +153,37 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     this.galleryItems = [
       {
         image: '/assets/images/i-service.jpg',
-        title: 'Servicio Integral',
+        title: 'Atención Personalizada',
         description: 'Desde que nos contactan para organizar y cotizar su viaje trabajamos en brindar el soporte esencial y necesario para que sientan que viajamos con ellos.'
       },
       {
         image: '/assets/images/our-essence.webp',
-        title: 'Atención personalizada',
-        description: 'Desde un vuelo hasta un programa de múltiples ciudades con detalles puntuales, afino nuestra atención para conectar con su necesidad y personalizarla.'
-      },
-      {
-        image: '/assets/images/experience.jpg',
-        title: 'Confianza de cliente',
-        description: 'Desde nuestro inicio cuidamos en seleccionar nuestros operadores y cuidar de responder ante las contingencias para contener y brindar el soporte oportuno.'
+        title: 'Clientes contentos',
+        description: 'Estamos comprometidos con brindar un excelente soporte a nuestros clientes para que su experiencia de viaje sea buena, agradable y perfecta'
       }
     ];
 
     this.carouselItems1 = [
+      { image: 'assets/logos/aerolineas/latam_logo.png', title: 'LATAM Airlines Group', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolinea/copa_logo.png', title: 'Copa Airlines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolinea/sky_logo.png', title: 'Sky Airline', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolinea/american_airlines_logo.png', title: 'American Airlines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolinea/delta_logo.png', title: 'Delta Air Lines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolinea/starperu_logo.png', title: 'StarPerú', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolinea/klm_logo.png', title: 'KLM Royal Dutch Airlines', description: 'Socio aéreo estratégico' },
+
+
+      { image: 'assets/logos/hotel/iberostar_logo.png', title: 'Iberostar Hotels & Resorts', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/bahia_principe_logo.png', title: 'Bahia Principe Hotels & Resorts', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/melia_logo.png', title: 'Meliá Hotels International', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/riu_logo.png', title: 'Riu Hotels & Resorts', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/decameron_logo.png', title: 'Decameron All Inclusive Hotels', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/barcelo_logo.png', title: 'Barceló Hotel Group', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/casa_andina_logo.png', title: 'Casa Andina Hotels', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/belmond_logo.png', title: 'Belmond Hotels', description: 'Socio hotelero estratégico' },
+      { image: 'assets/logos/hotel/royal_caribbean_logo.png', title: 'Royal Caribbean International', description: 'Socio de cruceros estratégico' },
+
+
       { image: 'assets/logos/agil_peru_logo.png', title: 'Agil (Destinos Mundiales SAC)', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/continental_travel_logo.webp', title: 'Continental Travel SAC', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/mundo_representaciones.png', title: 'Mundo Representaciones', description: 'Proveedor con 10 años de experiencia' },

@@ -139,7 +139,7 @@ p {
   padding: 1rem 2rem;
   position: relative;
   z-index: 2;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 
   flex-wrap: wrap;
   justify-content: center;
@@ -167,7 +167,7 @@ p {
     position: relative;
     transition: all 0.5s ease;
     pointer-events: none;
-    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 
     &::before {
       content: '';
@@ -194,9 +194,9 @@ p {
       color: #fff;
       text-align: start;
       font-size: 2.0rem;
-      font-family: "Roboto", sans-serif;
+      font-family: 'Poppins', sans-serif;
       transition: all 0.3s ease;
-      font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
 
 
       &:hover {
@@ -206,7 +206,7 @@ p {
     }
 
     h4 {
-      font-family: "Roboto", sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.4rem;
       font-weight: normal;
       color: #fff;
@@ -248,35 +248,33 @@ p {
     }
 
     .text-content-bg {
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(3, 6, 74, 0.029);
       border-radius: 18px;
       padding: 16px 18px;
       margin: 8px 0;
       color: #fff !important;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
       line-height: 1.6;
       text-align: justify;
-      width: 105%;
+      width: 130%;
       max-width: none;
       min-width: 260px;
 
-
       box-sizing: border-box;
-      
     }
 
     @media (max-width: 400px) {
-  .text-content-bg {
-    padding: 12px 14px;
-    font-size: 14px;
-  }
-}
+      .text-content-bg {
+        padding: 12px 14px;
+        font-size: 14px;
+      }
+    }
 
     .text-content {
       font-size: 1.18rem; // Más grande
       color: #fff !important; // Letras blancas
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.7;
     }
 
@@ -316,7 +314,9 @@ p {
     .fundadora-mobile {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: flex-end;
+      position: relative;
+
       align-items: center;
       gap: 1rem;
       max-width: 100%;
@@ -328,12 +328,36 @@ p {
       }
 
       .fundadora-image {
-        height: 220px;
-        width: auto;
-        max-width: 100%;
+        height: 300px;
+        margin-right: 40px;
         display: block;
         object-fit: contain;
         transition: all 0.5s ease;
+
+        object-fit: cover;
+
+        width: 100%;
+        max-width: 300px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05) rotate(2deg);
+          filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+        }
+      }
+
+      .fundadora-image-1 {
+        height: 250px;
+        margin-right: 40px;
+        display: block;
+        object-fit: contain;
+        transition: all 0.5s ease;
+
+        width: 100%;
+        max-width: 300px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           transform: scale(1.05) rotate(2deg);
@@ -1147,7 +1171,7 @@ p {
     align-items: center;
     gap: 12px;
     font-size: 1.4rem;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #000000b0;
 
     i {
@@ -1346,7 +1370,7 @@ p {
 /* Sección de servicios */
 .servicios-container {
   min-height: 500px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 4% 0px;
   transition: all 0.5s ease;
 
@@ -1541,7 +1565,7 @@ p {
   background: linear-gradient(90deg, #003049 60%, #003049 100%);
   color: #ffffff;
   border: none;
-  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-radius: 32px;
   padding: 16px 36px;
   font-size: 1.2rem;
