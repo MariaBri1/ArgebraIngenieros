@@ -27,16 +27,23 @@ export class GalleryComponent {
     '/assets/clientes/client-section/img12.jpg',
     '/assets/clientes/client-section/img13.jpg',
     '/assets/clientes/client-section/img15.jpg',
+    '/assets/clientes/client-section/img16.jpg',
+    '/assets/clientes/client-section/img17.jpg',
+    '/assets/clientes/client-section/img18.jpg',
+    '/assets/clientes/client-section/img19.jpg',
   ];
 
   showAllImages = false;
   selectedImage: string | null = null;
   currentIndex = 0;
+  allImages: string[] = [];
 
-  
+
+
   highlightedImages: string[] = [];
   secondaryImages: string[] = [];
   initialImages: string[] = [];
+
 
   constructor() {
     this.prepareImages();
@@ -83,9 +90,10 @@ export class GalleryComponent {
   }
 
   prepareImages() {
-  this.highlightedImages = this.images.slice(8, 14);
-  this.secondaryImages = this.images.slice(6, 10);
-  this.initialImages = this.images.slice(0, 6);
-}
+    this.highlightedImages = this.images.slice(8, 14);
+    this.secondaryImages = this.images.slice(6, 9);
+    this.initialImages = this.images.slice(0, 6);
+    this.allImages = this.images.slice(0, 25);
+  }
 
 }

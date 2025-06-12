@@ -3,26 +3,15 @@
   <div class="gallery">
     <!-- Main larger image on left -->
 
-
-    <!-- Grid of smaller images on right -->
     <!-- Primer bloque: initialImages -->
-    <div class="gallery-grid">
-      <div class="gallery-item" *ngFor="let img of initialImages; let i = index">
-        <div class="image-wrapper" (click)="openImage(img, i)">
-          <img [src]="img" alt="Imagen">
-        </div>
-      </div>
-      
-    </div>
-
     <!-- Segundo bloque: highlightedImages -->
     <div class="gallery-grid">
-      <div class="gallery-item" *ngFor="let img of highlightedImages; let i = index">
-        <div class="image-wrapper" (click)="openImage(img, i)">
-          <img [src]="img" alt="Imagen">
-        </div>
-      </div>
+  <div class="gallery-item" *ngFor="let img of allImages">
+    <div class="image-wrapper">
+      <img [src]="img" alt="Imagen" />
     </div>
+  </div>
+</div>
 
     <!-- Modal for showing all images -->
     <div class="modal" *ngIf="showAllImages" (click)="toggleGallery()">
