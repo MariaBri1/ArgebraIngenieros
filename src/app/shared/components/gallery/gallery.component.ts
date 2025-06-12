@@ -83,9 +83,9 @@ export class GalleryComponent {
   }
 
   prepareImages() {
-  this.highlightedImages = this.images.slice(10, 14);
-  this.secondaryImages = this.images.slice(6, 11);
-  this.initialImages = this.images.slice(0, 4);
+  this.highlightedImages = this.images.slice(8, 14);
+  this.secondaryImages = this.images.slice(6, 10);
+  this.initialImages = this.images.slice(0, 6);
 }
 
 }

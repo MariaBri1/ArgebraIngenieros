@@ -1,1 +1,51 @@
-<p>terms-conditions works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
+    <iframe #videoFrame [src]="videoUrl" width="100%" height="100%" frameborder="0"
+        (click)="preventPause($event)"></iframe>
+</app-banner>
+
+
+
+
+<div class="terms-wrapper">
+    <!-- LOGO -->
+    <div class="fundadora-mobile">
+        <video class="fundadora-image-1" autoplay muted loop playsinline>
+          <source src="assets/images/video-logo.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+
+    <h1 class="terms-title">Términos y Condiciones</h1>
+
+    <div class="terms-grid">
+        <div class="term" *ngFor="let item of termsList; let i = index">
+            <button class="term-toggle" (click)="toggle(i)">
+                <span class="icon-wrapper">
+                    <i class="{{ item.icon }}"></i>
+                </span>
+                <span class="term-title">{{ item.title }}</span>
+                <i class="fas toggle-icon" [ngClass]="{
+            'fa-chevron-down': !openStates[i],
+            'fa-chevron-up': openStates[i]
+          }"></i>
+            </button>
+
+            <div class="term-content" *ngIf="openStates[i]">
+                <!-- Muestra la descripción si existe -->
+                <p class="term-description" *ngIf="item.description">
+                    {{ item.description }}
+                </p>
+
+                <!-- Muestra cada párrafo si existe -->
+                <ul *ngIf="item.paragraphs">
+                    <li *ngFor="let para of item.paragraphs">
+                        {{ para }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

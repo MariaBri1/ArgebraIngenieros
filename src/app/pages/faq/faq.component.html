@@ -1,21 +1,32 @@
-<div class="container">
-    <app-banner
-    class="my_cover" urlImage="paisaje_faq.webp">
-    </app-banner>
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="faq.component.scss">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-crossorigin="anonymous" referrerpolicy="no-referrer" />
+<app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
+    <iframe #videoFrame [src]="videoUrl" width="100%" height="100%" frameborder="0"
+        (click)="preventPause($event)"></iframe>
+</app-banner>
 
-<div class="wrapper">
-    <h1>Todo lo que necesitas saber...</h1>
-    <div class="pannel">
-        <app-accordion
-            *ngFor="let faq of faqs"
-            [title]="faq.title"
-            [description]="faq.description"
-        ></app-accordion>
+
+<div class="terms-wrapper">
+  <h1 class="terms-title">PREGUNTAS FRECUENTES</h1>
+
+  <div class="terms-grid">
+    <div class="term" *ngFor="let item of faqs; let i = index">
+      <button class="term-toggle" (click)="toggle(i)">
+        <span class="icon-wrapper">
+          <i class="{{ item.icon }}"></i>
+        </span>
+        <span class="term-title">{{ item.title }}</span>
+        <i class="fas toggle-icon" [ngClass]="{
+          'fa-chevron-down': !openStates[i],
+          'fa-chevron-up': openStates[i]
+        }"></i>
+      </button>
+
+      <div class="term-content" *ngIf="openStates[i]">
+        <ul *ngIf="item.paragraphs">
+          <li *ngFor="let para of item.paragraphs">{{ para }}</li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>

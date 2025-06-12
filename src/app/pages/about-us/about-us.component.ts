@@ -173,7 +173,6 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       { image: 'assets/logos/aerolineas/klm_logo.png', title: 'KLM Royal Dutch Airlines', description: 'Socio aéreo estratégico' },
 
 
-      { image: 'assets/logos/hotel/iberostar_logo.png', title: 'Iberostar Hotels & Resorts', description: 'Socio hotelero estratégico' },
       { image: 'assets/logos/hotel/bahia_principe_logo.png', title: 'Bahia Principe Hotels & Resorts', description: 'Socio hotelero estratégico' },
       { image: 'assets/logos/hotel/melia_logo.png', title: 'Meliá Hotels International', description: 'Socio hotelero estratégico' },
       { image: 'assets/logos/hotel/riu_logo.png', title: 'Riu Hotels & Resorts', description: 'Socio hotelero estratégico' },
@@ -184,21 +183,14 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       { image: 'assets/logos/hotel/royal_caribbean_logo.png', title: 'Royal Caribbean International', description: 'Socio de cruceros estratégico' },
 
 
-      { image: 'assets/logos/agil_peru_logo.png', title: 'Agil (Destinos Mundiales SAC)', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/continental_travel_logo.webp', title: 'Continental Travel SAC', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/mundo_representaciones.png', title: 'Mundo Representaciones', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/costa_icon.png', title: 'Costa Cruceros', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/dynamics_Inkasiko.png', title: 'Dynamics Inkasiko', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/conexion_logo.png', title: 'Conexión', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/logo_eua.png', title: 'Euroamerican Assistance', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/posada_tumpis.png', title: 'Posada de los Tumpis', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/cumbaza_hoteles.png', title: 'Río Cumbaza Hotel', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/dm_logo.png', title: 'Dm Hoteles', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/costamar_logo.png', title: 'Costamar Travel Cruise & Tours S.A.C.', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/vcr_logo.png', title: 'VCR Representaciones', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/tambo_logo.png', title: 'Hoteles El Tambo Perú', description: 'Proveedor con 10 años de experiencia' },
       { image: 'assets/logos/ibero_logo.png', title: 'Iberostar Hotels & Resorts', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/colonial_logo.png', title: 'Colonial Tours SRL', description: 'Proveedor con 10 años de experiencia' }
     ];
 
     this.carouselItems2 = [
@@ -206,7 +198,8 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
  */      { image: 'assets/logos/respald-icons/prom_p-icon.png', title: 'PromPerú' },
       { image: 'assets/logos/respald-icons/min_c-icon.png', title: 'Mincetur' },
       { image: 'assets/logos/respald-icons/agency_r-icon.png', title: 'Agencia de Viajes y Turismo Registrada' },
-      { image: 'assets/logos/respald-icons/ytu-icon.webp', title: 'Y tú qué planes' }
+      { image: 'assets/logos/respald-icons/ytu-icon.webp', title: 'Y tú qué planes' },
+      { image: 'assets/logos/respald-icons/marca_Peru-icon.png', title: 'Marca Perú' }
     ];
 
 

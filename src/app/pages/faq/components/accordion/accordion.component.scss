@@ -1,4 +1,4 @@
-.button-accordion{
+.button-accordion {
    background-color: white;
    color: rgba(0, 0, 0, 0.8);
    cursor: pointer;
@@ -12,40 +12,47 @@
    justify-content: space-between;
    align-items: center;
    font-weight: bold;
- }
+}
 
- i{
+i {
    font-size: 1.6rem;
- }
+}
 
- .active, .button-accordion:hover{
+.active,
+.button-accordion:hover {
    background-color: #e7e7e7;
 }
 
-.pannel{
+.pannel {
    padding: 2.5rem 2rem;
    background-color: white;
    overflow: hidden;
    background-color: #f1f7f5;
    display: none;
 }
- 
- /* Clase para mostrar el panel */
- .visible {
-   display: block;
- }
 
-p{
+/* Clase para mostrar el panel */
+.visible {
+   display: block;
+}
+
+p {
    color: rgba(0, 0, 0, 0.7);
    font-size: 1.2rem;
    line-height: 1.4;
 }
 
-.faq{
+.pannel p {
+   font-size: 0.95rem; // 🔽 ajusta este valor según necesidad
+   color: #444;
+   line-height: 1.6;
+   font-family: 'Poppins', sans-serif;
+}
+
+.faq {
    outline: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.faq.active{
+.faq.active {
    outline: none;
 }
-

@@ -51,6 +51,8 @@ h2 {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin: 0 auto; /* Centra horizontalmente */
+  justify-content: center;
 }
 
 .gallery-item {

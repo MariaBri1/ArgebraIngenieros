@@ -1,0 +1,144 @@
+.terms-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #003366;
+}
+
+.fundadora-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  padding: 0 1rem;
+
+  .fundadora-image-1 {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+.terms-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #003366;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+}
+
+.terms-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.term {
+  border: 1px solid #dce6f2;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 51, 102, 0.08);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 16px rgba(0, 51, 102, 0.12);
+  }
+}
+
+.term-toggle {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #ecf4fc;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #003366;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #d6e9f9;
+  }
+
+  .icon-wrapper {
+    margin-right: 10px;
+
+    i {
+      font-size: 1.2rem;
+      color: #3498db;
+    }
+  }
+
+  .term-title {
+    flex: 1;
+    text-align: left;
+  }
+
+  .toggle-icon {
+    font-size: 1.1rem;
+    color: #003366;
+    transition: transform 0.3s ease;
+  }
+
+  .fa-chevron-up {
+    transform: rotate(180deg);
+  }
+}
+
+.term-content {
+  padding: 1.5rem;
+  background-color: #f5fbff;
+  color: #003366;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 1px solid #dbe8f1;
+  animation: fadeIn 0.3s ease-in-out;
+  font-size: 0.7rem;
+
+  p,
+  ul {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      list-style-type: disc;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

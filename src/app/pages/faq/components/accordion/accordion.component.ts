@@ -13,14 +13,16 @@ import { Component, Input } from '@angular/core'
 export class AccordionComponent {
   @Input() title?: string
   @Input() description?: string
+   @Input() paragraphs?: string[];
+  @Input() icon!: string;
 
   open: boolean = false
 
-  handleClick (): void {
+  handleClick(): void {
     this.open = !this.open
   }
 
-  get accordionIcon (): string {
+  get accordionIcon(): string {
     return this.open ? 'fa-chevron-up' : 'fa-chevron-down'
   }
 }

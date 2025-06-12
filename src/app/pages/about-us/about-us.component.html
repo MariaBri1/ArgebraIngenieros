@@ -11,6 +11,7 @@
 
 
 <div class="container">
+  
   <div class="history-content" #historyContent>
     <div class="part2">
       <div class="histori-header">
@@ -20,17 +21,28 @@
 
       <div class="text-content-bg">
         <p class="text-content">
-          La historia empezó con una mala experiencia en una agencia viajes, una estafa con la compra de un boleto aéreo
-          llevo a la fundadora a buscar la forma de recuperar su dinero sin imaginar que en ese camino quedo cautivada
-          por todo lo que involucra el mundo turístico. No recupero su dinero, lo perdió, pero decidió estudiar turismo
-          y
-          así empezó su formación profesional trabajando para la empresa Nuevo Mundo, Despegar.com y el Corte inglés.
-          Hoy
-          con 20
-          años de experiencia se sigue emocionando de ser parte de la historia de muchas familias ayudando a crear
-          momentos únicos e inolvidables. Experiencias para toda la vida dentro de Perú y el mundo.
-          ¿Y tú que esperas para viajar con nosotros?
+          El inicio fue con una estafa que sufrí en una agencia de viajes al comprar un boleto, al buscar una forma de
+          recuperar el dinero descubrí lo que involucra el mundo de los viajes quedando cautivada por toda la logística
+          que conlleva viajar, no recupere el dinero pero me abrio un profundo deseo por aprender y decidí formar parte
+          de este bello rubro, empece mis estudios en Columbia para luego formarme profesionalmente en empresas como
+          Nuevo Mundo, Despegar, Viajes el Corte Ingles adquiriendo un amplio conocimiento en este sector. Con los años
+          y creciendo en conocimiento me di cuenta que era tiempo de emprender vuelo y empezar mi propia historia para
+          seguir uniendo a familias, cumpliendo sueños y creando experiencias únicas, de las que se atesoran en el
+          corazón.Así nace MÁS QUE VACACIONES, ya son 10 años de entrega y servicio con honestidad, aportando al
+          crecimiento de nuestro sector turístico y fomentado el turismo sostenible, somos parte de la comunidad Marca
+          Peru y promperu. ¿Estás listo para vivir tu propia experiencia inolvidable con nosotros? Contacta hoy a MÁS
+          QUE VACACIONES y deja que nuestros expertos transformen tu sueño en realidad.
         </p>
+      </div>
+    </div>
+
+    <div class="part2">
+      <div class="fundadora-mobile">
+        <img [src]="currentImage" alt="Imagen fundadora" class="fundadora-image" (mouseenter)="onHover()"
+          (mouseleave)="onLeave()" (click)="onClick()" />
+      </div>
+
+      <div class="text-content-bg">
         <div class="audio-controls">
           <button (click)="toggleAudio()" class="btn-audio">
             <i class="fas" [class.fa-play]="audioPaused" [class.fa-pause]="!audioPaused"></i>
@@ -44,41 +56,12 @@
         </div>
       </div>
     </div>
-
-    <div class="part2">
-        <div class="fundadora-mobile">
-    <img 
-      [src]="currentImage" 
-      alt="Imagen fundadora" 
-      class="fundadora-image"
-      (mouseenter)="onHover()" 
-      (mouseleave)="onLeave()" 
-      (click)="onClick()" 
-    />
-  </div>
-    </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container-2">
   <div class="history-content" #historyContent>
-    <div class="part2">
-      <div class="histori-header">
-        <h2>Conócenos</h2>
-      </div>
-
-      <div class="text-content-bg">
-        <p class="text-content">
-          Somos una agencia de viajes con más de 10 años de trayectoria turística ayudando a personas a organizar viajes
-          en
-          familia, con amigos, por trabajo o para tomar un descanso.
-          Felices de ser parte de la comunidad de embajadores marca Perú y 100% peruanos estamos comprometidos con el
-          desarrollo de un turismo sostenible, promoviendo Perú al mundo.
-        </p>
-      </div>
-    </div>
-
-    <div class="part2">
+    <div class="part1">
       <div class="fundadora-mobile">
         <video class="fundadora-image-1" autoplay muted loop playsinline>
           <source src="assets/images/video-logo.mp4" type="video/mp4" />
@@ -86,10 +69,10 @@
         </video>
       </div>
     </div>
-
-
   </div>
 </div>
+
+
 
 <!-- <img src="/assets/images/bordes/ave.png" alt="ornament" class="ave"> 
 <img src="assets/images/video-logo.gif" alt="Logo animado" class="fundadora-image" /> 

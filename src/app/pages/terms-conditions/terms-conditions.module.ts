@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common';
+import { BannerComponent } from 'src/app/shared/components/banner/banner.component';
 
-import { TermsConditionsRoutingModule } from './terms-conditions-routing.module';
-import { TermsConditionsComponent } from './terms-conditions.component';
+import { TermsConditionsRoutingModule } from './terms-conditions-routing.module'
+import { TermsConditionsComponent } from './terms-conditions.component'
 
 
 @NgModule({
-  declarations: [
-    TermsConditionsComponent
-  ],
+
   imports: [
+    TermsConditionsRoutingModule,
     CommonModule,
-    TermsConditionsRoutingModule
+    BannerComponent,
+    TermsConditionsComponent      
   ]
 })
 export class TermsConditionsModule { }
