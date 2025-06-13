@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { ComplaintsBookRoutingModule } from './complaints-book-routing.module';
 import { ComplaintsBookComponent } from './complaints-book.component';
 
+import { BannerComponent } from 'src/app/shared/components/banner/banner.component';
+
+
 
 @NgModule({
-  declarations: [
-    ComplaintsBookComponent
-  ],
+
   imports: [
     CommonModule,
+    BannerComponent,
     ComplaintsBookRoutingModule
   ]
 })

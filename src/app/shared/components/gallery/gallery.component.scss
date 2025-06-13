@@ -233,7 +233,7 @@ h2 {
 /* Gallery inside modal */
 .modal-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 15px;
 }
 

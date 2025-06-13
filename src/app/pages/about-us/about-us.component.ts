@@ -164,23 +164,23 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     ];
 
     this.carouselItems1 = [
-      { image: 'assets/logos/aerolineas/latam_logo.png', title: 'Latam Airlines Group', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolineas/copa_logo.png', title: 'Copa Airlines', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolineas/sky_logo.png', title: 'Sky Airline', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolineas/american_airlines_logo.png', title: 'American Airlines', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolineas/delta_logo.png', title: 'Delta Air Lines', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolineas/starperu_logo.png', title: 'StarPerú', description: 'Socio aéreo estratégico' },
-      { image: 'assets/logos/aerolineas/klm_logo.png', title: 'KLM Royal Dutch Airlines', description: 'Socio aéreo estratégico' },
+      { image: 'assets/logos/aerolineas/latam_logo.png', title: 'Latam ', description: 'Socio aéreo' },
+      { image: 'assets/logos/aerolineas/copa_logo.png', title: 'Copa ', description: 'Socio aéreo ' },
+      { image: 'assets/logos/aerolineas/sky_logo.png', title: 'Sky ', description: 'Socio aéreo ' },
+      { image: 'assets/logos/aerolineas/american_airlines_logo.png', title: 'American ', description: 'Socio aéreo ' },
+      { image: 'assets/logos/aerolineas/delta_logo.png', title: 'Delta ', description: 'Socio aéreo ' },
+      { image: 'assets/logos/aerolineas/starperu_logo.png', title: 'StarPerú', description: 'Socio aéreo ' },
+      { image: 'assets/logos/aerolineas/klm_logo.png', title: 'KLM Royal', description: 'Socio aéreo ' },
 
 
-      { image: 'assets/logos/hotel/bahia_principe_logo.png', title: 'Bahia Principe Hotels & Resorts', description: 'Socio hotelero estratégico' },
-      { image: 'assets/logos/hotel/melia_logo.png', title: 'Meliá Hotels International', description: 'Socio hotelero estratégico' },
-      { image: 'assets/logos/hotel/riu_logo.png', title: 'Riu Hotels & Resorts', description: 'Socio hotelero estratégico' },
-      { image: 'assets/logos/hotel/decameron_logo.png', title: 'Decameron All Inclusive Hotels', description: 'Socio hotelero estratégico' },
-      { image: 'assets/logos/hotel/barcelo_logo.png', title: 'Barceló Hotel Group', description: 'Socio hotelero estratégico' },
-      { image: 'assets/logos/hotel/casa_andina_logo.png', title: 'Casa Andina Hotels', description: 'Socio hotelero estratégico' },
-      { image: 'assets/logos/hotel/belmond_logo.png', title: 'Belmond Hotels', description: 'Socio hotelero estratégico' },
-      { image: 'assets/logos/hotel/royal_caribbean_logo.png', title: 'Royal Caribbean International', description: 'Socio de cruceros estratégico' },
+      { image: 'assets/logos/hotel/bahia_principe_logo.png', title: 'Bahia Principe Hotels', description: 'Socio hotelero ' },
+      { image: 'assets/logos/hotel/melia_logo.png', title: 'Meliá Hotels International', description: 'Socio hotelero ' },
+      { image: 'assets/logos/hotel/riu_logo.png', title: 'Riu Hotels', description: 'Socio hotelero ' },
+      { image: 'assets/logos/hotel/decameron_logo.png', title: 'Decameron All Inclusive Hotels', description: 'Socio hotelero ' },
+      { image: 'assets/logos/hotel/barcelo_logo.png', title: 'Barceló Hotel Group', description: 'Socio hotelero ' },
+      { image: 'assets/logos/hotel/casa_andina_logo.png', title: 'Casa Andina Hotels', description: 'Socio hotelero ' },
+      { image: 'assets/logos/hotel/belmond_logo.png', title: 'Belmond Hotels', description: 'Socio hotelero ' },
+      { image: 'assets/logos/hotel/royal_caribbean_logo.png', title: 'Royal Caribbean International', description: 'Socio de cruceros ' },
 
 
       { image: 'assets/logos/costa_icon.png', title: 'Costa Cruceros', description: 'Proveedor con 10 años de experiencia' },

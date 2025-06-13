@@ -1,1 +1,58 @@
-<p>complaints-book works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
+    <iframe #videoFrame [src]="videoUrl" width="100%" height="100%" frameborder="0"
+        (click)="preventPause($event)"></iframe>
+</app-banner>
+
+
+
+<div class="reclamo-wrapper">
+
+     <h1 class="reclamo-title"> Libro de reclamaciones</h1>
+
+    <!-- LOGO -->
+    <div class="fundadora-mobile">
+        <video class="fundadora-image-1" autoplay muted loop playsinline>
+          <source src="assets/images/video-logo.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+
+
+     <!-- FORMULARIO -->
+  <form class="reclamo-form">
+    <div class="form-group">
+      <label for="nombre">👤 Nombres y Apellidos:</label>
+      <input type="text" id="nombre" name="nombre" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">📧 Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">📞 Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" />
+    </div>
+
+    <div class="form-group">
+      <label for="motivo">📄 Motivo de Reclamación:</label>
+      <textarea id="motivo" name="motivo" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">📌 Tipo de mensaje:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="reclamo">Reclamo</option>
+        <option value="queja">Queja</option>
+        <option value="sugerencia">Sugerencia</option>
+      </select>
+    </div>
+
+    <button type="submit" class="submit-btn">Enviar Reclamación</button>
+  </form>
+
+</div>

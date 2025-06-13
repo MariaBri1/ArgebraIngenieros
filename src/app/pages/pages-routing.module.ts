@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, type Routes } from '@angular/router'
-import { ROUTE_ABOUT, ROUTE_BOOK, ROUTE_CANCELLATION_POLICIES, ROUTE_CONTACT, ROUTE_DESTINATIONS, ROUTE_FAQ, ROUTE_HOME, ROUTE_NEW_ADVENTURE, ROUTE_PACKAGES, ROUTE_PRIVACY_POLICIES, ROUTE_TERMSCONDITIONS } from './constants/routes.constant'
+import { ROUTE_ABOUT, ROUTE_BOOK, ROUTE_CONTACT, ROUTE_DESTINATIONS, ROUTE_FAQ, ROUTE_HOME, ROUTE_NEW_ADVENTURE, ROUTE_PACKAGES, ROUTE_PRIVACY_POLICIES, ROUTE_TERMSCONDITIONS } from './constants/routes.constant'
 import { PagesComponent } from './pages.component'
 
 const routes: Routes = [
@@ -43,10 +43,6 @@ const routes: Routes = [
       {
         path: ROUTE_PRIVACY_POLICIES.path,
         loadChildren: async () => (await import('./privacy-policies/privacy-policies.module')).PrivacyPoliciesModule
-      },
-      {
-        path: ROUTE_CANCELLATION_POLICIES.path,
-        loadChildren: async () => (await import('./cancellation-policies/cancellation-policies.module')).CancellationPoliciesModule
       },
       {
         path: ROUTE_DESTINATIONS.path,

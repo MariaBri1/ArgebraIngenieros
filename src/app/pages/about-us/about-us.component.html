@@ -50,7 +50,7 @@
           </button>
           <audio #audioRef style="display:none;" (ended)="onAudioEnded()" (pause)="onAudioPaused()"
             (play)="onAudioPlayed()">
-            <source src="assets/audios/conocenos1.mp3" type="audio/mp3">
+            <source src="assets/audios/conocenos2.mp3" type="audio/mp3">
             Tu navegador no soporta el elemento de audio.
           </audio>
         </div>
@@ -112,10 +112,9 @@
   <div class="gallery-container">
     <div class="gallery">
       <div class="carousel-container">
-
         <h4 class="icon-heading">
           <i class="fas fa-users"></i>
-          Nuestros Socios Estratégico
+          Parte de nuestros aliados estratégicos
         </h4>
         <p>
           En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y
@@ -129,7 +128,6 @@
   </div>
 
 
-
   <div class="gallery">
     <div class="carousel-container">
       <h4 class="icon-heading">
@@ -140,12 +138,8 @@
         A lo largo de nuestra trayectoria en el sector turístico, hemos contado con el valioso respaldo de
         reconocidas instituciones que confían en nuestro compromiso y profesionalismo.
       </p>
-      <div class="grid-container">
-        <div *ngFor="let item of carouselItems2" class="card">
-          <img [src]="item.image" [alt]="item.title" class="card-image">
-          <h3 class="card-title">{{ item.title }}</h3>
-        </div>
-      </div>
+      <app-carousel [items]="carouselItems2" [itemsToShow]="5" [autoRotate]="true"
+          [rotationInterval]="3000"></app-carousel>
 
       <h4 class="icon-heading">
         <i class="fas fa-hotel"></i>
@@ -156,7 +150,7 @@
         ético y sostenible.
       </p>
       <div class="grid-container">
-        <div *ngFor="let item of carouselItems3" class="card">
+          <div *ngFor="let item of carouselItems3" class="card">
           <img [src]="item.image" [alt]="item.title" class="card-image">
           <h3 class="card-title">{{ item.title }}</h3>
         </div>

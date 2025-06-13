@@ -13,13 +13,13 @@ import { Component } from '@angular/core';
 })
 export class GalleryComponent {
   images = [
-    '/assets/clientes/client-section/img1.jpg',
     '/assets/clientes/client-section/img2.jpg',
     '/assets/clientes/client-section/img3.jpg',
     '/assets/clientes/client-section/img4.jpg',
     '/assets/clientes/client-section/img5.jpg',
     '/assets/clientes/client-section/img6.jpg',
     '/assets/clientes/client-section/img7.jpg',
+    '/assets/clientes/client-section/img19.jpg',
     '/assets/clientes/client-section/img8.jpg',
     '/assets/clientes/client-section/img9.jpg',
     '/assets/clientes/client-section/img10.jpg',
@@ -30,7 +30,7 @@ export class GalleryComponent {
     '/assets/clientes/client-section/img16.jpg',
     '/assets/clientes/client-section/img17.jpg',
     '/assets/clientes/client-section/img18.jpg',
-    '/assets/clientes/client-section/img19.jpg',
+    '/assets/clientes/client-section/foto1.jpg',
   ];
 
   showAllImages = false;

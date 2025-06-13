@@ -248,13 +248,13 @@ p {
     }
 
     .text-content-bg {
-      background: rgba(3, 6, 74, 0.029);
+      background: rgba(3, 7, 74, 0);
       border-radius: 18px;
       padding: 16px 18px;
       margin: 8px 0;
       color: #fff !important;
       font-family: 'Poppins', sans-serif;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0);
       line-height: 1.6;
       text-align: justify;
       width: 130%;
@@ -2012,7 +2012,7 @@ p {
 }
 
 .card-image {
-  max-width: 80px;
+  max-width: 140px;
   height: auto;
   margin-bottom: 10px;
 }
