@@ -1,124 +1,154 @@
-.search {
-  margin: 20px auto;
-  width: 90%; // Cambiado a porcentaje para mejor responsividad
-  max-width: 900px;
-  min-height: 250px; // Cambiado a min-height para permitir crecimiento
-  border: 2px solid #005ea8;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
+app-banner {
+  display: block;
+  margin-bottom: 40px; /* También puedes poner esto directamente en el banner */
+}
 
-  @media (max-width: 768px) {
-    width: 95%;
-    margin: 10px auto;
-    min-height: auto;
+.container-wrapper {
+  background: linear-gradient(145deg, #061737, #1682e0);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-widget-edreams {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+}
+
+.tabs-edreams {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  .tab {
+    padding: 12px 20px;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    background: #f0f0f0;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+
+    i {
+      margin-right: 8px;
+    }
+
+    &.active {
+      background: #0b2e66;
+      color: white;
+    }
   }
 }
 
-.search-engine {
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  font-family: Arial, sans-serif;
+.search-form-edreams {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-  .tabs {
+.trip-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+
+  label {
     display: flex;
-    justify-content: space-around;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
-    flex-wrap: wrap; // Permite que los tabs se envuelvan en pantallas pequeñas
+    align-items: center;
+    gap: 6px;
 
-    @media (max-width: 768px) {
-      gap: 10px;
-      padding: 0 10px;
+    input {
+      accent-color: #0d6efd;
+    }
+  }
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 4px;
     }
 
-    .tab {
-      background: none;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      color: #333;
-      border-bottom: 2px solid transparent;
-      transition: 0.3s;
-      white-space: nowrap; // Evita que el texto se rompa
+    input {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f7faff;
+      font-size: 15px;
+    }
 
-      @media (max-width: 768px) {
+    &.with-icon {
+      position: relative;
+
+      i {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
         font-size: 14px;
-        padding: 8px 15px;
+        color: #777;
       }
+    }
 
-      @media (max-width: 480px) {
-        font-size: 12px;
-        padding: 6px 10px;
-      }
+    .passenger-display {
+      background: #f7faff;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+  }
+}
 
-      &.active {
-        color: #005ea8;
-        border-bottom: 2px solid #005ea8;
-      }
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
 
-      &:hover {
-        color: #005ea8;
-      }
+  .secondary,
+  .primary {
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+  }
+
+  .secondary {
+    background: white;
+    color: #0b5ed7;
+    border: 2px solid #0b5ed7;
+
+    &:hover {
+      background: #e8f2fd;
     }
   }
 
-  .form-container {
-    .form {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap; // Permite que los elementos se envuelvan en pantallas pequeñas
-      justify-content: center;
+  .primary {
+    background: #0b5ed7;
+    color: white;
 
-      @media (max-width: 768px) {
-        flex-direction: column;
-        padding: 0 15px;
-      }
-
-      &.active {
-        display: flex;
-      }
-
-      input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
-        flex: 1;
-        min-width: 200px; // Establece un ancho mínimo
-        max-width: 400px;
-
-        @media (max-width: 768px) {
-          width: 100%;
-          max-width: 100%;
-          margin: 5px 0;
-        }
-      }
-
-      button {
-        padding: 10px;
-        background: #005ea8;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: 0.3s;
-        width: 200px;
-
-        @media (max-width: 768px) {
-          width: 100%;
-          margin: 10px 0;
-        }
-
-        &:hover {
-          background: #004480;
-        }
-      }
+    &:hover {
+      background: #0949ab;
     }
   }
 }

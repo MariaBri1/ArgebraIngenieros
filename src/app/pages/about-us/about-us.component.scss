@@ -257,19 +257,32 @@ p {
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0);
       line-height: 1.6;
       text-align: justify;
+
+
       width: 130%;
       max-width: none;
       min-width: 260px;
-
       box-sizing: border-box;
+      overflow-wrap: break-word;
     }
 
     @media (max-width: 400px) {
       .text-content-bg {
         padding: 12px 14px;
         font-size: 14px;
+        text-align: justify;
       }
     }
+
+    @media (max-width: 768px) {
+      .text-content-bg {
+        max-width: 100%;
+        padding: 14px;
+        font-size: 14px;
+      }
+    }
+
+
 
     .text-content {
       font-size: 1.18rem; // Más grande
@@ -296,13 +309,32 @@ p {
       opacity: 1;
       pointer-events: auto;
       align-items: flex-start;
-      width: 56%;
+      width: 100%;
       transition: all 0.6s ease;
-
+      align-items: center;
 
       &.animate-slideInLeft {
         opacity: 1;
         animation: slideInFromLeft 1s ease-out forwards;
+      }
+
+      .image-caption {
+        margin-top: 0.5rem;
+        text-align: center;
+        color: white;
+        margin-left: 190PX;
+        margin-right: 0;
+        font-weight: 500;
+      }
+
+      @media (max-width: 468px) {
+        .image-caption {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 10px;
+          font-size: 0.95rem;
+        }
       }
 
     }
@@ -313,7 +345,7 @@ p {
       flex-direction: row;
       justify-content: flex-end;
       position: relative;
-
+      text-align: center;
       align-items: center;
       gap: 1rem;
       max-width: 100%;
@@ -343,6 +375,8 @@ p {
           filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
         }
       }
+
+
 
 
       .fundadora-image-1 {
@@ -625,6 +659,8 @@ p {
       }
     }
   }
+
+
 }
 
 .container-2 {
@@ -760,16 +796,20 @@ p {
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
       line-height: 1.6;
       text-align: justify;
-      width: 130%;
-      max-width: none;
-      min-width: 260px;
 
+      width: 100%; // ✅ Ajuste a su contenedor
+      max-width: 100%; // ✅ Limita el ancho a su contenedor
+
+      min-width: 260px;
       box-sizing: border-box;
+
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       .text-content-bg {
-        padding: 12px 14px;
+        padding: 12px 10px;
         font-size: 14px;
       }
     }
@@ -816,6 +856,8 @@ p {
       flex-direction: row;
       justify-content: flex-end;
       position: relative;
+
+      flex-direction: column;
 
       align-items: center;
       gap: 1rem;

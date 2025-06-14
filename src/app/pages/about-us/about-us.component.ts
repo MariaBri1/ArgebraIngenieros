@@ -289,13 +289,13 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   }
 
   updateVideoUrl(): void {
-    const baseUrl = 'https://www.youtube.com/embed/cC_zjR1TtKM';
+    const baseUrl = 'https://www.youtube.com/embed/6HccyI1aBQI';
     const params = new URLSearchParams({
       autoplay: '1',
       mute: this.isMuted ? '1' : '0',
       controls: '0',
       loop: '1',
-      playlist: 'cC_zjR1TtKM',
+      playlist: '6HccyI1aBQI',
       modestbranding: '1',
       rel: '0',
       showinfo: '0',

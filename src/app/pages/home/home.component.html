@@ -1,24 +1,59 @@
-<app-banner
-  urlImage="home-banner.webp"
-  title="Cada destino, una historia por vivir"
+<app-banner urlImage="home-banner.webp" title="Cada destino, una historia por vivir"></app-banner>
 
-></app-banner>
-<div class="search">
-  <div class="search-engine">
-    <div class="tabs">
-      <button class="tab active" data-target="hotels">🏨 Hoteles</button>
-      <button class="tab" data-target="transfers">🚍 Traslados</button>
-      <button class="tab" data-target="flights">✈️ Vuelos</button>
-      <button class="tab" data-target="cruises">🛳️ Cruceros</button>
+<!-- Banner + Buscador tipo eDreams -->
+<div class="container-wrapper">
+  <section class="search-widget-edreams">
+    <div class="tabs-edreams">
+      <button class="tab active"><i class="fas fa-plane"></i> Vuelos</button>
+      <button class="tab"><i class="fas fa-bed"></i> Hoteles</button>
+      <button class="tab"><i class="fas fa-plane-departure"></i> Vuelo + Hotel</button>
+      <button class="tab"><i class="fas fa-car"></i> Alquiler de autos</button>
     </div>
-    <div class="form-container">
-      <!-- Formulario para Hoteles -->
-      <form id="hotels" class="form active">
-        <input type="text" placeholder="Ingrese Destino o Nombre de Hotel/Resort" />
-        <input type="date" />
-        <input type="text" placeholder="1 Habitación - 1 Huésped" />
-        <button>Buscar</button>
-      </form>
-    </div>
-  </div>
+
+    <form class="search-form-edreams">
+      <div class="trip-options">
+        <label><input type="radio" name="trip" checked> Ida y vuelta</label>
+        <label><input type="radio" name="trip"> Solo ida</label>
+        <label><input type="radio" name="trip"> Múltiples destinos</label>
+        <label><input type="checkbox"> Sin escalas</label>
+      </div>
+
+      <div class="search-grid">
+        <div class="input-group">
+          <label>Origen</label>
+          <input type="text" placeholder="Lima" />
+        </div>
+
+        <div class="input-group with-icon">
+          <label>Destino</label>
+          <input type="text" placeholder="Ayacucho" />
+          <i class="fas fa-right-left"></i>
+        </div>
+      </div>
+
+      <div class="search-grid">
+        <div class="input-group">
+          <label>Salida</label>
+          <input type="date" />
+        </div>
+
+        <div class="input-group">
+          <label>Regreso</label>
+          <input type="date" />
+        </div>
+
+        <div class="input-group">
+          <label>Pasajeros</label>
+          <div class="passenger-display">
+            <i class="fas fa-user"></i> 1
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="secondary">Buscar Vuelo + Hotel</button>
+        <button type="submit" class="primary">Buscar vuelos</button>
+      </div>
+    </form>
+  </section>
 </div>

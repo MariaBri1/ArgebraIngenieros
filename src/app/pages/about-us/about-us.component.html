@@ -11,7 +11,7 @@
 
 
 <div class="container">
-  
+
   <div class="history-content" #historyContent>
     <div class="part2">
       <div class="histori-header">
@@ -22,27 +22,32 @@
       <div class="text-content-bg">
         <p class="text-content">
           El inicio fue con una estafa que sufrí en una agencia de viajes al comprar un boleto, al buscar una forma de
-          recuperar el dinero descubrí lo que involucra el mundo de los viajes quedando cautivada por toda la logística
-          que conlleva viajar, no recupere el dinero pero me abrio un profundo deseo por aprender y decidí formar parte
-          de este bello rubro, empece mis estudios en Columbia para luego formarme profesionalmente en empresas como
-          Nuevo Mundo, Despegar, Viajes el Corte Ingles adquiriendo un amplio conocimiento en este sector. Con los años
+          recuperar el dinero descubrí lo que involucra el mundo de los viajes, quedando cautivada por toda la logística
+          que conlleva viajar, no recuperé el dinero pero me abrió un profundo deseo por aprender y decidí formar parte
+          de este bello rubro, empecé mis estudios en Columbia para luego formarme profesionalmente en empresas como
+          Nuevo Mundo, Despegar, Viajes el Corte Inglés adquiriendo un amplio conocimiento en este sector. Con los años
           y creciendo en conocimiento me di cuenta que era tiempo de emprender vuelo y empezar mi propia historia para
           seguir uniendo a familias, cumpliendo sueños y creando experiencias únicas, de las que se atesoran en el
-          corazón.Así nace MÁS QUE VACACIONES, ya son 10 años de entrega y servicio con honestidad, aportando al
-          crecimiento de nuestro sector turístico y fomentado el turismo sostenible, somos parte de la comunidad Marca
-          Peru y promperu. ¿Estás listo para vivir tu propia experiencia inolvidable con nosotros? Contacta hoy a MÁS
+          corazón. Así nace MÁS QUE VACACIONES, ya son 10 años de entrega y servicio con honestidad, aportando al
+          crecimiento de nuestro sector turístico y fomentando el turismo sostenible, somos parte de la comunidad Marca
+          Perú y Promperú . ¿Estás listo para vivir tu propia experiencia inolvidable con nosotros? Contacta hoy a MÁS
           QUE VACACIONES y deja que nuestros expertos transformen tu sueño en realidad.
         </p>
       </div>
     </div>
 
     <div class="part2">
+
       <div class="fundadora-mobile">
         <img [src]="currentImage" alt="Imagen fundadora" class="fundadora-image" (mouseenter)="onHover()"
           (mouseleave)="onLeave()" (click)="onClick()" />
       </div>
+      
+      <p class="image-caption">Me encanta viajar y tengo mas de 20 años de experiencia</p>
+
 
       <div class="text-content-bg">
+
         <div class="audio-controls">
           <button (click)="toggleAudio()" class="btn-audio">
             <i class="fas" [class.fa-play]="audioPaused" [class.fa-pause]="!audioPaused"></i>
@@ -56,6 +61,8 @@
         </div>
       </div>
     </div>
+
+
   </div>
 </div>
 
@@ -139,7 +146,7 @@
         reconocidas instituciones que confían en nuestro compromiso y profesionalismo.
       </p>
       <app-carousel [items]="carouselItems2" [itemsToShow]="5" [autoRotate]="true"
-          [rotationInterval]="3000"></app-carousel>
+        [rotationInterval]="3000"></app-carousel>
 
       <h4 class="icon-heading">
         <i class="fas fa-hotel"></i>
@@ -150,7 +157,7 @@
         ético y sostenible.
       </p>
       <div class="grid-container">
-          <div *ngFor="let item of carouselItems3" class="card">
+        <div *ngFor="let item of carouselItems3" class="card">
           <img [src]="item.image" [alt]="item.title" class="card-image">
           <h3 class="card-title">{{ item.title }}</h3>
         </div>

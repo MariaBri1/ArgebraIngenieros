@@ -2,57 +2,155 @@
 
 
 <app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
-    <iframe #videoFrame [src]="videoUrl" width="100%" height="100%" frameborder="0"
-        (click)="preventPause($event)"></iframe>
+  <iframe #videoFrame [src]="videoUrl" width="100%" height="100%" frameborder="0"
+    (click)="preventPause($event)"></iframe>
 </app-banner>
 
 
 
 <div class="reclamo-wrapper">
 
-     <h1 class="reclamo-title"> Libro de reclamaciones</h1>
+  <h1 class="reclamo-title"> Libro de reclamaciones</h1>
 
-    <!-- LOGO -->
-    <div class="fundadora-mobile">
-        <video class="fundadora-image-1" autoplay muted loop playsinline>
-          <source src="assets/images/video-logo.mp4" type="video/mp4" />
-          Tu navegador no soporta la reproducción de video.
-        </video>
-      </div>
+  <!-- LOGO -->
+  <div class="fundadora-mobile">
+    <video class="fundadora-image-1" autoplay muted loop playsinline>
+      <source src="assets/images/video-logo.mp4" type="video/mp4" />
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
 
 
-     <!-- FORMULARIO -->
+  <!-- FORMULARIO -->
+  <!-- FORMULARIO -->
   <form class="reclamo-form">
+    <!-- Información del negocio -->
+    <div class="form-info">
+      <p><strong>Razón social:</strong> MÁS QUE VACACIONES EIRL</p>
+      <p><strong>RUC:</strong> 20610201080</p>
+      <p><strong>Dirección:</strong> Mz G1 Lote 6 Urbanización El Álamo - Comas</p>
+    </div>
+
+    <!-- Punto de venta y fecha -->
     <div class="form-group">
-      <label for="nombre">👤 Nombres y Apellidos:</label>
-      <input type="text" id="nombre" name="nombre" required />
+      <label><i class="fas fa-store"></i> Punto de venta *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-calendar-alt"></i> Fecha *</label>
+      <input type="date" required />
+    </div>
+
+    <!-- Datos personales -->
+    <div class="form-group">
+      <label><i class="fas fa-user"></i> Nombres *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-user-tag"></i> Apellidos *</label>
+      <input type="text" required />
     </div>
 
     <div class="form-group">
-      <label for="email">📧 Correo electrónico:</label>
-      <input type="email" id="email" name="email" required />
+      <label><i class="fas fa-id-card"></i> Tipo de documento *</label>
+      <div class="doc-type">
+        <label><input type="radio" name="doc" checked /> DNI</label>
+        <label><input type="radio" name="doc" /> CE</label>
+        <label><input type="radio" name="doc" /> RUC</label>
+        <label><input type="radio" name="doc" /> Pasaporte</label>
+        <label><input type="radio" name="doc" /> Otro</label>
+      </div>
     </div>
 
     <div class="form-group">
-      <label for="telefono">📞 Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" />
+      <label><i class="fas fa-hashtag"></i> Número de documento *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-phone"></i> Teléfono *</label>
+      <input type="tel" required />
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-map-marker-alt"></i> Dirección *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-envelope"></i> Correo *</label>
+      <input type="email" required />
     </div>
 
     <div class="form-group">
-      <label for="motivo">📄 Motivo de Reclamación:</label>
-      <textarea id="motivo" name="motivo" rows="4" required></textarea>
+      <label><input type="checkbox" /> Soy menor de edad</label>
     </div>
 
+    <!-- Bien contratado -->
     <div class="form-group">
-      <label for="tipo">📌 Tipo de mensaje:</label>
-      <select id="tipo" name="tipo" required>
+      <label><i class="fas fa-check-square"></i> Identificación del bien contratado *</label>
+      <label><input type="radio" name="bien" checked /> Servicio</label>
+      <label><input type="radio" name="bien" /> Producto</label>
+    </div>
+
+    <!-- Descripción -->
+    <div class="form-group">
+      <label><i class="fas fa-file-alt"></i> Descripción del servicio contratado *</label>
+      <input type="text" required />
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-dollar-sign"></i> Monto contratado en soles *</label>
+      <input type="number" required />
+    </div>
+
+    <!-- Tipo de mensaje -->
+    <div class="form-group">
+      <label><i class="fas fa-clipboard"></i> Tipo de mensaje *</label>
+      <select required>
         <option value="reclamo">Reclamo</option>
         <option value="queja">Queja</option>
         <option value="sugerencia">Sugerencia</option>
       </select>
     </div>
 
-    <button type="submit" class="submit-btn">Enviar Reclamación</button>
+    <!-- Información del negocio -->
+    <div class="form-info">
+      <p><strong>Reclamo:</strong> Disconformidad no relacionada a los productos o servicios; o malestar o descontento
+        respecto a la atención al público.</p>
+    </div>
+    <div class="form-info">
+      <p><strong>Disconformidad:</strong> Disconformidad relacionada a los productos o servicios.</p>
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-comment-dots"></i> Descripción del reclamo*</label>
+      <textarea rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label><i class="fas fa-paper-plane"></i> Pedido del cliente*</label>
+      <textarea rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>
+        <input type="checkbox" required />
+        <strong style="color: #000;">
+          <span style="color: red;">*</span> He leído y acepto la política de protección de datos personales
+        </strong>
+      </label>
+    </div>
+
+    <!-- ✅ Notas legales -->
+    <ul class="legal-notes">
+      <li>* La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo
+        para interponer una denuncia ante INDECOPI</li>
+      <li>* El proveedor deberá dar respuesta al reclamo en un plazo no mayor a treinta (30) días calendario, pudiendo
+        ampliar el plazo hasta por treinta (30) días más, previa comunicación al consumidor.</li>
+      <li>* Con la firma de este documento, el cliente autoriza ser contactado después de la transmisión del reclamo
+        para evaluar la calidad y satisfacción del proceso de atención de reclamaciones.</li>
+    </ul>
+
+    <button type="submit" class="submit-btn">
+      <i class="fas fa-paper-plane"></i> Enviar Reclamación
+    </button>
   </form>
 
 </div>
