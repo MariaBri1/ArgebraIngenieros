@@ -65,147 +65,84 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.reviewList = [
       {
-        image: '/assets/clientes/p.webp',
+        image: '/assets/images/ingeniero1.jpg',
         time: 'Lima',
         stars: 5,
-        text: 'Excelente servicio y atención personalizada. El equipo de Más Que Vacaciones se encargó de cada detalle de mi viaje, asegurándose de que todo saliera excelente 😁 realmente los recomiendo',
-        name: 'Pamela Goicochea'
+        text: 'Excelente atención y acompañamiento técnico. El equipo de Argebra Ingenieros mostró gran profesionalismo y cumplimiento en cada etapa del proyecto.',
+        name: 'Walter Huamantumba'
       },
       {
-        image: '/assets/clientes/bra.png',
+        image: '/assets/images/ingeniero2.jpg',
+        time: 'Callao',
+        stars: 5,
+        text: 'Muy buena gestión y soporte en la ejecución de obras civiles. Cumplieron los plazos establecidos sin inconvenientes.',
+        name: 'Cecilia Misari'
+      },
+      {
+        image: '/assets/images/ingeniero3.jpg',
+        time: 'Lima',
+        stars: 5,
+        text: 'Excelente servicio en mantenimiento eléctrico e instalaciones industriales. Equipo serio y responsable.',
+        name: 'Sharela Hacha'
+      },
+      {
+        image: '/assets/images/ingeniero1.jpg',
         time: 'Arequipa',
         stars: 5,
-        text: 'Muy buena atención durante la compra de pasajes y seguro de viajes.',
-        name: 'Braulio Rugel Robles'
-      },
-      {
-        image: '/assets/clientes/deya.png',
-        time: 'Lima',
-        stars: 5,
-        text: 'Buenísima atención tanto en la coordinación para los paquetes de turismo y en los tours, los guías son muy atentos.',
-        name: 'Deyanira Goicochea'
-      },
-      {
-        image: '/assets/clientes/vic.png',
-        time: 'Arequipa',
-        stars: 5,
-        text: 'Tomamos servíos de turismo en Arequipa y fue lo máximo, lo recomiendo.',
-        name: 'Victor Manuel Alvarez'
-      },
-      {
-        image: '/assets/clientes/ale.png',
-        time: 'Lima',
-        stars: 5,
-        text: 'La guía muy bien preparada super atenta. La movilidad cómoda y limpia. Muy buen conductor.',
-        name: 'Alexandra de Bautista'
-      },
-      {
-        image: '/assets/clientes/osc.png',
-        time: 'Sao Paulo',
-        stars: 5,
-        text: 'Bonita experiencia impresionado con lo bello que es Sao Paulo',
-        name: 'Oscar Eduardo Aragon'
-      },
-      {
-        image: '/assets/clientes/jor.png',
-        time: 'Lima',
-        stars: 5,
-        text: 'La agencia nos ha preparado todo muy bien y nos ha ayudado a resolver las incidencias que nos han ocurrido. Sin duda la recomiendo para cualquiera que quiera visitar Perú.',
-        name: 'Jorge Gonzalez'
-      },
-      {
-        image: '/assets/clientes/cam.png',
-        time: 'Arequipa',
-        stars: 5,
-        text: 'Compré dos tours en Más que vacaciones: 1- para el colca y otra para las salinas, ambas en Arequipa. Mi proceso fue súper sencillo, un amigo me recomendó, luego hablé con Mónica que me guió con los precios y comunicaciones, de forma clara y rápida. Lo acordado en hora de salida, informaciones adicionales a tomar en cuenta. En los dos tours pasé súper bien y seguro solo recomiendo!',
-        name: 'Camila Diles'
-      },
-      {
-        image: '/assets/clientes/pab.png',
-        time: 'Lima',
-        stars: 5,
-        text: 'Es la agencia que se encarga de mis gestiones laborales y familiares, con la cual se encuentro muy satisfecho por las atenciones apropiadas, la paciencia para atenderme y ayudarme cuando fue necesario, la recomiendo.',
-        name: 'Pablo Carhuachin'
-      },
-      {
-        image: '/assets/clientes/a.png',
-        time: 'Lima',
-        stars: 5,
-        text: 'Excelente servicio. Son super atentos, toman en cuenta todos los detalles y hacen que realmente disfrute de las vacaciones. Recomiendo muchísimo los servicios de esta agencia.',
-        name: 'Ahyde Ruíz'
-      },
-      {
-        image: '/assets/clientes/i.png',
-        time: 'Lima',
-        stars: 5,
-        text: 'Viajamos a Peru con la agencia más que vacaciones con unas espectativas muy altas pero que se han visto superadas con creces. Una muy buena organización y siempre a pendiente de todo y de cómo estás. Viajar a Peru nos ha sorprendido su comida exquisita y que vamos a decir de sus paisajes, sus pueblos, su gente maravillosa y amable, es decir todo en general ha sido expectacular que recomiendo viajar al menos una vez en la vida. Gracias Más que vacaciones por todo y hasta pronto',
-        name: 'Idoia Rodriguez'
-      },
-      {
-        image: '/assets/clientes/erika.png',
-        time: 'Arequipa',
-        stars: 5,
-        text: '100% Recomendado!!! total garantía te asesoran de principio a fin! me encanto su servicio brindado.',
-        name: 'Erika Agurto'
+        text: 'Destaco la calidad técnica y la buena comunicación durante todo el proyecto. Muy recomendados.',
+        name: 'Jennifer Julca'
       }
     ];
 
     this.galleryItems = [
       {
-        image: '/assets/images/i-service.jpg',
-        title: 'Atención Personalizada',
-        description: 'Desde que nos contactan para organizar y cotizar su viaje trabajamos en brindar el soporte esencial y necesario para que sientan que viajamos con ellos.'
+        image: '/assets/images/ingeniero1.jpg',
+        title: 'Compromiso y Precisión',
+        description: 'Nuestro equipo garantiza soluciones técnicas seguras, eficientes y sostenibles, cumpliendo los más altos estándares de calidad.'
       },
       {
-        image: '/assets/images/our-essence.webp',
-        title: 'Clientes contentos',
-        description: 'Estamos comprometidos con brindar un excelente soporte a nuestros clientes para que su experiencia de viaje sea buena, agradable y perfecta'
+        image: '/assets/images/ingeniero2.jpg',
+        title: 'Proyectos con Valor',
+        description: 'Nos enfocamos en brindar resultados que generen impacto positivo en cada obra, impulsando el desarrollo de nuestros clientes.'
+      },
+      {
+        image: '/assets/images/ingeniero3.jpg',
+        title: 'Innovación y Eficiencia',
+        description: 'Aplicamos tecnología de vanguardia y metodologías modernas para optimizar procesos, reducir costos y asegurar la calidad en cada proyecto.'
       }
     ];
 
     this.carouselItems1 = [
-      { image: 'assets/logos/aerolineas/latam_logo.png', title: 'Latam ', description: 'Socio aéreo' },
-      { image: 'assets/logos/aerolineas/copa_logo.png', title: 'Copa ', description: 'Socio aéreo ' },
-      { image: 'assets/logos/aerolineas/sky_logo.png', title: 'Sky ', description: 'Socio aéreo ' },
-      { image: 'assets/logos/aerolineas/american_airlines_logo.png', title: 'American ', description: 'Socio aéreo ' },
-      { image: 'assets/logos/aerolineas/delta_logo.png', title: 'Delta ', description: 'Socio aéreo ' },
-      { image: 'assets/logos/aerolineas/starperu_logo.png', title: 'StarPerú', description: 'Socio aéreo ' },
-      { image: 'assets/logos/aerolineas/klm_logo.png', title: 'KLM Royal', description: 'Socio aéreo ' },
+      { image: 'assets/logos/aerolineas/latam_logo.png', title: 'Cementos Pacasmayo', description: 'Proveedor de materiales de construcción y concreto' },
+      { image: 'assets/logos/aerolineas/copa_logo.png', title: 'Ferreyros S.A.', description: 'Distribuidor de maquinaria pesada y equipos Caterpillar' },
+      { image: 'assets/logos/aerolineas/sky_logo.png', title: 'Sika Perú', description: 'Proveedor de productos químicos para la construcción' },
+      { image: 'assets/logos/aerolineas/american_airlines_logo.png', title: 'Unacem S.A.A.', description: 'Fabricante de cemento y soluciones estructurales' },
+      { image: 'assets/logos/aerolineas/delta_logo.png', title: 'Graña y Montero (Aenza)', description: 'Empresa de ingeniería y construcción aliada en proyectos integrales' },
+      { image: 'assets/logos/aerolineas/starperu_logo.png', title: 'Mota-Engil Perú', description: 'Socio en obras de infraestructura y servicios' },
+      { image: 'assets/logos/aerolineas/klm_logo.png', title: 'DP World Callao', description: 'Aliado en logística y transporte portuario' },
 
 
-      { image: 'assets/logos/hotel/bahia_principe_logo.png', title: 'Bahia Principe Hotels', description: 'Socio hotelero ' },
-      { image: 'assets/logos/hotel/melia_logo.png', title: 'Meliá Hotels International', description: 'Socio hotelero ' },
-      { image: 'assets/logos/hotel/riu_logo.png', title: 'Riu Hotels', description: 'Socio hotelero ' },
-      { image: 'assets/logos/hotel/decameron_logo.png', title: 'Decameron All Inclusive Hotels', description: 'Socio hotelero ' },
-      { image: 'assets/logos/hotel/barcelo_logo.png', title: 'Barceló Hotel Group', description: 'Socio hotelero ' },
-      { image: 'assets/logos/hotel/casa_andina_logo.png', title: 'Casa Andina Hotels', description: 'Socio hotelero ' },
-      { image: 'assets/logos/hotel/belmond_logo.png', title: 'Belmond Hotels', description: 'Socio hotelero ' },
-      { image: 'assets/logos/hotel/royal_caribbean_logo.png', title: 'Royal Caribbean International', description: 'Socio de cruceros ' },
+      { image: 'assets/logos/costa_icon.png', title: 'Colegio de Arquitectos del Perú', description: 'Institución aliada en el desarrollo y certificación de proyectos arquitectónicos' },
+      { image: 'assets/logos/dynamics_Inkasiko.png', title: 'Arup', description: 'Consultora internacional en diseño y planificación urbana' },
+      { image: 'assets/logos/logo_eua.png', title: 'Gensler', description: 'Estudio global de arquitectura y diseño colaborativo' },
+      { image: 'assets/logos/posada_tumpis.png', title: 'AECOM', description: 'Socio en ingeniería, gestión de proyectos e infraestructura sostenible' },
+      { image: 'assets/logos/cumbaza_hoteles.png', title: 'Peruvian Green Building Council', description: 'Aliado en la promoción de construcciones sostenibles y certificación LEED' },
 
-
-      { image: 'assets/logos/costa_icon.png', title: 'Costa Cruceros', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/dynamics_Inkasiko.png', title: 'Dynamics Inkasiko', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/logo_eua.png', title: 'Euroamerican Assistance', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/posada_tumpis.png', title: 'Posada de los Tumpis', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/cumbaza_hoteles.png', title: 'Río Cumbaza Hotel', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/dm_logo.png', title: 'Dm Hoteles', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/tambo_logo.png', title: 'Hoteles El Tambo Perú', description: 'Proveedor con 10 años de experiencia' },
-      { image: 'assets/logos/ibero_logo.png', title: 'Iberostar Hotels & Resorts', description: 'Proveedor con 10 años de experiencia' },
     ];
 
     this.carouselItems2 = [
-/*       { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Protegeme Turismo Responsable' },
- */      { image: 'assets/logos/respald-icons/prom_p-icon.png', title: 'PromPerú' },
-      { image: 'assets/logos/respald-icons/min_c-icon.png', title: 'Mincetur' },
-      { image: 'assets/logos/respald-icons/agency_r-icon.png', title: 'Agencia de Viajes y Turismo Registrada' },
-      { image: 'assets/logos/respald-icons/ytu-icon.webp', title: 'Y tú qué planes' },
-      { image: 'assets/logos/respald-icons/marca_Peru-icon.png', title: 'Marca Perú' }
+      { image: 'assets/logos/respald-icons/prom_p-icon.png', title: 'Ministerio de Energía y Minas (MINEM)' },
+      { image: 'assets/logos/respald-icons/min_c-icon.png', title: 'Organismo Supervisor de las Contrataciones del Estado (OSCE)' },
+      { image: 'assets/logos/respald-icons/agency_r-icon.png', title: 'Instituto Nacional de Defensa Civil (INDECI)' },
+      { image: 'assets/logos/respald-icons/ytu-icon.webp', title: 'Servicio Nacional de Certificación Ambiental (SENACE)' },
+      { image: 'assets/logos/respald-icons/marca_Peru-icon.png', title: 'Cámara Peruana de la Construcción (CAPECO)' },
+
     ];
 
 
     this.carouselItems3 = [
-      { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Protegeme Turismo Responsable' }
-      /* { image: 'assets/logos/respald-icons/camera-comercy-icon.png', title: 'CCL Cámara de Comercio de Lima' } */
+      { image: 'assets/logos/respald-icons/protecte-icon.webp', title: 'Cámara Peruana de la Construcción (CAPECO)' },
+
     ];
 
     this.carouselItems4 = [
@@ -289,13 +226,13 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   }
 
   updateVideoUrl(): void {
-    const baseUrl = 'https://www.youtube.com/embed/6HccyI1aBQI';
+    const baseUrl = 'https://www.youtube.com/embed/cKeWZiybRwo';
     const params = new URLSearchParams({
       autoplay: '1',
       mute: this.isMuted ? '1' : '0',
       controls: '0',
       loop: '1',
-      playlist: '6HccyI1aBQI',
+      playlist: 'cKeWZiybRwo',
       modestbranding: '1',
       rel: '0',
       showinfo: '0',

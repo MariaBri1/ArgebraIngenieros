@@ -3,6 +3,8 @@
   max-width: 100%;
   margin: 0;
   padding: 0;
+
+ 
 }
 
 html,
@@ -15,6 +17,7 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   letter-spacing: -0.02em;
+  
 }
 
 :root {
@@ -127,8 +130,14 @@ p {
   margin: 40px auto 10px auto;
   width: 95%;
 
-  background: linear-gradient(120deg, #12466d 40%, #1976d2 70%, #12466d 100%);
+  // 🔹 Fondo combinado (degradado + imagen)
+  background: linear-gradient(
+      rgba(0, 21, 64, 0.85),
+      rgba(0, 42, 128, 0.85)
+    ),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
 
+  color: #fff;
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(0, 51, 102, 0.15);
@@ -662,6 +671,8 @@ p {
 
 
 }
+
+
 
 .container-2 {
   max-width: 1300px;

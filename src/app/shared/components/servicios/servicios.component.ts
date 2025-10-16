@@ -38,52 +38,53 @@ export class ServiciosComponent {
 
   // Servicios iniciales (siempre visibles)
   serviciosPrincipales: Servicio[] = [
-    {
-      icono: 'flight',
-      titulo: 'Boletos nacionales e internacionales'
-    },
-    {
-      icono: 'emoji_events',
-      titulo: 'Viajes de incentivo'
-    },
-    {
-      icono: 'family_restroom',
-      titulo: 'Viajes en familia'
-    },
-    {
-      icono: 'school',
-      titulo: 'Viajes escolares'
-    },
-    {
-      icono: 'directions_bus',
-      titulo: 'Programas nacionales e internacionales'
-    }
-  ];
+  {
+    icono: 'engineering',
+    titulo: 'Supervisión y ejecución de obras civiles'
+  },
+  {
+    icono: 'architecture',
+    titulo: 'Diseño y planificación de proyectos'
+  },
+  {
+    icono: 'business',
+    titulo: 'Gestión y consultoría de proyectos'
+  },
+  {
+    icono: 'construction',
+    titulo: 'Infraestructura y edificaciones'
+  },
+  {
+    icono: 'eco',
+    titulo: 'Proyectos sostenibles y energías renovables'
+  }
+];
+
 
   // Servicios adicionales (visibles al expandir)
   serviciosAdicionales: Servicio[] = [
+  {
+    icono: 'precision_manufacturing',
+    titulo: 'Mantenimiento industrial y electromecánico'
+  },
+  {
+    icono: 'plumbing',
+    titulo: 'Instalaciones sanitarias y eléctricas'
+  },
+  {
+    icono: 'foundation',
+    titulo: 'Obras de cimentación y estructuras'
+  },
+  {
+    icono: 'verified_user',
+    titulo: 'Gestión de seguridad y control de calidad'
+  },
+  {
+    icono: 'lightbulb',
+    titulo: 'Innovación tecnológica en proyectos'
+  }
+];
 
-    {
-      icono: 'directions_car',
-      titulo: 'Alquiler de autos & traslados'
-    },
-    {
-      icono: 'directions_boat',
-      titulo: 'Cruceros'
-    },
-    {
-      icono: 'diamond',
-      titulo: 'Evento de bodas & Luna de miel'
-    },
-    {
-      icono: 'health_and_safety',
-      titulo: 'Seguro de asistencia'
-    },
-    {
-      icono: 'hiking',
-      titulo: 'Full days'
-    }
-  ];
 
   toggleExpansion() {
     this.expandido = !this.expandido;

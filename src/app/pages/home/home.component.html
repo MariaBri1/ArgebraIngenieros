@@ -1,59 +1,151 @@
-<app-banner urlImage="home-banner.webp" title="Cada destino, una historia por vivir"></app-banner>
+<app-banner
+  urlImage="home-banner.webp"
+  title="Hacemos de cada proyecto una nueva historia"
+></app-banner>
 
-<!-- Banner + Buscador tipo eDreams -->
-<div class="container-wrapper">
-  <section class="search-widget-edreams">
-    <div class="tabs-edreams">
-      <button class="tab active"><i class="fas fa-plane"></i> Vuelos</button>
-      <button class="tab"><i class="fas fa-bed"></i> Hoteles</button>
-      <button class="tab"><i class="fas fa-plane-departure"></i> Vuelo + Hotel</button>
-      <button class="tab"><i class="fas fa-car"></i> Alquiler de autos</button>
+<!-- 🧱 Sección de Servicios de ARGEBRA INGENIEROS -->
+<section class="services-argebra">
+  <h2 class="section-title">Nuestros Servicios</h2>
+  <p class="section-subtitle">
+    En <strong>ARGEBRA INGENIEROS S.A.C.</strong> brindamos soluciones
+    integrales en ingeniería, arquitectura y transporte con calidad, seguridad e
+    innovación.
+  </p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <i class="fas fa-drafting-compass icon"></i>
+      <h3>Arquitectura</h3>
+      <p>
+        Diseño arquitectónico funcional y estético, adaptado a las necesidades
+        del cliente y las normas vigentes.
+      </p>
     </div>
 
-    <form class="search-form-edreams">
-      <div class="trip-options">
-        <label><input type="radio" name="trip" checked> Ida y vuelta</label>
-        <label><input type="radio" name="trip"> Solo ida</label>
-        <label><input type="radio" name="trip"> Múltiples destinos</label>
-        <label><input type="checkbox"> Sin escalas</label>
+    <div class="service-card">
+      <i class="fas fa-tools icon"></i>
+      <h3>Ingeniería Civil</h3>
+      <p>
+        Planificación, ejecución y supervisión de obras civiles con altos
+        estándares técnicos y de seguridad.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-truck icon"></i>
+      <h3>Transporte de Carga</h3>
+      <p>
+        Servicio eficiente y seguro para el traslado de materiales, maquinaria y
+        productos a nivel nacional.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-clipboard-check icon"></i>
+      <h3>Consultoría Técnica</h3>
+      <p>
+        Asesoría profesional en gestión de proyectos, estudios de viabilidad y
+        control de calidad de obras.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-hard-hat icon"></i>
+      <h3>Supervisión de Obras</h3>
+      <p>
+        Control técnico y administrativo de proyectos en ejecución para
+        garantizar el cumplimiento del diseño y la seguridad.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="projects-argebra">
+  <h2 class="main-title">
+    Obras y proyectos personalizados únicos e irrepetibles
+  </h2>
+  <p class="subtitle">Mira algunos de nuestros trabajos</p>
+
+  <div class="project-categories">
+    <button class="category active">Residenciales</button>
+    <button class="category">Comerciales</button>
+    <button class="category">Oficinas</button>
+  </div>
+
+  <div class="projects-grid">
+    <!-- 🏠 Residenciales -->
+    <div class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+        alt="Residencial 1"
+      />
+      <div class="project-info">
+        <p>
+          Domitorio / Cocina / Baños<br />Terraza / Salas / Fachadas<br />Comedor
+          / Estudio / Sala de estar
+        </p>
+        <button class="btn-view">Ver proyectos &gt;&gt;</button>
       </div>
+    </div>
 
-      <div class="search-grid">
-        <div class="input-group">
-          <label>Origen</label>
-          <input type="text" placeholder="Lima" />
-        </div>
-
-        <div class="input-group with-icon">
-          <label>Destino</label>
-          <input type="text" placeholder="Ayacucho" />
-          <i class="fas fa-right-left"></i>
-        </div>
+    <!-- 🏗 Comerciales -->
+    <div class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+        alt="Comercial 1"
+      />
+      <div class="project-info">
+        <p>
+          Restaurantes / Bares / Hoteles<br />Colegios / Clínicas / Casinos<br />Retail
+          / Módulos de exhibición
+        </p>
+        <button class="btn-view">Ver proyectos &gt;&gt;</button>
       </div>
+    </div>
 
-      <div class="search-grid">
-        <div class="input-group">
-          <label>Salida</label>
-          <input type="date" />
-        </div>
-
-        <div class="input-group">
-          <label>Regreso</label>
-          <input type="date" />
-        </div>
-
-        <div class="input-group">
-          <label>Pasajeros</label>
-          <div class="passenger-display">
-            <i class="fas fa-user"></i> 1
-          </div>
-        </div>
+    <!-- 💼 Oficinas -->
+    <div class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+        alt="Oficina 1"
+      />
+      <div class="project-info">
+        <p>
+          Salas de reuniones / Capacitación<br />Kitchenette / Recepción /
+          Directorio<br />Oficinas administrativas
+        </p>
+        <button class="btn-view">Ver proyectos &gt;&gt;</button>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="btn-group">
-        <button type="button" class="secondary">Buscar Vuelo + Hotel</button>
-        <button type="submit" class="primary">Buscar vuelos</button>
-      </div>
-    </form>
-  </section>
-</div>
+<!-- 🧱 Valores de ARGEBRA INGENIEROS -->
+<section class="values-argebra">
+  <div class="value-card">
+    <i class="fas fa-shield-alt"></i>
+    <h3>CONFIANZA</h3>
+    <p>
+      Más de 10 años brindando soluciones seguras y confiables en ingeniería,
+      arquitectura y transporte.
+    </p>
+  </div>
+
+  <div class="value-card">
+    <i class="fas fa-cogs"></i>
+    <h3>EFICIENCIA</h3>
+    <p>
+      Optimizamos recursos, procesos y tiempos para garantizar la mejor calidad
+      en cada proyecto ejecutado.
+    </p>
+  </div>
+
+  <div class="value-card">
+    <i class="fas fa-lightbulb"></i>
+    <h3>INNOVACIÓN</h3>
+    <p>
+      Incorporamos tecnología y metodologías modernas para crear soluciones
+      técnicas sostenibles y precisas.
+    </p>
+  </div>
+</section>

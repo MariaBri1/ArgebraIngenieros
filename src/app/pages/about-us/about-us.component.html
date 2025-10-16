@@ -1,68 +1,99 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
 <app-banner [isVideo]="true" [videoUrl]="videoUrl" title="">
-  <iframe #videoFrame [src]="videoUrl" width="100%" height="100%" frameborder="0"
-    (click)="preventPause($event)"></iframe>
+  <iframe
+    #videoFrame
+    [src]="videoUrl"
+    width="100%"
+    height="100%"
+    frameborder="0"
+    (click)="preventPause($event)"
+  ></iframe>
 </app-banner>
 
-<button class="mute-toggle" (click)="toggleMute()" [title]="isMuted ? 'Unmute' : 'Mute'">
-  <i class="fas" [class.fa-volume-up]="!isMuted" [class.fa-volume-mute]="isMuted"></i>
+<button
+  class="mute-toggle"
+  (click)="toggleMute()"
+  [title]="isMuted ? 'Unmute' : 'Mute'"
+>
+  <i
+    class="fas"
+    [class.fa-volume-up]="!isMuted"
+    [class.fa-volume-mute]="isMuted"
+  ></i>
 </button>
 
-
 <div class="container">
-
   <div class="history-content" #historyContent>
     <div class="part2">
       <div class="histori-header">
         <h2>Nuestra historia</h2>
-        <img src="/assets/images/airplane-mobile.png" alt="ornament" class="air">
       </div>
 
       <div class="text-content-bg">
         <p class="text-content">
-          El inicio fue con una estafa que sufrí en una agencia de viajes al comprar un boleto, al buscar una forma de
-          recuperar el dinero descubrí lo que involucra el mundo de los viajes, quedando cautivada por toda la logística
-          que conlleva viajar, no recuperé el dinero pero me abrió un profundo deseo por aprender y decidí formar parte
-          de este bello rubro, empecé mis estudios en Columbia para luego formarme profesionalmente en empresas como
-          Nuevo Mundo, Despegar, Viajes el Corte Inglés adquiriendo un amplio conocimiento en este sector. Con los años
-          y creciendo en conocimiento me di cuenta que era tiempo de emprender vuelo y empezar mi propia historia para
-          seguir uniendo a familias, cumpliendo sueños y creando experiencias únicas, de las que se atesoran en el
-          corazón. Así nace MÁS QUE VACACIONES, ya son 10 años de entrega y servicio con honestidad, aportando al
-          crecimiento de nuestro sector turístico y fomentando el turismo sostenible, somos parte de la comunidad Marca
-          Perú y Promperú . ¿Estás listo para vivir tu propia experiencia inolvidable con nosotros? Contacta hoy a MÁS
-          QUE VACACIONES y deja que nuestros expertos transformen tu sueño en realidad.
+          El inicio de ARGEBRA INGENIEROS S.A.C. surge en el año 2014 con el
+          propósito de ofrecer soluciones integrales en el campo de la
+          arquitectura, la ingeniería y el transporte de carga por carretera.
+          Desde nuestros primeros proyectos, comprendimos la importancia de
+          brindar un servicio técnico de calidad, responsable y con enfoque
+          sostenible, convirtiendo cada reto en una oportunidad para innovar. A
+          lo largo de los años, hemos consolidado una trayectoria sólida gracias
+          al compromiso de un equipo profesional altamente capacitado, que
+          garantiza resultados eficientes y seguros en cada obra desarrollada.
+          Con sede en el distrito de Chorrillos, Lima – Perú, y registrados en
+          el Registro Nacional de Proveedores, nos encontramos plenamente
+          habilitados para participar en contrataciones con el Estado y el
+          sector privado. Así, ARGEBRA INGENIEROS S.A.C. se ha convertido en una empresa de
+          confianza, reconocida por su cumplimiento, ética y excelencia técnica.
+         ¿Estás listo para
+          construir tu próximo proyecto con nosotros? Puedes contactarnos para
+          descubrir cómo podemos contribuir al crecimiento de tu negocio.
+          Nuestro equipo de atención estará encantado de resolver tus dudas,
+          ofrecerte información detallada y ayudarte a tomar la mejor decisión
+          según tus necesidades.
         </p>
       </div>
     </div>
 
     <div class="part2">
-
       <div class="fundadora-mobile">
-        <img [src]="currentImage" alt="Imagen fundadora" class="fundadora-image" (mouseenter)="onHover()"
-          (mouseleave)="onLeave()" (click)="onClick()" />
+        <img
+          [src]="currentImage"
+          alt="Imagen fundadora"
+          class="fundadora-image"
+          (mouseenter)="onHover()"
+          (mouseleave)="onLeave()"
+          (click)="onClick()"
+        />
       </div>
-      
-      <p class="image-caption">Me encanta viajar y tengo mas de 20 años de experiencia</p>
-
 
       <div class="text-content-bg">
-
         <div class="audio-controls">
           <button (click)="toggleAudio()" class="btn-audio">
-            <i class="fas" [class.fa-play]="audioPaused" [class.fa-pause]="!audioPaused"></i>
-            {{ audioPaused ? 'Escuchar historia' : 'Pausar historia' }}
+            <i
+              class="fas"
+              [class.fa-play]="audioPaused"
+              [class.fa-pause]="!audioPaused"
+            ></i>
+            {{ audioPaused ? "Escuchar historia" : "Pausar historia" }}
           </button>
-          <audio #audioRef style="display:none;" (ended)="onAudioEnded()" (pause)="onAudioPaused()"
-            (play)="onAudioPlayed()">
-            <source src="assets/audios/conocenos2.mp3" type="audio/mp3">
+          <audio
+            #audioRef
+            style="display: none"
+            (ended)="onAudioEnded()"
+            (pause)="onAudioPaused()"
+            (play)="onAudioPlayed()"
+          >
+            <source src="assets/audios/conocenos2.mp3" type="audio/mp3" />
             Tu navegador no soporta el elemento de audio.
           </audio>
         </div>
       </div>
     </div>
-
-
   </div>
 </div>
 
@@ -70,16 +101,17 @@
   <div class="history-content" #historyContent>
     <div class="part1">
       <div class="fundadora-mobile">
-        <video class="fundadora-image-1" autoplay muted loop playsinline>
-          <source src="assets/images/video-logo.mp4" type="video/mp4" />
-          Tu navegador no soporta la reproducción de video.
-        </video>
+        <div class="fundadora-mobile">
+          <img
+            src="assets/images/video-logo.png"
+            alt="Logo institucional"
+            class="fundadora-image-1"
+          />
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
 
 <!-- <img src="/assets/images/bordes/ave.png" alt="ornament" class="ave"> 
 <img src="assets/images/video-logo.gif" alt="Logo animado" class="fundadora-image" /> 
@@ -88,13 +120,16 @@
 <div class="Esencia-content" #esenciaContent>
   <h4>Nuestra promesa</h4>
   <div class="image-container">
-    <app-cards *ngFor="let item of galleryItems" [image]="item.image" [title]="item.title"
-      [description]="item.description" class="card-item">
+    <app-cards
+      *ngFor="let item of galleryItems"
+      [image]="item.image"
+      [title]="item.title"
+      [description]="item.description"
+      class="card-item"
+    >
     </app-cards>
   </div>
 </div>
-
-
 
 <!-- <img src="/assets/images/bordes/tourist.png" alt="ornament" class="tourist"> -->
 
@@ -115,7 +150,6 @@
 </div>
 
 <div class="carousel_fondo">
-
   <div class="gallery-container">
     <div class="gallery">
       <div class="carousel-container">
@@ -124,16 +158,22 @@
           Parte de nuestros aliados estratégicos
         </h4>
         <p>
-          En Más que vacaciones, hemos logrado establecer alianzas estratégicas con los socios más confiables y
-          destacados
-          del sector.
+          En <strong>ARGEBRA INGENIEROS S.A.C.</strong>, hemos consolidado
+          alianzas estratégicas con empresas líderes del sector de la ingeniería
+          y la construcción, con el objetivo de fortalecer la calidad y
+          eficiencia de nuestros proyectos. Estas colaboraciones nos permiten
+          integrar tecnología, experiencia y soluciones innovadoras para brindar
+          resultados confiables y sostenibles a nuestros clientes.
         </p>
-        <app-carousel [items]="carouselItems1" [itemsToShow]="5" [autoRotate]="true"
-          [rotationInterval]="3000"></app-carousel>
+        <app-carousel
+          [items]="carouselItems1"
+          [itemsToShow]="5"
+          [autoRotate]="true"
+          [rotationInterval]="3000"
+        ></app-carousel>
       </div>
     </div>
   </div>
-
 
   <div class="gallery">
     <div class="carousel-container">
@@ -142,39 +182,48 @@
         Aliados que certifican nuestra trayectoria
       </h4>
       <p>
-        A lo largo de nuestra trayectoria en el sector turístico, hemos contado con el valioso respaldo de
-        reconocidas instituciones que confían en nuestro compromiso y profesionalismo.
+        A lo largo de nuestra trayectoria en el sector de la ingeniería y la
+        construcción, hemos contado con el valioso respaldo de reconocidas
+        instituciones y empresas que confían en nuestra capacidad técnica,
+        cumplimiento y compromiso con la excelencia.
       </p>
-      <app-carousel [items]="carouselItems2" [itemsToShow]="5" [autoRotate]="true"
-        [rotationInterval]="3000"></app-carousel>
+      <app-carousel
+        [items]="carouselItems2"
+        [itemsToShow]="5"
+        [autoRotate]="true"
+        [rotationInterval]="3000"
+      ></app-carousel>
 
       <h4 class="icon-heading">
         <i class="fas fa-hotel"></i>
-        Turismo con valores : orgullosos de pertenecer a Protégeme Turismo Responsable
+        Ingeniería con valores: comprometidos con la seguridad, la calidad y la
+        sostenibilidad
       </h4>
       <p>
-        Formamos parte de Protégeme Turismo Responsable, una iniciativa que promueve un turismo seguro,
-        ético y sostenible.
+        Formamos parte de un sector que promueve la
+        <strong>seguridad, sostenibilidad y ética profesional</strong> en cada
+        proyecto que desarrollamos, contribuyendo activamente al progreso del
+        país a través de soluciones responsables e innovadoras.
       </p>
       <div class="grid-container">
         <div *ngFor="let item of carouselItems3" class="card">
-          <img [src]="item.image" [alt]="item.title" class="card-image">
+          <img [src]="item.image" [alt]="item.title" class="card-image" />
           <h3 class="card-title">{{ item.title }}</h3>
         </div>
       </div>
     </div>
   </div>
 
-
-  <div class="gallery">
-  </div>
-
-
+  <div class="gallery"></div>
 </div>
 
 <div class="whatsapp-container">
   <a href="https://wa.me/+51932244747" class="whatsapp-button" target="_blank">
-    <img class="wa-image" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <img
+      class="wa-image"
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+    />
   </a>
 </div>
 

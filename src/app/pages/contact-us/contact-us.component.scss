@@ -1,0 +1,155 @@
+/* 🔹 Contenedor principal */
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+
+  // 🔹 Fondo combinado (degradado + imagen)
+  background: linear-gradient(
+      rgba(0, 21, 64, 0.85),
+      rgba(0, 42, 128, 0.85)
+    ),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+
+  color: #fff;
+}
+
+/* 🔹 Caja del formulario */
+.contact-us-wrapper {
+  flex: 1 1 450px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.contact-us-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔹 Título */
+.terms-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffd54f;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* 🔹 Campos del formulario */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.form-group i {
+  color: #ffd54f;
+  margin-right: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px #ffd54f;
+}
+
+/* 🔹 Botón */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #ffd54f;
+  color: #003a80;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #ffec80;
+  transform: translateY(-2px);
+}
+
+/* 🔹 Info de contacto */
+.contact-info {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: #ffd54f;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* 🔹 Redes sociales */
+.social-media {
+  margin-top: 2rem;
+}
+
+.social-media h4 {
+  color: #ffd54f;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd54f;
+  transform: scale(1.2);
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 768px) {
+  .contact-form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-us-wrapper,
+  .contact-info {
+    width: 100%;
+    max-width: 600px;
+  }
+}

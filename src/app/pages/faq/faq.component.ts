@@ -32,13 +32,13 @@ export class FaqComponent {
   }
 
   updateVideoUrl(): void {
-    const baseUrl = 'https://www.youtube.com/embed/6HccyI1aBQI';
+    const baseUrl = 'https://www.youtube.com/embed/cKeWZiybRwo';
     const params = new URLSearchParams({
       autoplay: '1',
       mute: this.isMuted ? '1' : '0',
       controls: '0',
       loop: '1',
-      playlist: '6HccyI1aBQI',
+      playlist: 'cKeWZiybRwo',
       modestbranding: '1',
       rel: '0',
       showinfo: '0',
@@ -64,88 +64,74 @@ export class FaqComponent {
 
   readonly faqs: Faq[] = [
   {
-    title: "¿Cuáles son los medios de pago?",
+    title: "¿Cuáles son los medios de pago aceptados?",
     paragraphs: [
-      "Pago por transferencia bancaria.",
-      "Pago por Yape.",
-      "Pago por Plin.",
-      "Pago por Tarjeta de crédito.",
-      "Pago por Western Union."
+      "Transferencia bancaria a cuentas corporativas.",
+      "Depósito en cuenta a nombre de Argebra Ingenieros S.A.C.",
+      "Pago mediante cheque de gerencia.",
+      "Pagos electrónicos (previa coordinación con el área administrativa)."
     ],
     icon: "fas fa-credit-card"
   },
   {
-    title: "¿Qué no forma parte del importe a reembolsar?",
+    title: "¿Qué servicios ofrece Argebra Ingenieros S.A.C.?",
     paragraphs: [
-      "Por norma general, el importe del reembolso no incluye la tasa de servicio.",
-      "Las líneas aéreas pueden no reembolsar el importe cobrado por hacer modificaciones en la reserva del vuelo.",
-      "Por ejemplo, si se cambian la fecha o el destino.",
-      "También aplica si se modifican los datos personales del pasajero."
+      "Diseño, ejecución y supervisión de obras civiles, eléctricas y sanitarias.",
+      "Consultoría técnica y gestión de proyectos de infraestructura.",
+      "Mantenimiento preventivo y correctivo de instalaciones industriales y comerciales.",
+      "Elaboración de expedientes técnicos y presupuestos detallados."
     ],
-    icon: "fas fa-undo"
+    icon: "fas fa-hard-hat"
   },
   {
-    title: "¿Tiene servicio de trámite de visado?",
+    title: "¿Trabajan con entidades públicas o privadas?",
     paragraphs: [
-      "Sí, te asesoramos para aplicar a las visas de países que lo requieran.",
-      "Conocemos los trámites relativos a cada embajada y los acompañamos hasta que cierren dicho trámite."
+      "Sí, desarrollamos proyectos tanto para el sector público como privado.",
+      "Participamos en procesos de licitación, adjudicación directa y contrataciones privadas.",
+      "Cumplimos con todos los requisitos legales y normativos del Estado Peruano."
     ],
-    icon: "fas fa-passport"
+    icon: "fas fa-building"
   },
   {
-    title: "¿Me ayudan con el Check-in?",
+    title: "¿Cuentan con certificaciones o acreditaciones?",
     paragraphs: [
-      "Sí. Nosotros generamos el Check-in como parte de nuestro servicio.",
-      "Dentro de las horas establecidas, usted recibirá sus pases de abordar correspondientes.",
-      "Tenga en cuenta que su asignación de asientos (si la tarifa del boleto lo permite) dentro del avión sólo puede decidirse en el momento del check-in.",
-      "Si no está conforme con la selección de asientos, será necesario acercarse al counter de la aerolínea con suficiente tiempo de anticipación y solicitar puedan ayudarle con el cambio.",
-      "Puede acumular millas de viajero frecuente. Para ello, deberá informarnos y brindarnos su número de pasajero frecuente."
+      "Sí, contamos con registros y certificaciones que respaldan nuestra experiencia técnica.",
+      "Cumplimos con las normas de seguridad y salud ocupacional (SST).",
+      "Nuestros procesos se alinean a estándares ISO aplicables a la ingeniería y construcción."
     ],
-    icon: "fas fa-plane-arrival"
+    icon: "fas fa-certificate"
   },
   {
-    title: "¿Puedo viajar con DNI o Pasaporte?",
+    title: "¿Cómo garantizan la calidad de los proyectos?",
     paragraphs: [
-      "En viajes nacionales o hacia países miembros de la Comunidad Andina (Argentina, Brasil, Bolivia, Colombia, Chile, Ecuador, Uruguay, Paraguay, Perú y Venezuela) es obligatorio presentar DNI vigente al momento del check-in.",
-      "Por lo cual no se necesita presentar pasaporte.",
-      "Preste atención a los documentos que pueden ser de utilidad dependiendo del tipo de pasajero:",
-      "• Mayores de 18 años: obligatorio presentar DNI.",
-      "• Menores de edad: deben presentar su partida de nacimiento, DNI y la autorización de viaje firmada por uno de los padres y legalizada por el notario público (Permiso Notarial).",
-      "• Viajes internacionales:",
-      "  - Mayores de 18 años: pasaporte con validez mínima de seis meses (o según el país), el DNI y Visa (en caso requiera).",
-      "  - Menores de edad: partida de nacimiento, pasaporte, DNI y Visa (de ser necesario), además de la autorización de viaje firmada por el padre que no acompañe al menor.",
-      "  - Menores viajando sin padres: autorización de viaje firmada por ambos padres y legalizada por un Notario Público.",
-      "    Si viaja con uno de los padres, la autorización debe ser firmada por el padre que no viaje."
+      "Contamos con un equipo de ingenieros especializados en control de calidad.",
+      "Supervisamos cada etapa del proceso constructivo con protocolos técnicos certificados.",
+      "Utilizamos materiales de primera calidad y proveedores verificados.",
+      "Realizamos auditorías técnicas y entregas documentadas al cliente."
     ],
-    icon: "fas fa-id-card"
+    icon: "fas fa-check-circle"
   },
   {
-    title: "¿Puedo viajar embarazada?",
+    title: "¿Qué medidas de seguridad aplican en obra?",
     paragraphs: [
-      "Todos los tipos de compañías aéreas permiten viajar a las mujeres embarazadas.",
-      "Sin embargo, existen diferencias de acuerdo al tiempo de embarazo.",
-      "Recuerde: toda mujer embarazada debe consultar al médico antes del vuelo.",
-      "Después del 7mo mes de gestación, la embarazada necesita un certificado médico permitiendo su viaje.",
-      "Es importante informar al médico sobre antecedentes como aborto previo, sangrados, diabetes, presión alta o parto prematuro.",
-      "La pasajera embarazada no puede olvidar entre sus documentos personales el certificado médico.",
-      "En el aeropuerto se le solicitará firmar unos términos de responsabilidad de la pasajera embarazada.",
-      "En el noveno mes de embarazo se exige que la pasajera viaje acompañada de un médico.",
-      "Durante el vuelo, la gestante debe evitar permanecer en la misma posición por largo tiempo, hidratarse con frecuencia y llevar sus medicamentos necesarios.",
-      "Cada compañía aérea tiene sus especificaciones y es indispensable avisar de la condición de embarazo durante la compra de pasajes aéreos.",
-      "Esta información puede variar."
+      "Implementamos planes de seguridad y salud ocupacional en todas nuestras obras.",
+      "Capacitamos continuamente a nuestro personal en prevención de riesgos.",
+      "Cumplimos las normas del Ministerio de Trabajo y del Reglamento Nacional de Seguridad en Construcción.",
+      "Contamos con supervisión técnica permanente y control de equipos de protección personal (EPP)."
     ],
-    icon: "fas fa-baby"
+    icon: "fas fa-helmet-safety"
   },
   {
-    title: "¿Puede la aerolínea modificar mi vuelo o cancelarlo?",
+    title: "¿Cómo puedo solicitar una cotización o propuesta técnica?",
     paragraphs: [
-      "Sí. Si su vuelo ha sido reprogramado por más de 3 horas de diferencia con su vuelo inicial, o cancelado por la compañía aérea, usted tiene derecho a un reembolso por el viaje que no ha disfrutado.",
-      "Sin embargo, recuerde que el reembolso únicamente se aplica a los servicios que no ha recibido.",
-      "Por lo tanto, el importe final del reembolso que le pagará la aerolínea puede no coincidir con el importe total pagado por la reserva."
+      "Puedes comunicarte con nosotros a través del correo corporativo o formulario web.",
+      "Nuestro equipo técnico evaluará tu requerimiento y preparará una propuesta adaptada a tus necesidades.",
+      "En caso de obras mayores, se coordina una visita técnica sin costo adicional."
     ],
-    icon: "fas fa-plane-slash"
+    icon: "fas fa-envelope-open-text"
   }
 ];
+
 
 
   openStates: boolean[] = this.faqs.map(() => false);

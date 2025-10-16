@@ -29,13 +29,13 @@ export class PrivacyPoliciesComponent {
   }
 
   updateVideoUrl(): void {
-    const baseUrl = 'https://www.youtube.com/embed/6HccyI1aBQI';
+    const baseUrl = 'https://www.youtube.com/embed/cKeWZiybRwo';
     const params = new URLSearchParams({
       autoplay: '1',
       mute: this.isMuted ? '1' : '0',
       controls: '0',
       loop: '1',
-      playlist: '6HccyI1aBQI',
+      playlist: 'cKeWZiybRwo',
       modestbranding: '1',
       rel: '0',
       showinfo: '0',
@@ -58,75 +58,72 @@ export class PrivacyPoliciesComponent {
     }
   }
 
-  policiesList = [
+ policiesList = [
     {
-      title: 'Políticas de Privacidad y Seguridad de Protección de Datos',
+      title: 'Política de Privacidad y Protección de Datos',
       paragraphs: [
-        `En Más Que Vacaciones EIRL, estamos comprometidos con salvaguardar la privacidad de nuestros clientes. Esta política describe cómo recopilamos, usamos, protegemos y compartimos tu información personal. Puede actualizarse con el tiempo, por lo que recomendamos revisarla frecuentemente en nuestra página web.`,
-        `Canales de comunicación: Correo electrónico, WhatsApp, llamadas telefónicas, página web, redes sociales como Facebook, TikTok, Instagram, etc. Por estos canales solicitamos y recopilamos información.`
+        `En Argebra Ingenieros S.A.C., valoramos la confidencialidad y seguridad de la información de nuestros clientes, colaboradores y aliados. Esta política explica cómo gestionamos y protegemos los datos personales obtenidos a través de nuestros canales digitales, contratos o comunicaciones institucionales.`,
+        `Canales de comunicación: correo electrónico corporativo, página web, llamadas, reuniones presenciales y redes profesionales. A través de estos medios podemos recopilar información necesaria para brindar nuestros servicios de ingeniería y construcción.`
       ],
       icon: 'fas fa-shield-alt'
     },
     {
       title: '1. Información que Recopilamos',
       paragraphs: [
-        `• Información de contacto: para cotizaciones y reservas se solicita nombre, correo, teléfono, documento, fecha de nacimiento, etc.`,
-        `• Información de viaje: destinos, fechas, vuelos, hoteles, edad, género, preferencias.`,
-        `• Información de pago: detalles de tarjeta u otros medios.`,
-        `• Información técnica: IP, navegador, cookies para mejorar experiencia y seguridad.`,
-        `• Información compartida sobre el viaje: opiniones, fotos, etiquetas, etc.`
+        `• Datos de contacto: nombre, cargo, empresa, correo electrónico y teléfono.`,
+        `• Información contractual: requerimientos técnicos, presupuestos, planos y especificaciones.`,
+        `• Información de facturación y pagos.`,
+        `• Información técnica o de acceso: dirección IP, navegador y cookies (solo para mejorar la experiencia de usuario en nuestra web).`
       ],
       icon: 'fas fa-database'
     },
     {
-      title: '2. Cómo Usamos tu Información',
+      title: '2. Uso de la Información',
       paragraphs: [
-        `• Procesar reservas y brindarte servicios personalizados.`,
-        `• Comunicarnos contigo con respecto a tu viaje, novedades, promociones y servicios.`,
-        `• Mejora de nuestros servicios y personalización de experiencia.`,
-        `• Análisis y estudios de mercado.`,
-        `• Marketing: solicitamos permiso para usar fotos o videos, y no publicamos nada sin consentimiento.`
+        `• Gestionar contratos y proyectos de ingeniería civil, eléctrica y mecánica.`,
+        `• Comunicarnos con clientes, proveedores y entidades públicas.`,
+        `• Garantizar el cumplimiento de normas de seguridad y calidad.`,
+        `• Analizar y mejorar nuestros procesos internos.`,
+        `• Cumplir obligaciones legales y normativas vigentes.`
       ],
       icon: 'fas fa-cogs'
     },
     {
-      title: '3. Compartir tu Información',
+      title: '3. Compartición de Datos',
       paragraphs: [
-        `• Con proveedores de servicios (hoteles, aerolíneas, etc.) para gestionar reservas y facturación.`,
-        `• Con terceros que nos ayudan (pagos, marketing).`,
-        `• Puede ser almacenada en nuestros sistemas.`,
-        `• Opiniones publicadas en nuestro sitio se toman de fuentes públicas (Google, Facebook), mostrando solo datos no sensibles.`
+        `• Con entidades aliadas o contratistas que colaboran en la ejecución de proyectos, bajo acuerdos de confidencialidad.`,
+        `• Con autoridades competentes cuando sea requerido por ley.`,
+        `• No compartimos, vendemos ni cedemos datos a terceros sin consentimiento expreso.`
       ],
       icon: 'fas fa-share-alt'
     },
     {
-      title: '4. Seguridad de tu Información',
+      title: '4. Seguridad de la Información',
       paragraphs: [
-        `• Implementamos medidas técnicas y administrativas para proteger tu información personal.`,
-        `• Uso de cifrado y tecnologías para datos de pago.`,
-        `• No vendemos ni cedemos datos sin tu consentimiento, salvo orden judicial.`,
-        `• Nuestros proveedores también cumplen con leyes de protección de datos.`,
-        `• Nos reservamos el derecho de modificar esta política en cualquier momento.`,
-        `• Infracciones internas conllevan suspensión y auditorías por el área de TI.`
+        `• Implementamos medidas de seguridad física, digital y administrativa para proteger la información.`,
+        `• Utilizamos servidores seguros y acceso restringido a personal autorizado.`,
+        `• Realizamos auditorías periódicas del sistema de información.`,
+        `• El incumplimiento interno conlleva sanciones y revisiones por el área de sistemas.`
       ],
       icon: 'fas fa-lock'
     },
     {
-      title: '5. Tus Derechos',
+      title: '5. Derechos del Titular de los Datos',
       paragraphs: [
-        `• Puedes solicitarnos la eliminación de tu información personal.`
+        `• Acceder, actualizar o eliminar su información personal.`,
+        `• Solicitar la limitación del uso de sus datos.`,
+        `• Presentar consultas o reclamos sobre el tratamiento de su información.`
       ],
       icon: 'fas fa-user-check'
     },
     {
       title: '6. Contacto',
       paragraphs: [
-        `• Si tienes dudas sobre esta política, contáctanos a: informes@masquevacaciones.com.pe`
+        `• Para cualquier consulta o ejercicio de derechos, puede escribirnos a: contacto@argebra.com.pe`
       ],
       icon: 'fas fa-envelope'
     }
   ];
-
 
   openStates: boolean[] = this.policiesList.map(() => false);
 
@@ -134,3 +131,6 @@ export class PrivacyPoliciesComponent {
     this.openStates[index] = !this.openStates[index];
   }
 }
+
+
+

@@ -1,11 +1,42 @@
 
 footer {
   position: relative;
-  background: #f6f6f6ee;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  color: #fff; /* Letras blancas por defecto */
+  padding: 2rem;
+  
+  /* 🔹 Fondo combinado (más oscuro para mejor contraste) */
+  background: linear-gradient(
+      rgba(19, 53, 202, 0.75),
+      rgba(24, 24, 168, 0.82)
+    ),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80')
+      center/cover no-repeat;
+}
 
+/* 🔹 Sombra ligera para resaltar texto sobre fondos claros */
+footer * {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 🔹 Enlaces con contraste y efecto hover */
+footer a {
+  color: #e8f0ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #00aaff;
+}
+
+/* 🔹 Títulos más claros y destacados */
+footer h2,
+footer h3 {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .footer-wave {
@@ -134,7 +165,7 @@ footer {
     margin-bottom: 15px;
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #000000;
     margin-top: 20px;
 
     &:first-child {
@@ -145,7 +176,7 @@ footer {
   p, a {
     margin: 8px 0;
     font-size: 14px;
-    color: #555;
+    color: #ffffff;
     text-decoration: none;
     line-height: 1.5;
   }

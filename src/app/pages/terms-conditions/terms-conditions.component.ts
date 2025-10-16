@@ -31,13 +31,13 @@ export class TermsConditionsComponent {
   }
 
   updateVideoUrl(): void {
-    const baseUrl = 'https://www.youtube.com/embed/6HccyI1aBQI';
+    const baseUrl = 'https://www.youtube.com/embed/cKeWZiybRwo';
     const params = new URLSearchParams({
       autoplay: '1',
       mute: this.isMuted ? '1' : '0',
       controls: '0',
       loop: '1',
-      playlist: '6HccyI1aBQI',
+      playlist: 'cKeWZiybRwo',
       modestbranding: '1',
       rel: '0',
       showinfo: '0',
@@ -59,6 +59,34 @@ export class TermsConditionsComponent {
       this.player.playVideo();
     }
   }
+
+
+  texto: string = `
+      <p>• <strong>MÁS QUE VACACIONES</strong> sólo actúa como intermediario entre los proveedores locales e internacionales y el usuario, es responsable únicamente de la organización de los tours y boletos aéreos adquiridos. El usuario no puede imputarnos responsabilidad por causas que están fuera de nuestro alcance. No somos responsables del perjuicio o retraso alguno derivado de circunstancias ajenas a nuestro control (ya sean causas fortuitas, de fuerza mayor y/o cualquier pérdida, daño, accidente o alguna otra irregularidad causada al usuario por hecho de tercero o la imprudencia del propio usuario afectado). Cualquier reclamo del usuario respecto a los servicios deberá registrarlo directamente con el proveedor en destino. En nuestra condición de intermediarios gestionaremos su tramitación hasta la respuesta del proveedor, agotando la reconsideración de ser necesario. En el caso de la línea aérea el reclamo sólo es aceptado para ser procesado si el usuario lo tramita directamente con ellos.</p>
+
+    <p>• <strong>MÁS QUE VACACIONES</strong> declara que actúa como intermediario entre las empresas de transporte (aéreo, terrestre y/o marítimo) y establecimientos hoteleros y otros, declinando por lo tanto toda responsabilidad por accidentes, huelgas, disturbios, terremotos, huracanes, sobreventas aéreas, terrestres y hoteleras y cualquier otro caso debidamente comprobado que pudiera ocurrir durante el viaje.</p>
+    
+    <p>• <strong>MÁS QUE VACACIONES</strong> no asume responsabilidad alguna frente a los asuntos legales u otros inconvenientes en que pueda verse involucrado el usuario, en caso de que el usuario se vea obligado a retirarse de la excursión por tales motivos y, asimismo, frente a los gastos personales en que el pasajero incurra.</p>
+    
+    <p>• <strong>MÁS QUE VACACIONES</strong> no asume responsabilidad alguna por pérdida o daño que sufra el equipaje o los efectos personales del usuario durante el viaje. El equipaje y cualquier otro objeto que los usuarios lleven consigo están bajo su custodia y responsabilidad.</p>
+    
+    <p>• Al brindarnos sus datos nos autoriza el uso de ellos, únicamente para la reserva de su viaje y para agregarla en nuestra base de datos para futuras promociones únicamente de nuestra empresa.</p>
+    
+    <p>• <strong>MÁS QUE VACACIONES</strong>, de conformidad con la Ley Peruana N°29733 – Ley de Protección de Datos Personales – y su Reglamento N° 003-2013-JUS; así como del Reglamento General de Protección de Datos GDPR (UE 2016/679), se compromete a garantizar y adoptar medidas para la seguridad de la información a través de las mejores prácticas internacionales, en atención a la confidencialidad, integridad y disponibilidad de los datos de carácter personal facilitados.</p>
+    
+    <p>• Para más información visita nuestras políticas de privacidad en: <a href="https://www.masquevacaciones.com.pe/politicas-de-privacidad/" target="_blank">https://www.masquevacaciones.com.pe/politicas-de-privacidad/</a></p>
+    
+    <p>• Visita nuestras políticas de términos y condiciones <a href="https://www.masquevacaciones.com.pe/terminos-y-condiciones-2/" target="_blank">https://www.masquevacaciones.com.pe/terminos-y-condiciones-2/</a></p>
+  `;
+
+
+  nota: string = `
+    <p><strong>  *** POR FAVOR, PRESENTARSE EN EL AEROPUERTO 3 HORAS ANTES DE LA SALIDA DE SU VUELO ***</strong></p>
+    <p><strong> *** DE CONTAR CON EQUIPAJE FACTURADO (DE 23KG) REGISTRARSE EN EL COUNTER DE LA AEROLÍNEA TRES HORAS ANTES DE SU SALIDA, DE LO CONTRARIO PODRÍA PERDER SU VUELO ***</strong></p>
+  `;
+
+
+
 
   termsList = [
     {
@@ -158,7 +186,7 @@ export class TermsConditionsComponent {
     this.openStates[index] = !this.openStates[index];
   }
 
-   onAudioEnded() {
+  onAudioEnded() {
     this.audioPaused = true;
   }
   onAudioPaused() {

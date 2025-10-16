@@ -22,5 +22,7 @@ export class BannerComponent {
   get backgroundImage (): string {
     return `url(/assets/images/${this.urlImage})`
   }
+
+  
   
 }

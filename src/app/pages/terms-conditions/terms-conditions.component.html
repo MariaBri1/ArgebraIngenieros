@@ -13,12 +13,12 @@
     <!-- LOGO -->
     <div class="fundadora-mobile">
         <video class="fundadora-image-1" autoplay muted loop playsinline>
-          <source src="assets/images/video-logo.mp4" type="video/mp4" />
-          Tu navegador no soporta la reproducción de video.
+            <source src="assets/images/video-logo.mp4" type="video/mp4" />
+            Tu navegador no soporta la reproducción de video.
         </video>
-      </div>
+    </div>
 
-    <h1 class="terms-title">Términos y Condiciones</h1>
+    <h1 class="terms-title">TÉRMINOS Y CONDICIONES</h1>
 
     <div class="terms-grid">
         <div class="term" *ngFor="let item of termsList; let i = index">
@@ -46,6 +46,14 @@
                     </li>
                 </ul>
             </div>
+
+        </div>
+
+        <div class="nuevo-parrafo">
+            <p [innerHTML]="texto"></p>
+        </div>
+        <div class="nuevo-parrafo-2">
+            <p [innerHTML]="nota"></p>
         </div>
     </div>
 </div>
