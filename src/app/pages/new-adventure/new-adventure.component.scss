@@ -1,0 +1,100 @@
+.vision-future-section {
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 100px 10%;
+  position: relative;
+}
+
+.vision-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.vision-header h2 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0a0e1a;
+}
+
+.vision-header h2 span {
+  color: #007bff;
+}
+
+.vision-header p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  max-width: 760px;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+.vision-item {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px 30px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+}
+
+.vision-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 35px rgba(0, 123, 255, 0.15);
+}
+
+.vision-icon {
+  font-size: 2.2rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.vision-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.vision-content p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.vision-footer {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.vision-footer h3 {
+  font-style: italic;
+  color: #444;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.btn-explore {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+  background: linear-gradient(90deg, #00e0ff, #3399ff);
+  transform: scale(1.05);
+}

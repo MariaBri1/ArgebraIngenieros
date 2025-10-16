@@ -1,0 +1,70 @@
+.packages-section {
+  padding: 80px 10%;
+  background: linear-gradient(180deg, #f6f9ff 0%, #e9efff 100%);
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.4rem;
+  color: #012d74;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.package-card i {
+  font-size: 45px;
+  color: #003399;
+  margin-bottom: 15px;
+}
+
+.package-card h3 {
+  color: #012d74;
+  margin-bottom: 10px;
+}
+
+.package-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.package-card .btn {
+  background: #012d74;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.package-card .btn:hover {
+  background: #0052cc;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}

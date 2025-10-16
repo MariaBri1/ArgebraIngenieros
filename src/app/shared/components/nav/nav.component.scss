@@ -1,4 +1,6 @@
 .nav-container {
+  background: linear-gradient( rgba(1, 15, 78, 0.75),  rgb(1, 1, 88));
+      
   position: fixed;
   width: 100%;
   top: 0;
@@ -36,6 +38,7 @@
         }
       }
     }
+    
   }
   // Estilos cuando se hace scroll
   &.scrolled {
